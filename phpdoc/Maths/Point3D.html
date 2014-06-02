@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Maths\Point3D | </title>
+                    <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../classes.html">Classes</a></li>
+                            <li><a href="../namespaces.html">Namespaces</a></li>
+                        <li><a href="../interfaces.html">Interfaces</a></li>
+            <li><a href="../traits.html">Traits</a></li>
+            <li><a href="../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../Maths.html">Maths</a>\Point3D</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Point3D</strong>        extends <a href="../Maths/Point2D.html"><abbr title="Maths\Point2D">Point2D</abbr></a>        implements
+        <a href="../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></p>
+
+            <div class="description">
+            <p>Basic 3D point</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(null|mixed $abscissa = null, null|mixed $ordinate = null, null|mixed $applicate = null)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setSpaceType">setSpaceType</a>(int $type)
+                    <p>Define the object cartesian space type (number of dimensions)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getSpaceType">getSpaceType</a>()
+                    <p>Get the object cartesian space type (number of dimensions)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_is1D">is1D</a>()
+                    <p>Test if the object is in 1D only</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_is2D">is2D</a>()
+                    <p>Test if the object is in 2D</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_is3D">is3D</a>()
+                    <p>Test if the object is in 3D</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method___set">__set</a>(mixed $name, mixed $value)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method___set"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>(mixed $name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method___get"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method___isset">__isset</a>(mixed $name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method___isset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method___unset">__unset</a>(mixed $name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method___unset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>(mixed $offset)
+                    <p>Test if an offset exists in the object using array notation <code>isset($obj[offset])</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>(mixed $offset)
+                    <p>Get an object coordinate using array notation <code>$obj[offset]</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>(mixed $offset, mixed $value)
+                    <p>Set an object coordinate using array notation <code>$obj[offset] = value</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>(mixed $offset)
+                    <p>Set an object coordinate using array notation <code>unset($obj[offset])</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>Write a 3D point as <code>( x , y , z )</code></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setAbscissa">setAbscissa</a>(int|mixed $val)
+                    <p>Define the abscissa value of the point</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/Point1D.html#method_setAbscissa"><abbr title="Maths\Point1D">Point1D</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAbscissa">getAbscissa</a>()
+                    <p>Get the abscissa value of the point</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/Point1D.html#method_getAbscissa"><abbr title="Maths\Point1D">Point1D</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setOrdinate">setOrdinate</a>(int|mixed $val)
+                    <p>Define the ordinate value of the point</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/Point2D.html#method_setOrdinate"><abbr title="Maths\Point2D">Point2D</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdinate">getOrdinate</a>()
+                    <p>Get the ordinate value of the point</p>
+                </td>
+                <td><small>from&nbsp;<a href="../Maths/Point2D.html#method_getOrdinate"><abbr title="Maths\Point2D">Point2D</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setApplicate">setApplicate</a>(int|mixed $val)
+                    <p>Define the applicate value of the point</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getApplicate">getApplicate</a>()
+                    <p>Get the applicate value of the point</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 57</div>
+        <code>            public            
+    <strong>__construct</strong>(null|mixed $abscissa = null, null|mixed $ordinate = null, null|mixed $applicate = null)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>null|mixed</td>
+                <td>$abscissa</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>null|mixed</td>
+                <td>$ordinate</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>null|mixed</td>
+                <td>$applicate</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSpaceType">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 64</div>
+        <code>            public            <abbr title="Maths\$this">$this</abbr>
+    <strong>setSpaceType</strong>(int $type)</code>
+    </h3>
+    <div class="details">
+        <p>Define the object cartesian space type (number of dimensions)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSpaceType">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 75</div>
+        <code>            public            int
+    <strong>getSpaceType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object cartesian space type (number of dimensions)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_is1D">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 85</div>
+        <code>            public            bool
+    <strong>is1D</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test if the object is in 1D only</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_is2D">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 95</div>
+        <code>            public            bool
+    <strong>is2D</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test if the object is in 2D</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_is3D">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 105</div>
+        <code>            public            bool
+    <strong>is3D</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test if the object is in 3D</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___set">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method___set"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 118</div>
+        <code>            public            void
+    <strong>__set</strong>(mixed $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method___get"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 138</div>
+        <code>            public            mixed
+    <strong>__get</strong>(mixed $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___isset">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method___isset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 154</div>
+        <code>            public            bool
+    <strong>__isset</strong>(mixed $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___unset">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method___unset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 171</div>
+        <code>            public            void
+    <strong>__unset</strong>(mixed $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 195</div>
+        <code>            public            bool
+    <strong>offsetExists</strong>(mixed $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Test if an offset exists in the object using array notation <code>isset($obj[offset])</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 206</div>
+        <code>            public            bool
+    <strong>offsetGet</strong>(mixed $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Get an object coordinate using array notation <code>$obj[offset]</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 218</div>
+        <code>            public            
+    <strong>offsetSet</strong>(mixed $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set an object coordinate using array notation <code>$obj[offset] = value</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 233</div>
+        <code>            public            
+    <strong>offsetUnset</strong>(mixed $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Set an object coordinate using array notation <code>unset($obj[offset])</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 70</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Write a 3D point as <code>( x , y , z )</code></p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAbscissa">
+        <div class="location">in <a href="../Maths/Point1D.html#method_setAbscissa"><abbr title="Maths\Point1D">Point1D</abbr></a> at line 73</div>
+        <code>            public            <abbr title="Maths\$this">$this</abbr>
+    <strong>setAbscissa</strong>(int|mixed $val)</code>
+    </h3>
+    <div class="details">
+        <p>Define the abscissa value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|mixed</td>
+                <td>$val</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAbscissa">
+        <div class="location">in <a href="../Maths/Point1D.html#method_getAbscissa"><abbr title="Maths\Point1D">Point1D</abbr></a> at line 84</div>
+        <code>            public            mixed
+    <strong>getAbscissa</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the abscissa value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setOrdinate">
+        <div class="location">in <a href="../Maths/Point2D.html#method_setOrdinate"><abbr title="Maths\Point2D">Point2D</abbr></a> at line 79</div>
+        <code>            public            <abbr title="Maths\$this">$this</abbr>
+    <strong>setOrdinate</strong>(int|mixed $val)</code>
+    </h3>
+    <div class="details">
+        <p>Define the ordinate value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|mixed</td>
+                <td>$val</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrdinate">
+        <div class="location">in <a href="../Maths/Point2D.html#method_getOrdinate"><abbr title="Maths\Point2D">Point2D</abbr></a> at line 90</div>
+        <code>            public            mixed
+    <strong>getOrdinate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the ordinate value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setApplicate">
+        <div class="location">at line 85</div>
+        <code>            public            <abbr title="Maths\$this">$this</abbr>
+    <strong>setApplicate</strong>(int|mixed $val)</code>
+    </h3>
+    <div class="details">
+        <p>Define the applicate value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|mixed</td>
+                <td>$val</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getApplicate">
+        <div class="location">at line 96</div>
+        <code>            public            mixed
+    <strong>getApplicate</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the applicate value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

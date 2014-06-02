@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Maths\Geometry\Circle | </title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title"></div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Maths/Geometry.html">Maths\Geometry</a>\Circle</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Circle</strong>        extends <a href="../../Maths/Geometry/AbstractGeometricObject.html"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></p>
+
+            <div class="description">
+            <p>Class Circle</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_o = null, null|int $radius = null, int $space_type = Maths::CARTESIAN_2D)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setSpaceType">setSpaceType</a>(int $type)
+                    <p>Define the object cartesian space type (number of dimensions)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getSpaceType">getSpaceType</a>()
+                    <p>Get the object cartesian space type (number of dimensions)</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_is1D">is1D</a>()
+                    <p>Test if the object is in 1D only</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_is2D">is2D</a>()
+                    <p>Test if the object is in 2D</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_is3D">is3D</a>()
+                    <p>Test if the object is in 3D</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method___set">__set</a>(mixed $name, mixed $value)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>(mixed $name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method___isset">__isset</a>(mixed $name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    void
+                </td>
+                <td class="last">
+                    <a href="#method___unset">__unset</a>(mixed $name)
+                    <p>
+</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_offsetExists">offsetExists</a>(mixed $offset)
+                    <p>Test if an offset exists in the object using array notation <code>isset($obj[offset])</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_offsetGet">offsetGet</a>(mixed $offset)
+                    <p>Get an object coordinate using array notation <code>$obj[offset]</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetSet">offsetSet</a>(mixed $offset, mixed $value)
+                    <p>Set an object coordinate using array notation <code>$obj[offset] = value</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_offsetUnset">offsetUnset</a>(mixed $offset)
+                    <p>Set an object coordinate using array notation <code>unset($obj[offset])</code></p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPoint">setPoint</a>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <p>Define (or redefine) a point of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getPoint">getPoint</a>(string $name)
+                    <p>Get a point of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method_getSegment">getSegment</a>(string $name1, string|null $name2 = null)
+                    <p>Get a [point1->point2] segment as a <code>\Maths\Geometry\Segment</code> object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setRadius">setRadius</a>(int|mixed $val)
+                    <p>Define the radius value of the circle</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getRadius">getRadius</a>()
+                    <p>Get the radius value of the point</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setPointO">setPointO</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <p>Define point O (origin) point of the circle</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getPointO">getPointO</a>()
+                    <p>Get the O (origin) point of the circle</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getDiameter">getDiameter</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getArea">getArea</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getPerimeter">getPerimeter</a>()
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 56</div>
+        <code>            public            
+    <strong>__construct</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_o = null, null|int $radius = null, int $space_type = Maths::CARTESIAN_2D)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$point_o</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>null|int</td>
+                <td>$radius</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$space_type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSpaceType">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 64</div>
+        <code>            public            <abbr title="Maths\$this">$this</abbr>
+    <strong>setSpaceType</strong>(int $type)</code>
+    </h3>
+    <div class="details">
+        <p>Define the object cartesian space type (number of dimensions)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSpaceType">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 75</div>
+        <code>            public            int
+    <strong>getSpaceType</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the object cartesian space type (number of dimensions)</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_is1D">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 85</div>
+        <code>            public            bool
+    <strong>is1D</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test if the object is in 1D only</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_is2D">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 95</div>
+        <code>            public            bool
+    <strong>is2D</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test if the object is in 2D</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_is3D">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 105</div>
+        <code>            public            bool
+    <strong>is3D</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Test if the object is in 3D</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___set">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 143</div>
+        <code>            public            void
+    <strong>__set</strong>(mixed $name, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 166</div>
+        <code>            public            mixed
+    <strong>__get</strong>(mixed $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___isset">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 185</div>
+        <code>            public            bool
+    <strong>__isset</strong>(mixed $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___unset">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 205</div>
+        <code>            public            void
+    <strong>__unset</strong>(mixed $name)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetExists">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 195</div>
+        <code>            public            bool
+    <strong>offsetExists</strong>(mixed $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Test if an offset exists in the object using array notation <code>isset($obj[offset])</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetGet">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 206</div>
+        <code>            public            bool
+    <strong>offsetGet</strong>(mixed $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Get an object coordinate using array notation <code>$obj[offset]</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetSet">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 218</div>
+        <code>            public            
+    <strong>offsetSet</strong>(mixed $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+        <p>Set an object coordinate using array notation <code>$obj[offset] = value</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offsetUnset">
+        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 233</div>
+        <code>            public            
+    <strong>offsetUnset</strong>(mixed $offset)</code>
+    </h3>
+    <div class="details">
+        <p>Set an object coordinate using array notation <code>unset($obj[offset])</code></p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>eventually caught</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 71</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPoint">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 58</div>
+        <code>            public            
+    <strong>setPoint</strong>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    </h3>
+    <div class="details">
+        <p>Define (or redefine) a point of the object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$point</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the <code>$point</code> argument is not <code>\Maths\PointInterface</code> object</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the <code>$point</code> argument is not an object</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPoint">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 81</div>
+        <code>            public            <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
+    <strong>getPoint</strong>(string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Get a point of the object</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSegment">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 100</div>
+        <code>            public            <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
+    <strong>getSegment</strong>(string $name1, string|null $name2 = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a [point1->point2] segment as a <code>\Maths\Geometry\Segment</code> object</p>
+        <p>You can equally use <code>$obj-&gt;getSegment(a,b)</code> or <code>$obj-&gt;getSegment(ab)</code></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$name1</td>
+                <td>name of first point of the segment</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$name2</td>
+                <td>name of first point of the segment</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if the segmentation can't be constructed (wrong parameters)</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if <code>$name1</code> is more than 2 chars length</td>
+            </tr>
+                    <tr>
+                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td>if one of the points is not found</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRadius">
+        <div class="location">at line 86</div>
+        <code>            public            <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setRadius</strong>(int|mixed $val)</code>
+    </h3>
+    <div class="details">
+        <p>Define the radius value of the circle</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|mixed</td>
+                <td>$val</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRadius">
+        <div class="location">at line 97</div>
+        <code>            public            mixed
+    <strong>getRadius</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the radius value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPointO">
+        <div class="location">at line 109</div>
+        <code>            public            <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setPointO</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    </h3>
+    <div class="details">
+        <p>Define point O (origin) point of the circle</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$point</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>if the argument is not on of the <code>\Maths\PointInterface</code> classes</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPointO">
+        <div class="location">at line 124</div>
+        <code>            public            <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+    <strong>getPointO</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the O (origin) point of the circle</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDiameter">
+        <div class="location">at line 134</div>
+        <code>            public            float
+    <strong>getDiameter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getArea">
+        <div class="location">at line 142</div>
+        <code>            public            float
+    <strong>getArea</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPerimeter">
+        <div class="location">at line 150</div>
+        <code>            public            float
+    <strong>getPerimeter</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
