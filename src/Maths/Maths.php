@@ -1,10 +1,10 @@
 <?php
 /**
- * PHP Library package of Les Ateliers Pierrot
+ * Some PHP classes to do mathematics
  * Copyleft (c) 2013 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/library>
+ * Sources <https://github.com/atelierspierrot/maths>
  */
 
 namespace Maths;
@@ -173,6 +173,25 @@ class Maths
         return new Point($x,$y);
     }
 
+
+    /**
+     * Test if two segments are perpendiculars
+     *
+     * This will test it two lines are perpendiculars constructing a triangle and
+     * testing if it is perpendicular
+     *
+     * @param   \Maths\Geometry\Line     $line1
+     * @param   \Maths\Geometry\Line     $line2
+     * @return  bool
+     */
+    public function arePerpendiculars(Line $line1, Line $line2)
+    {
+        if (self::areParallels($line1, $line2)) {
+            return false;
+        }
+
+    }
+
     /**
      * Test if two segments are parallels
      *
@@ -219,8 +238,7 @@ class Maths
         $segCE = new Segment($intersectCE, $e);
         $intersectDE = self::getLinesIntersection($segBE, $line2);
         $segDE = new Segment($intersectDE, $e);
-
-
+/*
 echo <<<TYPEOTHER
         var demo1 = brd.create('point', [{$line1->getPointA()->x},{$line1->getPointA()->y}], {
             name: 'a'
@@ -246,7 +264,7 @@ echo <<<TYPEOTHER
         var segment5 = brd.create('line', [demo3,demo5], {straightFirst:false,straightLast:false,color:'#404040'});
         var segment6 = brd.create('line', [demo4,demo5], {straightFirst:false,straightLast:false,color:'#404040'});
 TYPEOTHER;
-
+*/
         return (bool) (($segAE->getLength() / $segCE->getLength()) == ($segBE->getLength() / $segDE->getLength()));
     }
 
