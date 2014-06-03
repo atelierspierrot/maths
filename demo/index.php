@@ -271,6 +271,8 @@ $line_pointb = new \Maths\Geometry\Point(-2,3);
 $line1 = new \Maths\Geometry\Line($line_pointa, $line_pointb);
 echo 'echo $line1;'."\n";
 echo $line1."\n";
+echo 'echo $line1->equation;'."\n";
+echo $line1->equation."\n";
 
 echo "\n\n";
 $test_pointa = new \Maths\Geometry\Point(1,3.75);
@@ -296,6 +298,8 @@ $segment_pointb = new \Maths\Geometry\Point(-2,3);
 $segment1 = new \Maths\Geometry\Segment($segment_pointa, $segment_pointb);
 echo 'echo $segment1;'."\n";
 echo $segment1."\n";
+echo 'echo $segment1->equation;'."\n";
+echo $segment1->equation."\n";
 
 echo 'echo $segment1->getLength()'."\n";
 echo $segment1->getLength()."\n";
@@ -345,6 +349,8 @@ $quadri = new \Maths\Geometry\Quadrilateral($rec_pointA, $rec_pointB, $rec_point
 echo 'echo $quadri;'."\n";
 echo $quadri."\n";
 //var_export($quadri);
+echo 'echo $quadri->equation;'."\n";
+echo $quadri->equation."\n";
 echo 'echo $quadri->isParallelogram();'."\n";
 echo var_export($quadri->isParallelogram(),1)."\n";
 
@@ -359,6 +365,8 @@ echo '$rect = new \Maths\Geometry\Rectangle($rec_pointA, $rec_pointB, $rec_point
 $rect = new \Maths\Geometry\Rectangle($rec_pointA, $rec_pointB, $rec_pointC, $rec_pointD);
 echo 'echo $rect;'."\n";
 echo $rect."\n";
+echo 'echo $rect->equation;'."\n";
+echo $rect->equation."\n";
 var_export($rect);
 echo 'echo $rect->width'."\n";
 echo $rect->width."\n";
@@ -374,7 +382,34 @@ echo $rect->getSegmentAB();
 ?>
     </pre>
 
-    <h3 id="circles">Circles</h3>
+    <h3 id="triangles">Triangles</h3>
+
+    <pre class="code" data-language="php">
+<?php
+
+echo '$tri_point1 = new \Maths\Geometry\Point(-1,-2);'."\n";
+$tri_point1 = new \Maths\Geometry\Point(-1,-2);;
+echo '$tri_point2 = new \Maths\Geometry\Point(2,4);'."\n";
+$tri_point2 = new \Maths\Geometry\Point(2,4);;
+echo '$tri_point3 = new \Maths\Geometry\Point(1,1);'."\n";
+$tri_point3 = new \Maths\Geometry\Point(1,1);;
+echo '$tri = new \Maths\Geometry\Triangle($tri_point1, $tri_point2, $tri_point3);'."\n";
+$tri = new \Maths\Geometry\Triangle($tri_point1, $tri_point2, $tri_point3);
+echo 'echo $tri;'."\n";
+echo $tri."\n";
+echo 'echo $tri->equation;'."\n";
+echo $tri->equation."\n";
+//var_export($tri);
+
+echo 'echo $tri->area'."\n";
+echo $tri->area."\n";
+echo 'echo $tri->perimeter'."\n";
+echo $tri->perimeter."\n";
+
+?>
+    </pre>
+
+    <h3 id="circles">Circles and discs</h3>
 
     <pre class="code" data-language="php">
 <?php
@@ -385,14 +420,47 @@ echo '$circ = new \Maths\Geometry\Circle($rec_point0, 3);'."\n";
 $circ = new \Maths\Geometry\Circle($circ_pointO, 3);
 echo 'echo $circ;'."\n";
 echo $circ."\n";
+echo 'echo $circ->equation;'."\n";
+echo $circ->equation."\n";
 //var_export($circ);
 
 echo 'echo $circ->diameter;'."\n";
 echo $circ->diameter."\n";
 echo 'echo $circ->perimeter;'."\n";
 echo $circ->perimeter."\n";
-echo 'echo $circ->area;'."\n";
-echo $circ->area."\n";
+
+echo "\n";
+echo '$circ_test1_x = 1;'."\n";
+echo '$circ_test1_y = $circ->getOrdinateByAbscissa($circ_test1_x);'."\n";
+echo 'echo $circ_test1_y;'."\n";
+echo '$circ_test1 = new \Maths\Geometry\Point($circ_test1_x,$circ_test1_y);'."\n";
+echo 'echo $circ->isValidPoint($circ_test1);'."\n";
+$circ_test1_x = 1;
+$circ_test1_y = $circ->getOrdinateByAbscissa($circ_test1_x);
+echo $circ_test1_y."\n";
+$circ_test1 = new \Maths\Geometry\Point($circ_test1_x,$circ_test1_y);
+echo var_export($circ->isValidPoint($circ_test1),1)."\n";
+
+echo "\n";
+echo '$circ_test2 = new \Maths\Geometry\Point(-1,0.5);'."\n";
+echo 'echo $circ->isValidPoint($circ_test2);'."\n";
+$circ_test2 = new \Maths\Geometry\Point(-1,0.5);
+echo var_export($circ->isValidPoint($circ_test2),1)."\n";
+
+echo "\n";
+echo '$disc_pointO = new \Maths\Geometry\Point(-2,4);'."\n";
+$disc_pointO = new \Maths\Geometry\Point(-2,4);
+echo '$disc = new \Maths\Geometry\Circle($disc_point0, 4);'."\n";
+$disc = new \Maths\Geometry\Disc($disc_pointO, 4);
+echo 'echo $disc;'."\n";
+echo $disc."\n";
+//var_export($disc);
+echo 'echo $disc->area;'."\n";
+echo $disc->area."\n";
+
+echo "\n";
+echo 'echo $circ->isValidPoint($circ_test2);'."\n";
+echo var_export($disc->isValidPoint($circ_test2),1)."\n";
 
 ?>
     </pre>
@@ -406,8 +474,7 @@ echo $circ->area."\n";
 <script type="text/javascript">
 <?php
 $jxg = new \Maths\Helper\JSXgraph('box1', array(
-    'board_boundingbox'     => array(-5,10,5,-2),
-
+    'board_boundingbox' => array(-5,10,5,-2),
 ));
 
 $js_point1d = new Maths\Point1D(2);

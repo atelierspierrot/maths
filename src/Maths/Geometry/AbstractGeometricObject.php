@@ -221,6 +221,25 @@ abstract class AbstractGeometricObject
         }
     }
 
+// Abstract methods
+
+    /**
+     * Get the algebric equation of the object
+     *
+     * @return  string
+     */
+    public function getEquation()
+    {
+        return $this->__equationToString();
+    }
+
+    /**
+     * Force children classes to define a way to get the algebric function of the object
+     *
+     * @return  string
+     */
+    abstract public function __equationToString();
+
 }
 
 // Endfile

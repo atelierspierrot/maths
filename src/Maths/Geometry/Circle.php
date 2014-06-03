@@ -70,6 +70,8 @@ class Circle
     }
 
     /**
+     * Write a circle like `[circ. O(x,y),r=..]`
+     *
      * @return  string
      */
     public function __toString()
@@ -77,6 +79,19 @@ class Circle
         return '[circ. O'
             .Maths::coordinatesToString(array($this->getPointO()->getAbscissa(), $this->getPointO()->getOrdinate()))
             .',r='.$this->getRadius().']';
+    }
+
+    /**
+     * Write an algebric function of the circle
+     *
+     *      (x - Ox)^2 + (y - Oy)^2 = r^2
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        $o = $this->getOrigin();
+        return "y = f(x){ sqrt({$this->getRadius()}^2 - (x - {$o->getAbscissa()})^2) + {$o->getOrdinate()} }";
     }
 
 // Points
@@ -130,6 +145,33 @@ class Circle
         return (isset($this->_points['o']) ? $this->_points['o'] : null);
     }
 
+    /**
+     * Define point O (origin) point of the circle
+     *
+     * @param   \Maths\PointInterface    $point
+     * @return  $this
+     * @throws  \Exception if the argument is not on of the `\Maths\PointInterface` classes
+     */
+    public function setOrigin($point)
+    {
+        try {
+            $this->setPointO($point);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the O (origin) point of the circle
+     *
+     * @return  \Maths\PointInterface|null
+     */
+    public function getOrigin()
+    {
+        return $this->getPointO();
+    }
+
 // Characteristics
 
     /**
@@ -138,14 +180,6 @@ class Circle
     public function getDiameter()
     {
         return ($this->getRadius() * 2);
-    }
-
-    /**
-     * @return  float
-     */
-    public function getArea()
-    {
-        return (pi() * ($this->getRadius() * $this->getRadius()));
     }
 
     /**

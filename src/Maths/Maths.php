@@ -238,33 +238,7 @@ class Maths
         $segCE = new Segment($intersectCE, $e);
         $intersectDE = self::getLinesIntersection($segBE, $line2);
         $segDE = new Segment($intersectDE, $e);
-/*
-echo <<<TYPEOTHER
-        var demo1 = brd.create('point', [{$line1->getPointA()->x},{$line1->getPointA()->y}], {
-            name: 'a'
-        });
-        var demo2 = brd.create('point', [{$line1->getPointB()->x},{$line1->getPointB()->y}], {
-            name: 'b'
-        });
-        var segment1 = brd.create('line', [demo1,demo2], {straightFirst:false,straightLast:false});
 
-        var demo3 = brd.create('point', [{$intersectCE->x},{$intersectCE->y}], {
-            name: 'c'
-        });
-        var demo4 = brd.create('point', [{$intersectDE->x},{$intersectDE->y}], {
-            name: 'd'
-        });
-        var segment2 = brd.create('line', [demo3,demo4], {straightFirst:false,straightLast:false});
-
-        var demo5 = brd.create('point', [{$e->x},{$e->y}], {
-            name: 'e'
-        });
-        var segment3 = brd.create('line', [demo1,demo5], {straightFirst:false,straightLast:false,color:'#404040'});
-        var segment4 = brd.create('line', [demo2,demo5], {straightFirst:false,straightLast:false,color:'#404040'});
-        var segment5 = brd.create('line', [demo3,demo5], {straightFirst:false,straightLast:false,color:'#404040'});
-        var segment6 = brd.create('line', [demo4,demo5], {straightFirst:false,straightLast:false,color:'#404040'});
-TYPEOTHER;
-*/
         return (bool) (($segAE->getLength() / $segCE->getLength()) == ($segBE->getLength() / $segDE->getLength()));
     }
 

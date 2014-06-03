@@ -49,13 +49,47 @@ class Line
     }
 
     /**
-     * Write an algebric function of the line
+     * Write a line object
      *
      * @return  string
      */
     public function __toString()
     {
-        return "y = f(x){ ({$this->getSlope()} * x) + {$this->getYIntercept()} }";
+        $str = '';
+        $a = $this->getSlope();
+        if ($a!=1) {
+            $str .= "({$a}x)";
+        } else {
+            $str .= "x";
+        }
+        $b = $this->getYIntercept();
+        if ($b!=0) {
+            $str .= "+{$b}";
+        }
+        return "[y=({$str}]";
+    }
+
+    /**
+     * Write an algebric function of the line
+     *
+     *      y = (a * x) + b
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        $str = '';
+        $a = $this->getSlope();
+        if ($a!=1) {
+            $str .= "({$a} * x)";
+        } else {
+            $str .= "x";
+        }
+        $b = $this->getYIntercept();
+        if ($b!=0) {
+            $str .= " + {$b}";
+        }
+        return "y = f(x){ {$str} }";
     }
 
 // Points
@@ -132,7 +166,7 @@ class Line
     }
 
     /**
-     * Get the y-intercept of the line: m = (By - Ay) / (Bx - Ax)
+     * Get the y-intercept of the line: b = Ay - (Ax * a)
      *
      * @return  float
      */
@@ -181,6 +215,16 @@ class Line
     public function isHorizontal()
     {
         return (bool) ($this->getPointA()->getOrdinate() == $this->getPointB()->getOrdinate());
+    }
+
+    /**
+     * Test if a line is linear (y-intercept = 0)
+     *
+     * @return  bool
+     */
+    public function isLinear()
+    {
+        return (bool) ($this->getYIntercept() == 0);
     }
 
     /**

@@ -39,6 +39,16 @@ class Segment
         );
     }
 
+    /**
+     * Write an algebric function of the line
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        return "y = f(x){ ({$this->getSlope()} * x) + {$this->getYIntercept()} }";
+    }
+
 // Characteristics
 
     /**

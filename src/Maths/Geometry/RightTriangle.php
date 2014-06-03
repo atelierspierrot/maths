@@ -12,9 +12,10 @@ namespace Maths\Geometry;
 use \Maths\Geometry\Rectangle;
 
 /**
- * Class Rectangle
+ * Class Right Triangle
  *
- * - rectangle in B
+ * - triangle ABC
+ * - right angle in B
  * - 'alpha' angle is [cAb]
  * - 'beta' angle is [aCb]
  *
@@ -28,7 +29,7 @@ use \Maths\Geometry\Rectangle;
  *  ↑ → x
  *
  */
-class TriangleRectangle 
+class RightTriangle
     extends Rectangle
 {
 

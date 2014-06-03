@@ -66,6 +66,11 @@ class Quadrilateral
         }
     }
 
+    /**
+     * Write a line object as `[(Ax,Ay),(Bx,By),(Cx,Cy),(Dx,Dy)]`
+     *
+     * @return  string
+     */
     public function __toString()
     {
         return Maths::polygonToString(
@@ -82,6 +87,17 @@ class Quadrilateral
                 array($this->getPointD()->x, $this->getPointD()->y, $this->getPointD()->z) : array($this->getPointD()->x, $this->getPointD()->y)
             )
         );
+    }
+
+    /**
+     * Write an algebric function of the quadrilateral
+     * This will return the "toString" result
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        return $this->__toString();
     }
 
 // Points

@@ -66,6 +66,11 @@ class Triangle
         }
     }
 
+    /**
+     * Write a circle like `[(Ax,Ay),(Bx,By),(Cx,Cy)]`
+     *
+     * @return  string
+     */
     public function __toString()
     {
         return Maths::polygonToString(
@@ -79,6 +84,16 @@ class Triangle
                 array($this->getPointC()->x, $this->getPointC()->y, $this->getPointC()->z) : array($this->getPointC()->x, $this->getPointC()->y)
             )
         );
+    }
+
+    /**
+     * Write an algebric function of the line
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        return $this->__toString();
     }
 
 // Points
@@ -209,6 +224,61 @@ class Triangle
         } catch (\InvalidArgumentException $e) {
             throw $e;
         }
+    }
+
+// Characteristics
+
+    /**
+     * @return  float
+     */
+    public function getPerimeter()
+    {
+        return ($this->getSegmentAB()->getLength() + $this->getSegmentBC()->getLength() + $this->getSegmentCA()->getLength());
+    }
+
+    /**
+     * @return  float
+     */
+    public function getArea()
+    {
+        $p = $this->getPerimeter() / 2;
+        return sqrt(
+            $p *
+            ($p - $this->getSegmentAB()->getLength()) *
+            ($p - $this->getSegmentBC()->getLength()) *
+            ($p - $this->getSegmentCA()->getLength())
+        );
+    }
+
+// Utilities
+
+    /**
+     * Test if a triangle is equilateral : [AB] = [BC] = [CA]
+     *
+     * @return  bool
+     */
+    public function isEquilateral()
+    {
+        return (bool) (
+            ($this->getSegmentAB()->getLength() == $this->getSegmentBC()->getLength()) &&
+            ($this->getSegmentAB()->getLength() == $this->getSegmentCA()->getLength())
+        );
+    }
+
+    /**
+     * Test if a triangle is equilateral : [AB] = [BC] OR [AB] = [CA] OR [BC] = [CA]
+     *
+     * @return  bool
+     */
+    public function isIsoceles()
+    {
+        return (bool) (
+            $this->isEquilateral()==false && (
+                ($this->getSegmentAB()->getLength() == $this->getSegmentBC()->getLength()) ||
+                ($this->getSegmentAB()->getLength() == $this->getSegmentCA()->getLength()) ||
+                ($this->getSegmentBC()->getLength() == $this->getSegmentCA()->getLength())
+            )
+        );
     }
 
 }
