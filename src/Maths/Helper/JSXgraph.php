@@ -44,6 +44,7 @@ class JSXgraph
         'board_width'           => 500,
         'board_height'          => 500,
         // origin point
+        'draw_origin'           => true,
         'origin_name'           => 'O',
         'origin_color'          => '#404040',
         'origin_face'           => '[]',
@@ -158,7 +159,9 @@ class JSXgraph
         if ($this->getOption('draw_board', false)==true) {
             $this->drawBoard($id);
         }
-        $this->drawOrigin();
+        if ($this->getOption('draw_origin', false)==true) {
+            $this->drawOrigin();
+        }
     }
 
     public function drawBoard($id, array $options = array())

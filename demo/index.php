@@ -402,14 +402,6 @@ echo $circ->area."\n";
     <p>This representation uses the javascript library <a href="http://jsxgraph.uni-bayreuth.de/wp/">JSXgraph</a> under both GNU Lesser GPL and MIT licenses.</p>
     <p>The package embeds a <code>\Maths\Helper\JXSgraph</code> class to help construct the js library usage.</p>
 
-<?php
-
-$r1 = new Maths\Geometry\Point(-2,6);
-$r2 = new Maths\Geometry\Point(2,6);
-$r3 = new Maths\Geometry\Point(2,8);
-$r4 = new Maths\Geometry\Point(-2,8);
-?>
-
 <div id="box1" class="jxgbox" style="width:500px; height:500px;"></div>
 <script type="text/javascript">
 <?php
@@ -434,46 +426,42 @@ $jxg->drawSegment($js_line1, array('build_segment_ghost'=>false));
 
 echo $jxg;
 ?>
-    var a = brd.create('point', [<?php echo $a->x; ?>,<?php echo $a->y; ?>], {
-        name: 'PointA',
-        color: "#00ff00"
-    });
-    var b = brd.create('point', [<?php echo $b->x; ?>,<?php echo $b->y; ?>], {
-        name: 'PointB',
-        color: "#00ff00"
-    });
-    var li1 = brd.create('line', [a,b], {
-        name: 'Segment',
-        straightFirst:false,
-        straightLast:false,
-        strokeWidth:2
-    });
-    var r1 = brd.create('point', [<?php echo $r1->x; ?>,<?php echo $r1->y; ?>], {
-        name: 'PointRa',
-        color: "#0000ff"
-    });
-    var r2 = brd.create('point', [<?php echo $r2->x; ?>,<?php echo $r2->y; ?>], {
-        name: 'PointRb',
-        color: "#0000ff"
-    });
-    var r3 = brd.create('point', [<?php echo $r3->x; ?>,<?php echo $r3->y; ?>], {
-        name: 'PointRc',
-        color: "#0000ff"
-    });
-    var r4 = brd.create('point', [<?php echo $r4->x; ?>,<?php echo $r4->y; ?>], {
-        name: 'PointRd',
-        color: "#0000ff"
-    });
-    var rect = brd.createElement('polygon',[r1,r2,r3,r4]);
-    var gr = brd.create('group',[r1,r2,r3,r4]);
 </script>
 
-    <h4 id="thales">Thales theorem demonstration</h4>
+    <h4 id="trigonometric">Trigonometric demonstration</h4>
 
     <div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
     <script type="text/javascript">
 <?php
 $jxg = new \Maths\Helper\JSXgraph('box2', array(
+    'board_boundingbox'     => array(-1.5,1.5,1.5,-1.5),
+    'draw_origin'           => false,
+));
+
+$origin = new \Maths\Geometry\Point(0,0);
+$circ = new \Maths\Geometry\Circle($origin, 1);
+$jxg->drawCircle($circ);
+
+$pi = new Maths\Point2D(-1,0);
+$jxg->drawPoint($pi, array('name'=>'PI', 'color'=>'#00ff00'));
+$halfpi = new Maths\Point2D(0,1);
+$jxg->drawPoint($halfpi, array('name'=>'half PI', 'color'=>'#00ff00'));
+$onehalfpi = new Maths\Point2D(0,-1);
+$jxg->drawPoint($onehalfpi, array('name'=>'one and a half PI', 'color'=>'#00ff00'));
+
+$pi = new Maths\Point2D(0.5,$circ->getOrdinateByAbscissa(0.5));
+$jxg->drawPoint($pi, array('name'=>'alpha', 'color'=>'#ff0000'));
+
+echo $jxg;
+?>
+    </script>
+
+    <h4 id="thales">Thales theorem demonstration</h4>
+
+    <div id="box3" class="jxgbox" style="width:500px; height:500px;"></div>
+    <script type="text/javascript">
+<?php
+$jxg = new \Maths\Helper\JSXgraph('box3', array(
     'board_boundingbox'     => array(-5,10,5,-2),
 ));
 
@@ -560,7 +548,6 @@ $jxg->drawQuadrilateral($quadri);
 $origin = new \Maths\Geometry\Point(-1,-2);
 $circ = new \Maths\Geometry\Circle($origin, 3);
 $jxg->drawCircle($circ);
-
 
 echo $jxg;
 ?>

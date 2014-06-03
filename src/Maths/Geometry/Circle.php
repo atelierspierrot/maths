@@ -16,6 +16,10 @@ use \Maths\PointInterface;
 /**
  * Class Circle
  *
+ * For a circle with center O(x,y) and a radius r:
+ *
+ *      (x - Ox)^2 + (y - Oy)^2 = r^2
+ *
  */
 class Circle
     extends AbstractGeometricObject
@@ -151,5 +155,49 @@ class Circle
     {
         return (2 * pi() * $this->getRadius());
     }
-    
+
+// Utilities
+
+    /**
+     * (x - Ox)^2 + (y - Oy)^2 = r^2
+     *
+     * @param   \Maths\PointInterface   $a
+     * @return  bool
+     */
+    public function isValidPoint(PointInterface $a)
+    {
+        $o = $this->getPointO();
+        return (bool) (
+            ( pow(($a->getAbscissa() - $o->getAbscissa()), 2) + pow(($a->getOrdinate() - $o->getOrdinate()), 2) ) == pow($this->getRadius(), 2)
+        );
+    }
+
+    /**
+     * Get the ordinate of a point of the circle by its abscissa
+     *
+     * y = sqrt( r^2 - (x - Ox)^2 ) + Oy
+     *
+     * @param   float   $x
+     * @return  float
+     */
+    public function getOrdinateByAbscissa($x)
+    {
+        $o = $this->getPointO();
+        return ( sqrt( pow($this->getRadius(), 2) - pow(($x - $o->getAbscissa()), 2) ) + $o->getOrdinate() );
+    }
+
+    /**
+     * Get the abscissa of a point of the circle by its ordinate
+     *
+     * x = sqrt( r^2 - (y - Oy)^2 ) + Ox
+     *
+     * @param   float   $y
+     * @return  float
+     */
+    public function getAbscissaByOrdinate($y)
+    {
+        $o = $this->getPointO();
+        return ( sqrt( pow($this->getRadius(), 2) - pow(($y - $o->getOrdinate()), 2) ) + $o->getAbscissa() );
+    }
+
 }
