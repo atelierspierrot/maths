@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
@@ -82,7 +82,7 @@ class Circle
     }
 
     /**
-     * Write an algebric function of the circle
+     * Write an algebraic function of the circle
      *
      *      (x - Ox)^2 + (y - Oy)^2 = r^2
      *

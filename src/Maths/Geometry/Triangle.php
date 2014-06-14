@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
@@ -87,7 +87,7 @@ class Triangle
     }
 
     /**
-     * Write an algebric function of the line
+     * Write an algebraic function of the line
      *
      * @return  string
      */
@@ -251,6 +251,21 @@ class Triangle
     }
 
 // Utilities
+
+    /**
+     * Test if point A is in one of the triangle's segments
+     *
+     * @param   \Maths\PointInterface   $a
+     * @return  bool
+     */
+    public function isValidPoint(PointInterface $a)
+    {
+        return (bool) (
+            $this->getSegmentAB()->isValidPoint($a) ||
+            $this->getSegmentBC()->isValidPoint($a) ||
+            $this->getSegmentCA()->isValidPoint($a)
+        );
+    }
 
     /**
      * Test if a triangle is equilateral : [AB] = [BC] = [CA]

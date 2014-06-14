@@ -1,15 +1,16 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
 
 use \Library\Helper\Text as TextHelper;
+use \Maths\CartesianInterface;
 use \Maths\Maths;
 use \Maths\AbstractCartesianObject;
 use \Maths\Geometry\Point;
@@ -17,10 +18,11 @@ use \Maths\Geometry\Segment;
 use \Maths\PointInterface;
 
 /**
- * @author  PieroWbmstr (me [at] picas [dot] fr)
+ * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
  */
 abstract class AbstractGeometricObject
     extends AbstractCartesianObject
+    implements CartesianInterface
 {
 
     /**
@@ -224,7 +226,7 @@ abstract class AbstractGeometricObject
 // Abstract methods
 
     /**
-     * Get the algebric equation of the object
+     * Get the algebraic equation of the object
      *
      * @return  string
      */
@@ -234,7 +236,7 @@ abstract class AbstractGeometricObject
     }
 
     /**
-     * Force children classes to define a way to get the algebric function of the object
+     * Force children classes to define a way to get the algebraic function of the object
      *
      * @return  string
      */

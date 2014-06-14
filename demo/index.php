@@ -17,6 +17,13 @@
 $dtmz = @date_default_timezone_get();
 date_default_timezone_set($dtmz?:'Europe/Paris');
 
+$demos = array(
+    'basics',
+    'trigonometrics',
+    'thales',
+    'tests'
+);
+
 /**
  * For security, transform a realpath as '/[***]/package_root/...'
  *
@@ -109,6 +116,11 @@ if (file_exists($_f = __DIR__."/../vendor/autoload.php")) {
 }
 ?>
     
+
+<p>&#x61; &#x40; &#xCA; &#xFB;</p>
+    <p>&#61; &#40; &#171; &#x171;</p>
+
+
 <h3 id="presentation">Presentation</h3>
 
 <p>This namespace defines objects to work with geometric objects in 1, 2 or 3 dimensional spaces. By convention, the coordinates of the objects are called <code>( abscissa , ordinate , applicate )</code>, but your can access each of them using the following shortcuts:</p>
@@ -470,155 +482,29 @@ echo var_export($disc->isValidPoint($circ_test2),1)."\n";
     <p>This representation uses the javascript library <a href="http://jsxgraph.uni-bayreuth.de/wp/">JSXgraph</a> under both GNU Lesser GPL and MIT licenses.</p>
     <p>The package embeds a <code>\Maths\Helper\JXSgraph</code> class to help construct the js library usage.</p>
 
-<div id="box1" class="jxgbox" style="width:500px; height:500px;"></div>
-<script type="text/javascript">
-<?php
-$jxg = new \Maths\Helper\JSXgraph('box1', array(
-    'board_boundingbox' => array(-5,10,5,-2),
-));
 
-$js_point1d = new Maths\Point1D(2);
-$jxg->drawHorizontalPoint($js_point1d);
+<?php foreach ($demos as $i=>$_demo) : ?>
 
-$js_point2d = new Maths\Point2D(-1,3);
-$jxg->drawPoint($js_point2d);
+    <div class="jxs-wrapper" style="position: relative; clear: both; margin: 1em auto;">
+        <h4 style="display: block;"><?php echo ucwords($_demo); ?></h4>
+        <div id="box<?php echo $i; ?>" class="jxgbox" style="width:500px; height:500px;float: left;"></div>
+        <div id="codebox<?php echo $i; ?>" style="float: left; max-width: 600px;margin-left: 12px;">
+            <pre class="code" data-language="php">
+                <?php
+                $ctt = file_get_contents('jsx_codes/'.$_demo.'.php');
+                echo substr($ctt, 6);
+                ?>
+            </pre>
+        </div>
+        <script type="text/javascript">
+    <?php
+            $BOXID = 'box'.$i;
+            include 'jsx_codes/'.$_demo.'.php';
+    ?>
+        </script>
+    </div>
 
-$js_point2d_vertical = new Maths\Point2D(2,-1);
-$jxg->drawVerticalPoint($js_point2d_vertical);
-
-$a = new Maths\Geometry\Point(-2.5,5);
-$b = new Maths\Geometry\Point(4,4);
-$js_line1 = new Maths\Geometry\Segment($a, $b);
-$jxg->drawSegment($js_line1, array('build_segment_ghost'=>false));
-
-echo $jxg;
-?>
-</script>
-
-    <h4 id="trigonometric">Trigonometric demonstration</h4>
-
-    <div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
-    <script type="text/javascript">
-<?php
-$jxg = new \Maths\Helper\JSXgraph('box2', array(
-    'board_boundingbox'     => array(-1.5,1.5,1.5,-1.5),
-    'draw_origin'           => false,
-));
-
-$origin = new \Maths\Geometry\Point(0,0);
-$circ = new \Maths\Geometry\Circle($origin, 1);
-$jxg->drawCircle($circ);
-
-$pi = new Maths\Point2D(-1,0);
-$jxg->drawPoint($pi, array('name'=>'PI', 'color'=>'#00ff00'));
-$halfpi = new Maths\Point2D(0,1);
-$jxg->drawPoint($halfpi, array('name'=>'half PI', 'color'=>'#00ff00'));
-$onehalfpi = new Maths\Point2D(0,-1);
-$jxg->drawPoint($onehalfpi, array('name'=>'one and a half PI', 'color'=>'#00ff00'));
-
-$pi = new Maths\Point2D(0.5,$circ->getOrdinateByAbscissa(0.5));
-$jxg->drawPoint($pi, array('name'=>'alpha', 'color'=>'#ff0000'));
-
-echo $jxg;
-?>
-    </script>
-
-    <h4 id="thales">Thales theorem demonstration</h4>
-
-    <div id="box3" class="jxgbox" style="width:500px; height:500px;"></div>
-    <script type="text/javascript">
-<?php
-$jxg = new \Maths\Helper\JSXgraph('box3', array(
-    'board_boundingbox'     => array(-5,10,5,-2),
-));
-
-// Thales-inverse to demonstrate that [A->B] and [C->D] are parallels
-$seg_para_a = new \Maths\Geometry\Point(-1,2);
-$seg_para_b = new \Maths\Geometry\Point(1,4);
-$seg_para_1 = new \Maths\Geometry\Segment($seg_para_a, $seg_para_b);
-$jxg->drawSegment($seg_para_1);
-
-$seg_para_c = new \Maths\Geometry\Point(-2.5,2.5);
-$seg_para_d = new \Maths\Geometry\Point(2,7);
-$seg_para_2 = new \Maths\Geometry\Segment($seg_para_c, $seg_para_d);
-$jxg->drawSegment($seg_para_2);
-
-$seg_para_e = new \Maths\Geometry\Point(1,-1);
-$seg_para_f = new \Maths\Geometry\Point(3,2);
-$seg_para_3 = new \Maths\Geometry\Segment($seg_para_e, $seg_para_f);
-$jxg->drawSegment($seg_para_3);
-
-$seg_para_1->rearrange();
-$seg_para_2->rearrange();
-$abs = array(
-    $seg_para_1->getPointA()->getAbscissa(),
-    $seg_para_1->getPointB()->getAbscissa(),
-    $seg_para_2->getPointA()->getAbscissa(),
-    $seg_para_2->getPointB()->getAbscissa()
-);
-$ords = array(
-    $seg_para_1->getPointA()->getOrdinate(),
-    $seg_para_1->getPointB()->getOrdinate(),
-    $seg_para_2->getPointA()->getOrdinate(),
-    $seg_para_2->getPointB()->getOrdinate()
-);
-$e = new \Maths\Geometry\Point(
-    (max($abs) + abs(min($abs)) - 2),
-    (max($ords) + abs(min($ords)) - 6)
-);
-$jxg->drawPoint($e, array('color'=>'#00ff00'));
-$segAE = new \Maths\Geometry\Segment($seg_para_1->getPointA(), $e);
-$segBE = new \Maths\Geometry\Segment($seg_para_1->getPointB(), $e);
-
-$intersectCE = \Maths\Maths::getLinesIntersection($segAE, $seg_para_2);
-$segCE = new \Maths\Geometry\Segment($intersectCE, $e);
-$intersectDE = \Maths\Maths::getLinesIntersection($segBE, $seg_para_2);
-$segDE = new \Maths\Geometry\Segment($intersectDE, $e);
-$jxg->drawSegment($segAE, array('color'=>'#00ff00'));
-$jxg->drawSegment($segBE, array('color'=>'#00ff00'));
-
-/*
-$ok = \Maths\Maths::areParallels($seg_para_1, $seg_para_2);
-$ok = \Maths\Maths::areParallels($seg_para_1, $seg_para_3);
-*/
-echo $jxg;
-?>
-    </script>
-
-    <h4>Tests</h4>
-
-    <div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
-<script type="text/javascript">
-<?php
-
-$jxg = new \Maths\Helper\JSXgraph('jxgbox');
-
-// used by representation below
-$js_point1d = new Maths\Point1D(2);
-$jxg->drawHorizontalPoint($js_point1d);
-
-$js_point2d = new Maths\Point2D(-1,3);
-$jxg->drawPoint($js_point2d);
-
-$a = new Maths\Geometry\Point(-2.5,5);
-$b = new Maths\Geometry\Point(4,4);
-$js_line1 = new Maths\Geometry\Segment($a, $b);
-$jxg->drawSegment($js_line1);
-
-$r1 = new Maths\Geometry\Point(-2,-5);
-$r2 = new Maths\Geometry\Point(2,-4);
-$r3 = new Maths\Geometry\Point(2,-6);
-$r4 = new Maths\Geometry\Point(-2,-7);
-$quadri = new \Maths\Geometry\Quadrilateral($r1, $r2, $r3, $r4);
-$jxg->drawQuadrilateral($quadri);
-
-$origin = new \Maths\Geometry\Point(-1,-2);
-$circ = new \Maths\Geometry\Circle($origin, 3);
-$jxg->drawCircle($circ);
-
-echo $jxg;
-?>
-</script>
+<?php endforeach; ?>
 
         </article>
     </div>
