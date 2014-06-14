@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
@@ -82,6 +82,17 @@ class Quadrilateral
                 array($this->getPointD()->x, $this->getPointD()->y, $this->getPointD()->z) : array($this->getPointD()->x, $this->getPointD()->y)
             )
         );
+    }
+
+    /**
+     * Write an algebraic function of the quadrilateral
+     * This will return the "toString" result
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        return $this->__toString();
     }
 
 // Points
@@ -328,6 +339,24 @@ class Quadrilateral
         } catch (\InvalidArgumentException $e) {
             throw $e;
         }
+    }
+
+// Utilities
+
+    /**
+     * Test if point A is part of one of quadrilateral's segments
+     *
+     * @param   \Maths\PointInterface   $a
+     * @return  bool
+     */
+    public function isValidPoint(PointInterface $a)
+    {
+        return (bool) (
+            $this->getSegmentAB()->isValidPoint($a) ||
+            $this->getSegmentBC()->isValidPoint($a) ||
+            $this->getSegmentCD()->isValidPoint($a) ||
+            $this->getSegmentDA()->isValidPoint($a)
+        );
     }
 
 // Specials

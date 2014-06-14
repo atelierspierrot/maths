@@ -17,6 +17,13 @@
 $dtmz = @date_default_timezone_get();
 date_default_timezone_set($dtmz?:'Europe/Paris');
 
+$demos = array(
+    'basics',
+    'trigonometrics',
+    'thales',
+    'tests'
+);
+
 /**
  * For security, transform a realpath as '/[***]/package_root/...'
  *
@@ -109,6 +116,11 @@ if (file_exists($_f = __DIR__."/../vendor/autoload.php")) {
 }
 ?>
     
+
+<p>&#x61; &#x40; &#xCA; &#xFB;</p>
+    <p>&#61; &#40; &#171; &#x171;</p>
+
+
 <h3 id="presentation">Presentation</h3>
 
 <p>This namespace defines objects to work with geometric objects in 1, 2 or 3 dimensional spaces. By convention, the coordinates of the objects are called <code>( abscissa , ordinate , applicate )</code>, but your can access each of them using the following shortcuts:</p>
@@ -544,27 +556,30 @@ $jxg->drawHorizontalPoint($js_point1d);
 
 $js_point2d = new Maths\Point2D(-1,3);
 $jxg->drawPoint($js_point2d);
-
-$a = new Maths\Geometry\Point(-2.5,5);
-$b = new Maths\Geometry\Point(4,4);
-$js_line1 = new Maths\Geometry\Segment($a, $b);
-$jxg->drawSegment($js_line1);
-
-$r1 = new Maths\Geometry\Point(-2,-5);
-$r2 = new Maths\Geometry\Point(2,-4);
-$r3 = new Maths\Geometry\Point(2,-6);
-$r4 = new Maths\Geometry\Point(-2,-7);
-$quadri = new \Maths\Geometry\Quadrilateral($r1, $r2, $r3, $r4);
-$jxg->drawQuadrilateral($quadri);
-
-$origin = new \Maths\Geometry\Point(-1,-2);
-$circ = new \Maths\Geometry\Circle($origin, 3);
-$jxg->drawCircle($circ);
-
-
-echo $jxg;
 ?>
-</script>
+
+<?php foreach ($demos as $i=>$_demo) : ?>
+
+    <div class="jxs-wrapper" style="position: relative; clear: both; margin: 1em auto;">
+        <h4 style="display: block;"><?php echo ucwords($_demo); ?></h4>
+        <div id="box<?php echo $i; ?>" class="jxgbox" style="width:500px; height:500px;float: left;"></div>
+        <div id="codebox<?php echo $i; ?>" style="float: left; max-width: 600px;margin-left: 12px;">
+            <pre class="code" data-language="php">
+                <?php
+                $ctt = file_get_contents('jsx_codes/'.$_demo.'.php');
+                echo substr($ctt, 6);
+                ?>
+            </pre>
+        </div>
+        <script type="text/javascript">
+    <?php
+            $BOXID = 'box'.$i;
+            include 'jsx_codes/'.$_demo.'.php';
+    ?>
+        </script>
+    </div>
+
+<?php endforeach; ?>
 
         </article>
     </div>

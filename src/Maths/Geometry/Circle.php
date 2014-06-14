@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
@@ -15,6 +15,10 @@ use \Maths\PointInterface;
 
 /**
  * Class Circle
+ *
+ * For a circle with center O(x,y) and a radius r:
+ *
+ *      (x - Ox)^2 + (y - Oy)^2 = r^2
  *
  */
 class Circle
@@ -66,6 +70,8 @@ class Circle
     }
 
     /**
+     * Write a circle like `[circ. O(x,y),r=..]`
+     *
      * @return  string
      */
     public function __toString()
@@ -73,6 +79,19 @@ class Circle
         return '[circ. O'
             .Maths::coordinatesToString(array($this->getPointO()->getAbscissa(), $this->getPointO()->getOrdinate()))
             .',r='.$this->getRadius().']';
+    }
+
+    /**
+     * Write an algebraic function of the circle
+     *
+     *      (x - Ox)^2 + (y - Oy)^2 = r^2
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        $o = $this->getOrigin();
+        return "y = f(x){ sqrt({$this->getRadius()}^2 - (x - {$o->getAbscissa()})^2) + {$o->getOrdinate()} }";
     }
 
 // Points
@@ -126,6 +145,33 @@ class Circle
         return (isset($this->_points['o']) ? $this->_points['o'] : null);
     }
 
+    /**
+     * Define point O (origin) point of the circle
+     *
+     * @param   \Maths\PointInterface    $point
+     * @return  $this
+     * @throws  \Exception if the argument is not on of the `\Maths\PointInterface` classes
+     */
+    public function setOrigin($point)
+    {
+        try {
+            $this->setPointO($point);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the O (origin) point of the circle
+     *
+     * @return  \Maths\PointInterface|null
+     */
+    public function getOrigin()
+    {
+        return $this->getPointO();
+    }
+
 // Characteristics
 
     /**
@@ -139,17 +185,53 @@ class Circle
     /**
      * @return  float
      */
-    public function getArea()
-    {
-        return (pi() * ($this->getRadius() * $this->getRadius()));
-    }
-
-    /**
-     * @return  float
-     */
     public function getPerimeter()
     {
         return (2 * pi() * $this->getRadius());
     }
-    
+
+// Utilities
+
+    /**
+     * (x - Ox)^2 + (y - Oy)^2 = r^2
+     *
+     * @param   \Maths\PointInterface   $a
+     * @return  bool
+     */
+    public function isValidPoint(PointInterface $a)
+    {
+        $o = $this->getPointO();
+        return (bool) (
+            ( pow(($a->getAbscissa() - $o->getAbscissa()), 2) + pow(($a->getOrdinate() - $o->getOrdinate()), 2) ) == pow($this->getRadius(), 2)
+        );
+    }
+
+    /**
+     * Get the ordinate of a point of the circle by its abscissa
+     *
+     * y = sqrt( r^2 - (x - Ox)^2 ) + Oy
+     *
+     * @param   float   $x
+     * @return  float
+     */
+    public function getOrdinateByAbscissa($x)
+    {
+        $o = $this->getPointO();
+        return ( sqrt( pow($this->getRadius(), 2) - pow(($x - $o->getAbscissa()), 2) ) + $o->getOrdinate() );
+    }
+
+    /**
+     * Get the abscissa of a point of the circle by its ordinate
+     *
+     * x = sqrt( r^2 - (y - Oy)^2 ) + Ox
+     *
+     * @param   float   $y
+     * @return  float
+     */
+    public function getAbscissaByOrdinate($y)
+    {
+        $o = $this->getPointO();
+        return ( sqrt( pow($this->getRadius(), 2) - pow(($y - $o->getOrdinate()), 2) ) + $o->getAbscissa() );
+    }
+
 }
