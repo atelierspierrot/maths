@@ -173,6 +173,48 @@ class Helper
         return false;
     }
 
+    /**
+     * Make the "euclidean division" `a / b` having a result like `array( divisor , rest )`
+     *
+     * @param $a
+     * @param $b
+     * @return array
+     * @throws \InvalidArgumentException if `$b == 0`
+     */
+    public static function EuclideanDivision($a, $b)
+    {
+        if ($b==0) {
+            throw new \InvalidArgumentException('Division by 0 is not allowed!');
+        }
+        $divisor    = floor($a / $b);
+        $rest       = ($a % $b);
+        return array($divisor, $rest);
+    }
+
+    /**
+     * Find the "GCD" (greatest common divisor) using the Euclide's algorithm
+     *
+     * @param $a
+     * @param $b
+     * @return int
+     * @throws \InvalidArgumentException if $a or $b is negative
+     */
+    public static function GCD($a, $b)
+    {
+        if ($a<0 || $b<0) {
+            throw new \InvalidArgumentException('GCD calculation of negative numbers is not allowed!');
+        }
+        if ($b===0) {
+            return $a;
+        }
+        try {
+            list(,$r) = self::EuclideanDivision($a, $b);
+            return self::GCD($b, $r);
+        } catch (\InvalidArgumentException $e) {
+            throw $e;
+        }
+    }
+
 }
 
 // Endfile
