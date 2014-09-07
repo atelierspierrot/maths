@@ -20,16 +20,52 @@ class Helper
     /**
      * Calculate the "factorial" resolution of a number: `a!`
      *
+     * Be warmed that this will not throw an error in case `$a < 0`
+     * but an empty string
+     *
      * @param $n
      * @return int
      */
     public static function factorial($n)
     {
-        if ($n < 2) {
-            return 1;
-        } else {
-            return ($n * self::factorial($n-1));
+        return ($n<0 ? '' : ($n > 1 ? $n * self::factorial($n-1):1));
+    }
+
+    /**
+     * Write a number as a float what ever value it is (< 0.0000000...)
+     *
+     * By default, PHP seems to write any number inferior to 0.0001 as a tenth power:
+     *
+     *      0.00005 becomes 5.0E-5
+     *
+     * This method will return:
+     *
+     *      0.00005
+     *
+     * @param float $a
+     * @return string
+     */
+    public static function asFloat($a)
+    {
+        return (abs($a)>0.0001 ? $a : rtrim(sprintf("%0.40f", $a), 0));
+    }
+
+    /**
+     * Try to get the "true" modulo
+     *
+     * @param $a
+     * @param $b
+     * @return float|int
+     */
+    public static function modulo($a,$b)
+    {
+        if (abs($b)>abs($a)) {
+            return $a;
         }
+        if ($a>0 && $b>0) {
+            return ($a%$b);
+        }
+        return self::getModuloFromEntirePart($a,$b);
     }
 
     /**
