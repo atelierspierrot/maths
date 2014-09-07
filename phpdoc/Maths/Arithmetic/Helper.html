@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>Maths\Arithmetic\Helper | Maths</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Maths</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../Maths/Arithmetic.html">Maths\Arithmetic</a>\Helper</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Helper</strong></p>
+
+            <div class="description">
+            <p>Basic class for arithemtic</p>
+            <p>
+</p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    static&nbsp;int
+                </td>
+                <td class="last">
+                    <a href="#method_factorial">factorial</a>(<abbr title="Maths\Arithmetic\$n">$n</abbr> $n)
+                    <p>Calculate the "factorial" resolution of a number: <code>a!</code></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;string
+                </td>
+                <td class="last">
+                    <a href="#method_asFloat">asFloat</a>(float $a)
+                    <p>Write a number as a float what ever value it is (&lt; 0.0000000...)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;float|int
+                </td>
+                <td class="last">
+                    <a href="#method_modulo">modulo</a>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a, <abbr title="Maths\Arithmetic\$b">$b</abbr> $b)
+                    <p>Try to get the "true" modulo</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;float
+                </td>
+                <td class="last">
+                    <a href="#method_getModuloFromEntirePart">getModuloFromEntirePart</a>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a, <abbr title="Maths\Arithmetic\$b">$b</abbr> $b)
+                    <p>This method is an alternative to the native <code>a % b</code> using the "entire part" method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;int
+                </td>
+                <td class="last">
+                    <a href="#method_getModuloUsingTruncation">getModuloUsingTruncation</a>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a, <abbr title="Maths\Arithmetic\$b">$b</abbr> $b)
+                    <p>This method is an alternative to the native <code>a % b</code> using the loop method.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isNarcissicNumber">isNarcissicNumber</a>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a)
+                    <p>Test if a number is an "narcissic" number: an n-digit number that is equal to the sum of the n'th powers of its digits</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isArmstrongNumber">isArmstrongNumber</a>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a)
+                    <p>
+</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    static&nbsp;bool
+                </td>
+                <td class="last">
+                    <a href="#method_isHappyNumber">isHappyNumber</a>(<abbr title="Maths\Arithmetic\$val">$val</abbr> $val, int $iteration)
+                    <p>Test if a number is an "happy number":</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_factorial">
+        <div class="location">at line 29</div>
+        <code>        static            int
+    <strong>factorial</strong>(<abbr title="Maths\Arithmetic\$n">$n</abbr> $n)</code>
+    </h3>
+    <div class="details">
+        <p>Calculate the "factorial" resolution of a number: <code>a!</code></p>
+        <p>Be warmed that this will not throw an error in case <code>$a &lt; 0</code>
+but an empty string</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$n">$n</abbr></td>
+                <td>$n</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_asFloat">
+        <div class="location">at line 48</div>
+        <code>        static            string
+    <strong>asFloat</strong>(float $a)</code>
+    </h3>
+    <div class="details">
+        <p>Write a number as a float what ever value it is (&lt; 0.0000000...)</p>
+        <p>By default, PHP seems to write any number inferior to 0.0001 as a tenth power:</p>
+
+<pre><code> 0.00005 becomes 5.0E-5
+</code></pre>
+
+<p>This method will return:</p>
+
+<pre><code> 0.00005
+</code></pre>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>float</td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_modulo">
+        <div class="location">at line 60</div>
+        <code>        static            float|int
+    <strong>modulo</strong>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a, <abbr title="Maths\Arithmetic\$b">$b</abbr> $b)</code>
+    </h3>
+    <div class="details">
+        <p>Try to get the "true" modulo</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$a">$a</abbr></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$b">$b</abbr></td>
+                <td>$b</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float|int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModuloFromEntirePart">
+        <div class="location">at line 79</div>
+        <code>        static            float
+    <strong>getModuloFromEntirePart</strong>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a, <abbr title="Maths\Arithmetic\$b">$b</abbr> $b)</code>
+    </h3>
+    <div class="details">
+        <p>This method is an alternative to the native <code>a % b</code> using the "entire part" method.</p>
+        <p>The result will always be in range <code>[0 ; b[</code> and have the same sign as <code>b</code>.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$a">$a</abbr></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$b">$b</abbr></td>
+                <td>$b</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getModuloUsingTruncation">
+        <div class="location">at line 97</div>
+        <code>        static            int
+    <strong>getModuloUsingTruncation</strong>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a, <abbr title="Maths\Arithmetic\$b">$b</abbr> $b)</code>
+    </h3>
+    <div class="details">
+        <p>This method is an alternative to the native <code>a % b</code> using the loop method.</p>
+        <p>The result will always be in range <code>[0 ; a]</code> and have the same sign as <code>a</code>.</p>
+
+<p>This method is VERY slow but can be considered as the real calculation of a "modulo".</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$a">$a</abbr></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$b">$b</abbr></td>
+                <td>$b</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_isNarcissicNumber">
+        <div class="location">at line 126</div>
+        <code>        static            bool
+    <strong>isNarcissicNumber</strong>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a)</code>
+    </h3>
+    <div class="details">
+        <p>Test if a number is an "narcissic" number: an n-digit number that is equal to the sum of the n'th powers of its digits</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$a">$a</abbr></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>https://en.wikipedia.org/wiki/Narcissistic_number</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isArmstrongNumber">
+        <div class="location">at line 140</div>
+        <code>        static            bool
+    <strong>isArmstrongNumber</strong>(<abbr title="Maths\Arithmetic\$a">$a</abbr> $a)</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$a">$a</abbr></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::isNarcissicNumber()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_isHappyNumber">
+        <div class="location">at line 157</div>
+        <code>        static            bool
+    <strong>isHappyNumber</strong>(<abbr title="Maths\Arithmetic\$val">$val</abbr> $val, int $iteration)</code>
+    </h3>
+    <div class="details">
+        <p>Test if a number is an "happy number":</p>
+        <p>Starting with any positive integer,
+replace the number by the sum of the squares of its digits, and repeat the process until
+the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="Maths\Arithmetic\$val">$val</abbr></td>
+                <td>$val</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$iteration</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>https://en.wikipedia.org/wiki/Happy_number</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

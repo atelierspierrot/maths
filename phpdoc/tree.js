@@ -1,6 +1,8 @@
 var tree = [["Maths","Maths.html","",
                 [["Algebra","Maths\/Algebra.html","",
                 [["Matrix","Maths\/Algebra\/Matrix.html","",
+                [        ]]        ]],["Arithmetic","Maths\/Arithmetic.html","",
+                [["Helper","Maths\/Arithmetic\/Helper.html","",
                 [        ]]        ]],["Geometry","Maths\/Geometry.html","",
                 [["AbstractGeometricObject","Maths\/Geometry\/AbstractGeometricObject.html"," < AbstractCartesianObject",
                 [        ]],["Angle","Maths\/Geometry\/Angle.html"," < AbstractGeometricObject",
