@@ -2,7 +2,7 @@
     "name": "atelierspierrot/maths",
     "type": "library",
     "description": "Some PHP classes to do mathematics",
-    "keywords": [ "library", "helpers" ],
+    "keywords": [ "library", "helpers", "mathematics" ],
     "homepage": "http://github.com/atelierspierrot/maths",
     "license": "GPL-3.0",
     "authors": [{
