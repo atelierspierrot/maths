@@ -283,6 +283,8 @@ $line_pointb = new \Maths\Geometry\Point(-2,3);
 $line1 = new \Maths\Geometry\Line($line_pointa, $line_pointb);
 echo 'echo $line1;'."\n";
 echo $line1."\n";
+echo 'echo $line1->equation;'."\n";
+echo $line1->equation."\n";
 
 echo "\n\n";
 $test_pointa = new \Maths\Geometry\Point(1,3.75);
@@ -308,6 +310,8 @@ $segment_pointb = new \Maths\Geometry\Point(-2,3);
 $segment1 = new \Maths\Geometry\Segment($segment_pointa, $segment_pointb);
 echo 'echo $segment1;'."\n";
 echo $segment1."\n";
+echo 'echo $segment1->equation;'."\n";
+echo $segment1->equation."\n";
 
 echo 'echo $segment1->getLength()'."\n";
 echo $segment1->getLength()."\n";
@@ -357,6 +361,8 @@ $quadri = new \Maths\Geometry\Quadrilateral($rec_pointA, $rec_pointB, $rec_point
 echo 'echo $quadri;'."\n";
 echo $quadri."\n";
 //var_export($quadri);
+echo 'echo $quadri->equation;'."\n";
+echo $quadri->equation."\n";
 echo 'echo $quadri->isParallelogram();'."\n";
 echo var_export($quadri->isParallelogram(),1)."\n";
 
@@ -371,6 +377,8 @@ echo '$rect = new \Maths\Geometry\Rectangle($rec_pointA, $rec_pointB, $rec_point
 $rect = new \Maths\Geometry\Rectangle($rec_pointA, $rec_pointB, $rec_pointC, $rec_pointD);
 echo 'echo $rect;'."\n";
 echo $rect."\n";
+echo 'echo $rect->equation;'."\n";
+echo $rect->equation."\n";
 var_export($rect);
 echo 'echo $rect->width'."\n";
 echo $rect->width."\n";
@@ -386,7 +394,34 @@ echo $rect->getSegmentAB();
 ?>
     </pre>
 
-    <h3 id="circles">Circles</h3>
+    <h3 id="triangles">Triangles</h3>
+
+    <pre class="code" data-language="php">
+<?php
+
+echo '$tri_point1 = new \Maths\Geometry\Point(-1,-2);'."\n";
+$tri_point1 = new \Maths\Geometry\Point(-1,-2);;
+echo '$tri_point2 = new \Maths\Geometry\Point(2,4);'."\n";
+$tri_point2 = new \Maths\Geometry\Point(2,4);;
+echo '$tri_point3 = new \Maths\Geometry\Point(1,1);'."\n";
+$tri_point3 = new \Maths\Geometry\Point(1,1);;
+echo '$tri = new \Maths\Geometry\Triangle($tri_point1, $tri_point2, $tri_point3);'."\n";
+$tri = new \Maths\Geometry\Triangle($tri_point1, $tri_point2, $tri_point3);
+echo 'echo $tri;'."\n";
+echo $tri."\n";
+echo 'echo $tri->equation;'."\n";
+echo $tri->equation."\n";
+//var_export($tri);
+
+echo 'echo $tri->area'."\n";
+echo $tri->area."\n";
+echo 'echo $tri->perimeter'."\n";
+echo $tri->perimeter."\n";
+
+?>
+    </pre>
+
+    <h3 id="circles">Circles and discs</h3>
 
     <pre class="code" data-language="php">
 <?php
@@ -397,14 +432,47 @@ echo '$circ = new \Maths\Geometry\Circle($rec_point0, 3);'."\n";
 $circ = new \Maths\Geometry\Circle($circ_pointO, 3);
 echo 'echo $circ;'."\n";
 echo $circ."\n";
+echo 'echo $circ->equation;'."\n";
+echo $circ->equation."\n";
 //var_export($circ);
 
 echo 'echo $circ->diameter;'."\n";
 echo $circ->diameter."\n";
 echo 'echo $circ->perimeter;'."\n";
 echo $circ->perimeter."\n";
-echo 'echo $circ->area;'."\n";
-echo $circ->area."\n";
+
+echo "\n";
+echo '$circ_test1_x = 1;'."\n";
+echo '$circ_test1_y = $circ->getOrdinateByAbscissa($circ_test1_x);'."\n";
+echo 'echo $circ_test1_y;'."\n";
+echo '$circ_test1 = new \Maths\Geometry\Point($circ_test1_x,$circ_test1_y);'."\n";
+echo 'echo $circ->isValidPoint($circ_test1);'."\n";
+$circ_test1_x = 1;
+$circ_test1_y = $circ->getOrdinateByAbscissa($circ_test1_x);
+echo $circ_test1_y."\n";
+$circ_test1 = new \Maths\Geometry\Point($circ_test1_x,$circ_test1_y);
+echo var_export($circ->isValidPoint($circ_test1),1)."\n";
+
+echo "\n";
+echo '$circ_test2 = new \Maths\Geometry\Point(-1,0.5);'."\n";
+echo 'echo $circ->isValidPoint($circ_test2);'."\n";
+$circ_test2 = new \Maths\Geometry\Point(-1,0.5);
+echo var_export($circ->isValidPoint($circ_test2),1)."\n";
+
+echo "\n";
+echo '$disc_pointO = new \Maths\Geometry\Point(-2,4);'."\n";
+$disc_pointO = new \Maths\Geometry\Point(-2,4);
+echo '$disc = new \Maths\Geometry\Circle($disc_point0, 4);'."\n";
+$disc = new \Maths\Geometry\Disc($disc_pointO, 4);
+echo 'echo $disc;'."\n";
+echo $disc."\n";
+//var_export($disc);
+echo 'echo $disc->area;'."\n";
+echo $disc->area."\n";
+
+echo "\n";
+echo 'echo $circ->isValidPoint($circ_test2);'."\n";
+echo var_export($disc->isValidPoint($circ_test2),1)."\n";
 
 ?>
     </pre>
@@ -414,149 +482,6 @@ echo $circ->area."\n";
     <p>This representation uses the javascript library <a href="http://jsxgraph.uni-bayreuth.de/wp/">JSXgraph</a> under both GNU Lesser GPL and MIT licenses.</p>
     <p>The package embeds a <code>\Maths\Helper\JXSgraph</code> class to help construct the js library usage.</p>
 
-<?php
-
-$r1 = new Maths\Geometry\Point(-2,6);
-$r2 = new Maths\Geometry\Point(2,6);
-$r3 = new Maths\Geometry\Point(2,8);
-$r4 = new Maths\Geometry\Point(-2,8);
-?>
-
-<div id="box1" class="jxgbox" style="width:500px; height:500px;"></div>
-<script type="text/javascript">
-<?php
-$jxg = new \Maths\Helper\JSXgraph('box1', array(
-    'board_boundingbox'     => array(-5,10,5,-2),
-
-));
-
-$js_point1d = new Maths\Point1D(2);
-$jxg->drawHorizontalPoint($js_point1d);
-
-$js_point2d = new Maths\Point2D(-1,3);
-$jxg->drawPoint($js_point2d);
-
-$js_point2d_vertical = new Maths\Point2D(2,-1);
-$jxg->drawVerticalPoint($js_point2d_vertical);
-
-$a = new Maths\Geometry\Point(-2.5,5);
-$b = new Maths\Geometry\Point(4,4);
-$js_line1 = new Maths\Geometry\Segment($a, $b);
-$jxg->drawSegment($js_line1, array('build_segment_ghost'=>false));
-
-echo $jxg;
-?>
-    var a = brd.create('point', [<?php echo $a->x; ?>,<?php echo $a->y; ?>], {
-        name: 'PointA',
-        color: "#00ff00"
-    });
-    var b = brd.create('point', [<?php echo $b->x; ?>,<?php echo $b->y; ?>], {
-        name: 'PointB',
-        color: "#00ff00"
-    });
-    var li1 = brd.create('line', [a,b], {
-        name: 'Segment',
-        straightFirst:false,
-        straightLast:false,
-        strokeWidth:2
-    });
-    var r1 = brd.create('point', [<?php echo $r1->x; ?>,<?php echo $r1->y; ?>], {
-        name: 'PointRa',
-        color: "#0000ff"
-    });
-    var r2 = brd.create('point', [<?php echo $r2->x; ?>,<?php echo $r2->y; ?>], {
-        name: 'PointRb',
-        color: "#0000ff"
-    });
-    var r3 = brd.create('point', [<?php echo $r3->x; ?>,<?php echo $r3->y; ?>], {
-        name: 'PointRc',
-        color: "#0000ff"
-    });
-    var r4 = brd.create('point', [<?php echo $r4->x; ?>,<?php echo $r4->y; ?>], {
-        name: 'PointRd',
-        color: "#0000ff"
-    });
-    var rect = brd.createElement('polygon',[r1,r2,r3,r4]);
-    var gr = brd.create('group',[r1,r2,r3,r4]);
-</script>
-
-    <h4 id="thales">Thales theorem demonstration</h4>
-
-    <div id="box2" class="jxgbox" style="width:500px; height:500px;"></div>
-    <script type="text/javascript">
-<?php
-$jxg = new \Maths\Helper\JSXgraph('box2', array(
-    'board_boundingbox'     => array(-5,10,5,-2),
-));
-
-// Thales-inverse to demonstrate that [A->B] and [C->D] are parallels
-$seg_para_a = new \Maths\Geometry\Point(-1,2);
-$seg_para_b = new \Maths\Geometry\Point(1,4);
-$seg_para_1 = new \Maths\Geometry\Segment($seg_para_a, $seg_para_b);
-$jxg->drawSegment($seg_para_1);
-
-$seg_para_c = new \Maths\Geometry\Point(-2.5,2.5);
-$seg_para_d = new \Maths\Geometry\Point(2,7);
-$seg_para_2 = new \Maths\Geometry\Segment($seg_para_c, $seg_para_d);
-$jxg->drawSegment($seg_para_2);
-
-$seg_para_e = new \Maths\Geometry\Point(1,-1);
-$seg_para_f = new \Maths\Geometry\Point(3,2);
-$seg_para_3 = new \Maths\Geometry\Segment($seg_para_e, $seg_para_f);
-$jxg->drawSegment($seg_para_3);
-
-$seg_para_1->rearrange();
-$seg_para_2->rearrange();
-$abs = array(
-    $seg_para_1->getPointA()->getAbscissa(),
-    $seg_para_1->getPointB()->getAbscissa(),
-    $seg_para_2->getPointA()->getAbscissa(),
-    $seg_para_2->getPointB()->getAbscissa()
-);
-$ords = array(
-    $seg_para_1->getPointA()->getOrdinate(),
-    $seg_para_1->getPointB()->getOrdinate(),
-    $seg_para_2->getPointA()->getOrdinate(),
-    $seg_para_2->getPointB()->getOrdinate()
-);
-$e = new \Maths\Geometry\Point(
-    (max($abs) + abs(min($abs)) - 2),
-    (max($ords) + abs(min($ords)) - 6)
-);
-$jxg->drawPoint($e, array('color'=>'#00ff00'));
-$segAE = new \Maths\Geometry\Segment($seg_para_1->getPointA(), $e);
-$segBE = new \Maths\Geometry\Segment($seg_para_1->getPointB(), $e);
-
-$intersectCE = \Maths\Maths::getLinesIntersection($segAE, $seg_para_2);
-$segCE = new \Maths\Geometry\Segment($intersectCE, $e);
-$intersectDE = \Maths\Maths::getLinesIntersection($segBE, $seg_para_2);
-$segDE = new \Maths\Geometry\Segment($intersectDE, $e);
-$jxg->drawSegment($segAE, array('color'=>'#00ff00'));
-$jxg->drawSegment($segBE, array('color'=>'#00ff00'));
-
-/*
-$ok = \Maths\Maths::areParallels($seg_para_1, $seg_para_2);
-$ok = \Maths\Maths::areParallels($seg_para_1, $seg_para_3);
-*/
-echo $jxg;
-?>
-    </script>
-
-    <h4>Tests</h4>
-
-    <div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
-<script type="text/javascript">
-<?php
-
-$jxg = new \Maths\Helper\JSXgraph('jxgbox');
-
-// used by representation below
-$js_point1d = new Maths\Point1D(2);
-$jxg->drawHorizontalPoint($js_point1d);
-
-$js_point2d = new Maths\Point2D(-1,3);
-$jxg->drawPoint($js_point2d);
-?>
 
 <?php foreach ($demos as $i=>$_demo) : ?>
 
