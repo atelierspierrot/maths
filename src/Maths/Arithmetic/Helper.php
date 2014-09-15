@@ -51,6 +51,22 @@ class Helper
     }
 
     /**
+     * Get the n-th triangular numbet:
+     *
+     *      1           3           6       ...
+     *      .           .           .
+     *                 . .         . .
+     *                            . . .
+     *
+     * @param   int   $n    Get the triangular number of `n`
+     * @return  int
+     */
+    public static function getTriangularNumber($n)
+    {
+        return (($n * ($n + 1)) / 2);
+    }
+
+    /**
      * Try to get the "true" modulo
      *
      * @param $a
