@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Algebra;
@@ -47,7 +47,7 @@ namespace Maths\Algebra;
  *
  * The "positional" indexing can be forced in all cases using explicitly a string index with `matrix['x']`.
  *
- * @author  PieroWbmstr (me [at] picas [dot] fr)
+ * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
  */
 class Matrix
     implements ArrayAccess, SeekableIterator, Countable, Serializable

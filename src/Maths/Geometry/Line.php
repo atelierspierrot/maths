@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
@@ -16,7 +16,7 @@ use \Maths\PointInterface;
 /**
  * Line class : two points A -> B not limited
  *
- * @author  PieroWbmstr (me [at] picas [dot] fr)
+ * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
  */
 class Line
     extends AbstractGeometricObject
@@ -34,7 +34,7 @@ class Line
     /**
      * @param   null|\Maths\PointInterface    $point_a
      * @param   null|\Maths\PointInterface    $point_b
-     * @param   int                                   $space_type
+     * @param   int                           $space_type
      */
     public function __construct(
         PointInterface $point_a = null, PointInterface $point_b = null, $space_type = Maths::CARTESIAN_2D
@@ -49,11 +49,32 @@ class Line
     }
 
     /**
-     * Write an algebric function of the line
+     * Write a line object
      *
      * @return  string
      */
     public function __toString()
+    {
+        $str = '';
+        $a = $this->getSlope();
+        if ($a!=1) {
+            $str .= "({$a}x)";
+        } else {
+            $str .= "x";
+        }
+        $b = $this->getYIntercept();
+        if ($b!=0) {
+            $str .= "+{$b}";
+        }
+        return "[y=({$str}]";
+    }
+
+    /**
+     * Write an algebraic function of the line
+     *
+     * @return  string
+     */
+    public function __equationToString()
     {
         return "y = f(x){ ({$this->getSlope()} * x) + {$this->getYIntercept()} }";
     }
@@ -123,12 +144,16 @@ class Line
      */
     public function getSlope()
     {
-        $r = ($this->getPointB()->getAbscissa() - $this->getPointA()->getAbscissa());
-        return (
-            ($this->getPointB()->getOrdinate() - $this->getPointA()->getOrdinate())
-            /
-            ($r!=0 ? $r : 1)
-        );
+        if ($this->isVertical()) {
+            return Maths::INFINITY;
+        } else {
+            $r = ($this->getPointB()->getAbscissa() - $this->getPointA()->getAbscissa());
+            return (
+                ($this->getPointB()->getOrdinate() - $this->getPointA()->getOrdinate())
+                /
+                ($r!=0 ? $r : 1)
+            );
+        }
     }
 
     /**

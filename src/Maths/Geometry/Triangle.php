@@ -1,10 +1,10 @@
 <?php
 /**
  * Some PHP classes to do mathematics
- * Copyleft (c) 2013 Pierre Cassat and contributors
+ * Copyleft (c) 2014 Pierre Cassat and contributors
  * <www.ateliers-pierrot.fr> - <contact@ateliers-pierrot.fr>
  * License GPL-3.0 <http://www.opensource.org/licenses/gpl-3.0.html>
- * Sources <https://github.com/atelierspierrot/maths>
+ * Sources <http://github.com/atelierspierrot/maths>
  */
 
 namespace Maths\Geometry;
@@ -79,6 +79,16 @@ class Triangle
                 array($this->getPointC()->x, $this->getPointC()->y, $this->getPointC()->z) : array($this->getPointC()->x, $this->getPointC()->y)
             )
         );
+    }
+
+    /**
+     * Write an algebraic function of the line
+     *
+     * @return  string
+     */
+    public function __equationToString()
+    {
+        return $this->__toString();
     }
 
 // Points
@@ -209,6 +219,76 @@ class Triangle
         } catch (\InvalidArgumentException $e) {
             throw $e;
         }
+    }
+
+// Characteristics
+
+    /**
+     * @return  float
+     */
+    public function getPerimeter()
+    {
+        return ($this->getSegmentAB()->getLength() + $this->getSegmentBC()->getLength() + $this->getSegmentCA()->getLength());
+    }
+
+    /**
+     * @return  float
+     */
+    public function getArea()
+    {
+        $p = $this->getPerimeter() / 2;
+        return sqrt(
+            $p *
+            ($p - $this->getSegmentAB()->getLength()) *
+            ($p - $this->getSegmentBC()->getLength()) *
+            ($p - $this->getSegmentCA()->getLength())
+        );
+    }
+
+// Utilities
+
+    /**
+     * Test if point A is in one of the triangle's segments
+     *
+     * @param   \Maths\PointInterface   $a
+     * @return  bool
+     */
+    public function isValidPoint(PointInterface $a)
+    {
+        return (bool) (
+            $this->getSegmentAB()->isValidPoint($a) ||
+            $this->getSegmentBC()->isValidPoint($a) ||
+            $this->getSegmentCA()->isValidPoint($a)
+        );
+    }
+
+    /**
+     * Test if a triangle is equilateral : [AB] = [BC] = [CA]
+     *
+     * @return  bool
+     */
+    public function isEquilateral()
+    {
+        return (bool) (
+            ($this->getSegmentAB()->getLength() == $this->getSegmentBC()->getLength()) &&
+            ($this->getSegmentAB()->getLength() == $this->getSegmentCA()->getLength())
+        );
+    }
+
+    /**
+     * Test if a triangle is equilateral : [AB] = [BC] OR [AB] = [CA] OR [BC] = [CA]
+     *
+     * @return  bool
+     */
+    public function isIsoceles()
+    {
+        return (bool) (
+            $this->isEquilateral()==false && (
+                ($this->getSegmentAB()->getLength() == $this->getSegmentBC()->getLength()) ||
+                ($this->getSegmentAB()->getLength() == $this->getSegmentCA()->getLength()) ||
+                ($this->getSegmentBC()->getLength() == $this->getSegmentCA()->getLength())
+            )
+        );
     }
 
 }
