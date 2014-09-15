@@ -28,7 +28,10 @@
 
             <div class="description">
             <p>Class Circle</p>
-            <p>
+            <p>For a circle with center O(x,y) and a radius r:</p>
+
+<pre><code> (x - Ox)^2 + (y - Oy)^2 = r^2
+</code></pre>
 </p>
         </div>
     
@@ -188,8 +191,7 @@
                 </td>
                 <td class="last">
                     <a href="#method___toString">__toString</a>()
-                    <p>
-</p>
+                    <p>Write a circle like `[circ.</p>
                 </td>
                 <td></td>
             </tr>
@@ -222,6 +224,26 @@
                     <p>Get a [point1->point2] segment as a <code>\Maths\Geometry\Segment</code> object</p>
                 </td>
                 <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEquation">getEquation</a>()
+                    <p>Get the algebraic equation of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___equationToString">__equationToString</a>()
+                    <p>Write an algebraic function of the circle</p>
+                </td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -265,12 +287,21 @@
             </tr>
                     <tr>
                 <td class="type">
-                    float
+                    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_getDiameter">getDiameter</a>()
-                    <p>
-</p>
+                    <a href="#method_setOrigin">setOrigin</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <p>Define point O (origin) point of the circle</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+                </td>
+                <td class="last">
+                    <a href="#method_getOrigin">getOrigin</a>()
+                    <p>Get the O (origin) point of the circle</p>
                 </td>
                 <td></td>
             </tr>
@@ -279,7 +310,7 @@
                     float
                 </td>
                 <td class="last">
-                    <a href="#method_getArea">getArea</a>()
+                    <a href="#method_getDiameter">getDiameter</a>()
                     <p>
 </p>
                 </td>
@@ -296,13 +327,43 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isValidPoint">isValidPoint</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)
+                    <p>(x - Ox)^2 + (y - Oy)^2 = r^2</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getOrdinateByAbscissa">getOrdinateByAbscissa</a>(float $x)
+                    <p>Get the ordinate of a point of the circle by its abscissa</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    float
+                </td>
+                <td class="last">
+                    <a href="#method_getAbscissaByOrdinate">getAbscissaByOrdinate</a>(float $y)
+                    <p>Get the abscissa of a point of the circle by its ordinate</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 56</div>
+        <div class="location">at line 60</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_o = null, null|int $radius = null, int $space_type = Maths::CARTESIAN_2D)</code>
     </h3>
@@ -483,7 +544,7 @@
     </div>
 
                 <h3 id="method___set">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 143</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 145</div>
         <code>                    void
     <strong>__set</strong>(mixed $name, mixed $value)</code>
     </h3>
@@ -536,7 +597,7 @@
     </div>
 
                 <h3 id="method___get">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 166</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 168</div>
         <code>                    mixed
     <strong>__get</strong>(mixed $name)</code>
     </h3>
@@ -574,7 +635,7 @@
     </div>
 
                 <h3 id="method___isset">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 185</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 187</div>
         <code>                    bool
     <strong>__isset</strong>(mixed $name)</code>
     </h3>
@@ -612,7 +673,7 @@
     </div>
 
                 <h3 id="method___unset">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 205</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 207</div>
         <code>                    void
     <strong>__unset</strong>(mixed $name)</code>
     </h3>
@@ -811,15 +872,13 @@
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">at line 71</div>
+        <div class="location">at line 77</div>
         <code>                    string
     <strong>__toString</strong>()</code>
     </h3>
     <div class="details">
-        <p>
-</p>
-        <p>
-</p>
+        <p>Write a circle like `[circ.</p>
+        <p>O(x,y),r=..]`</p>
         <div class="tags">
             
                             <h4>Return Value</h4>
@@ -838,7 +897,7 @@
     </div>
 
                 <h3 id="method_setPoint">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 58</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 60</div>
         <code>                    
     <strong>setPoint</strong>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -884,7 +943,7 @@
     </div>
 
                 <h3 id="method_getPoint">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 81</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 83</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
     <strong>getPoint</strong>(string $name)</code>
     </h3>
@@ -921,7 +980,7 @@
     </div>
 
                 <h3 id="method_getSegment">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 100</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 102</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegment</strong>(string $name1, string|null $name2 = null)</code>
     </h3>
@@ -977,8 +1036,59 @@
                     </div>
     </div>
 
+                <h3 id="method_getEquation">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 233</div>
+        <code>                    string
+    <strong>getEquation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the algebraic equation of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___equationToString">
+        <div class="location">at line 91</div>
+        <code>                    string
+    <strong>__equationToString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Write an algebraic function of the circle</p>
+        <p>(x - Ox)^2 + (y - Oy)^2 = r^2</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setRadius">
-        <div class="location">at line 86</div>
+        <div class="location">at line 105</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
     <strong>setRadius</strong>(int|mixed $val)</code>
     </h3>
@@ -1015,7 +1125,7 @@
     </div>
 
                 <h3 id="method_getRadius">
-        <div class="location">at line 97</div>
+        <div class="location">at line 116</div>
         <code>                    mixed
     <strong>getRadius</strong>()</code>
     </h3>
@@ -1041,7 +1151,7 @@
     </div>
 
                 <h3 id="method_setPointO">
-        <div class="location">at line 109</div>
+        <div class="location">at line 128</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
     <strong>setPointO</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -1087,7 +1197,7 @@
     </div>
 
                 <h3 id="method_getPointO">
-        <div class="location">at line 124</div>
+        <div class="location">at line 143</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointO</strong>()</code>
     </h3>
@@ -1112,8 +1222,80 @@
                     </div>
     </div>
 
+                <h3 id="method_setOrigin">
+        <div class="location">at line 155</div>
+        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setOrigin</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    </h3>
+    <div class="details">
+        <p>Define point O (origin) point of the circle</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$point</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td>if the argument is not on of the <code>\Maths\PointInterface</code> classes</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrigin">
+        <div class="location">at line 170</div>
+        <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+    <strong>getOrigin</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the O (origin) point of the circle</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_getDiameter">
-        <div class="location">at line 134</div>
+        <div class="location">at line 180</div>
         <code>                    float
     <strong>getDiameter</strong>()</code>
     </h3>
@@ -1139,10 +1321,10 @@
                     </div>
     </div>
 
-                <h3 id="method_getArea">
-        <div class="location">at line 142</div>
+                <h3 id="method_getPerimeter">
+        <div class="location">at line 188</div>
         <code>                    float
-    <strong>getArea</strong>()</code>
+    <strong>getPerimeter</strong>()</code>
     </h3>
     <div class="details">
         <p>
@@ -1166,17 +1348,99 @@
                     </div>
     </div>
 
-                <h3 id="method_getPerimeter">
-        <div class="location">at line 150</div>
-        <code>                    float
-    <strong>getPerimeter</strong>()</code>
+                <h3 id="method_isValidPoint">
+        <div class="location">at line 201</div>
+        <code>                    bool
+    <strong>isValidPoint</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>(x - Ox)^2 + (y - Oy)^2 = r^2</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOrdinateByAbscissa">
+        <div class="location">at line 217</div>
+        <code>                    float
+    <strong>getOrdinateByAbscissa</strong>(float $x)</code>
+    </h3>
+    <div class="details">
+        <p>Get the ordinate of a point of the circle by its abscissa</p>
+        <p>y = sqrt( r^2 - (x - Ox)^2 ) + Oy</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>float</td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>float</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAbscissaByOrdinate">
+        <div class="location">at line 231</div>
+        <code>                    float
+    <strong>getAbscissaByOrdinate</strong>(float $y)</code>
+    </h3>
+    <div class="details">
+        <p>Get the abscissa of a point of the circle by its ordinate</p>
+        <p>x = sqrt( r^2 - (y - Oy)^2 ) + Ox</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>float</td>
+                <td>$y</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 

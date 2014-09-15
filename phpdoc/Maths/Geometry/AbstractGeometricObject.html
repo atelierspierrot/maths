@@ -24,7 +24,8 @@
     </div>
         <div class="content">
                 <p>abstract     class
-    <strong>AbstractGeometricObject</strong>        extends <a href="../../Maths/AbstractCartesianObject.html"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></p>
+    <strong>AbstractGeometricObject</strong>        extends <a href="../../Maths/AbstractCartesianObject.html"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a>        implements
+        <a href="../../Maths/CartesianInterface.html"><abbr title="Maths\CartesianInterface">CartesianInterface</abbr></a></p>
 
     
     
@@ -216,13 +217,33 @@
                 </td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEquation">getEquation</a>()
+                    <p>Get the algebraic equation of the object</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___equationToString">__equationToString</a>()
+                    <p>Force children classes to define a way to get the algebraic function of the object</p>
+                </td>
+                <td></td>
+            </tr>
             </table>
 
 
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 43</div>
+        <div class="location">at line 45</div>
         <code>                    
     <strong>__construct</strong>(int $type = Maths::CARTESIAN_2D)</code>
     </h3>
@@ -390,7 +411,7 @@
     </div>
 
                 <h3 id="method___set">
-        <div class="location">at line 143</div>
+        <div class="location">at line 145</div>
         <code>                    void
     <strong>__set</strong>(mixed $name, mixed $value)</code>
     </h3>
@@ -443,7 +464,7 @@
     </div>
 
                 <h3 id="method___get">
-        <div class="location">at line 166</div>
+        <div class="location">at line 168</div>
         <code>                    mixed
     <strong>__get</strong>(mixed $name)</code>
     </h3>
@@ -481,7 +502,7 @@
     </div>
 
                 <h3 id="method___isset">
-        <div class="location">at line 185</div>
+        <div class="location">at line 187</div>
         <code>                    bool
     <strong>__isset</strong>(mixed $name)</code>
     </h3>
@@ -519,7 +540,7 @@
     </div>
 
                 <h3 id="method___unset">
-        <div class="location">at line 205</div>
+        <div class="location">at line 207</div>
         <code>                    void
     <strong>__unset</strong>(mixed $name)</code>
     </h3>
@@ -744,7 +765,7 @@
     </div>
 
                 <h3 id="method_setPoint">
-        <div class="location">at line 58</div>
+        <div class="location">at line 60</div>
         <code>                    
     <strong>setPoint</strong>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -790,7 +811,7 @@
     </div>
 
                 <h3 id="method_getPoint">
-        <div class="location">at line 81</div>
+        <div class="location">at line 83</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
     <strong>getPoint</strong>(string $name)</code>
     </h3>
@@ -827,7 +848,7 @@
     </div>
 
                 <h3 id="method_getSegment">
-        <div class="location">at line 100</div>
+        <div class="location">at line 102</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegment</strong>(string $name1, string|null $name2 = null)</code>
     </h3>
@@ -879,6 +900,58 @@
             </tr>
             </table>
 
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getEquation">
+        <div class="location">at line 233</div>
+        <code>                    string
+    <strong>getEquation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the algebraic equation of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___equationToString">
+        <div class="location">at line 243</div>
+        <code>    abstract                string
+    <strong>__equationToString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Force children classes to define a way to get the algebraic function of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
             
                     </div>
     </div>

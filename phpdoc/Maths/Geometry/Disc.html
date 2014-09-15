@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>Maths\Geometry\Segment | Maths</title>
+        <title>Maths\Geometry\Disc | Maths</title>
                     <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
                             </head>
         <body id="class">
@@ -20,14 +20,14 @@
         <div id="title">Maths</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../Maths/Geometry.html">Maths\Geometry</a>\Segment</h1>
+    <h1><a href="../../Maths/Geometry.html">Maths\Geometry</a>\Disc</h1>
     </div>
         <div class="content">
                 <p>    class
-    <strong>Segment</strong>        extends <a href="../../Maths/Geometry/Line.html"><abbr title="Maths\Geometry\Line">Line</abbr></a></p>
+    <strong>Disc</strong>        extends <a href="../../Maths/Geometry/Circle.html"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></p>
 
             <div class="description">
-            <p>Segment class : two points A -> B</p>
+            <p>Class Disc</p>
             <p>
 </p>
         </div>
@@ -42,11 +42,11 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_a = null, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_b = null, int $space_type = Maths::CARTESIAN_2D)
+                    <a href="#method___construct">__construct</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_o = null, null|int $radius = null, int $space_type = Maths::CARTESIAN_2D)
                     <p>
 </p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method___construct"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method___construct"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -188,7 +188,8 @@
                 </td>
                 <td class="last">
                     <a href="#method___toString">__toString</a>()
-                    <p>Write a segment as <code>[(Ax,Ay),(Bx,By)]</code></p>
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
@@ -238,99 +239,91 @@
                 </td>
                 <td class="last">
                     <a href="#method___equationToString">__equationToString</a>()
-                    <p>Write an algebraic function of the segment</p>
+                    <p>Write an algebraic function of the circle</p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method___equationToString"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     <abbr title="Maths\Geometry\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setPointA">setPointA</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
-                    <p>Define point A of the line</p>
+                    <a href="#method_setRadius">setRadius</a>(int|mixed $val)
+                    <p>Define the radius value of the circle</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_setPointA"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_setRadius"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getRadius">getRadius</a>()
+                    <p>Get the radius value of the point</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getRadius"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method_setPointO">setPointO</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <p>Define point O (origin) point of the circle</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_setPointO"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
                 </td>
                 <td class="last">
-                    <a href="#method_getPointA">getPointA</a>()
-                    <p>Get the A point of the line</p>
+                    <a href="#method_getPointO">getPointO</a>()
+                    <p>Get the O (origin) point of the circle</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_getPointA"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getPointO"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     <abbr title="Maths\Geometry\$this">$this</abbr>
                 </td>
                 <td class="last">
-                    <a href="#method_setPointB">setPointB</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
-                    <p>Define point B of the line</p>
+                    <a href="#method_setOrigin">setOrigin</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <p>Define point O (origin) point of the circle</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_setPointB"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_setOrigin"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
                 </td>
                 <td class="last">
-                    <a href="#method_getPointB">getPointB</a>()
-                    <p>Get the B point of the line</p>
+                    <a href="#method_getOrigin">getOrigin</a>()
+                    <p>Get the O (origin) point of the circle</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_getPointB"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getOrigin"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     float
                 </td>
                 <td class="last">
-                    <a href="#method_getSlope">getSlope</a>()
-                    <p>Get the slope of the line: m = (By - Ay) / (Bx - Ax)</p>
+                    <a href="#method_getDiameter">getDiameter</a>()
+                    <p>
+</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_getSlope"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getDiameter"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     float
                 </td>
                 <td class="last">
-                    <a href="#method_getYIntercept">getYIntercept</a>()
-                    <p>Get the y-intercept of the line: m = (By - Ay) / (Bx - Ax)</p>
+                    <a href="#method_getPerimeter">getPerimeter</a>()
+                    <p>
+</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_getYIntercept"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
-                </td>
-                <td class="last">
-                    <a href="#method_rearrange">rearrange</a>(int $direction = Maths::DIRECTION_POSITIVE)
-                    <p>Rearrange a segment to have [A->B] in requested direction</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_rearrange"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    bool
-                </td>
-                <td class="last">
-                    <a href="#method_isVertical">isVertical</a>()
-                    <p>Test if a line is vertical (constant X value)</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_isVertical"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    bool
-                </td>
-                <td class="last">
-                    <a href="#method_isHorizontal">isHorizontal</a>()
-                    <p>Test if a line is horizontal (constant Y value)</p>
-                </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_isHorizontal"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getPerimeter"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -338,10 +331,9 @@
                 </td>
                 <td class="last">
                     <a href="#method_isValidPoint">isValidPoint</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)
-                    <p>
-</p>
+                    <p>Test if a point is part of the disc ([O->a] &lt;= r)</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_isValidPoint"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -349,9 +341,9 @@
                 </td>
                 <td class="last">
                     <a href="#method_getOrdinateByAbscissa">getOrdinateByAbscissa</a>(float $x)
-                    <p>Get the ordinate of a point of the line by its abscissa</p>
+                    <p>Get the ordinate of a point of the circle by its abscissa</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_getOrdinateByAbscissa"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getOrdinateByAbscissa"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
@@ -359,27 +351,28 @@
                 </td>
                 <td class="last">
                     <a href="#method_getAbscissaByOrdinate">getAbscissaByOrdinate</a>(float $y)
-                    <p>Get the abscissa of a point of the line by its ordinate</p>
+                    <p>Get the abscissa of a point of the circle by its ordinate</p>
                 </td>
-                <td><small>from&nbsp;<a href="../../Maths/Geometry/Line.html#method_getAbscissaByOrdinate"><abbr title="Maths\Geometry\Line">Line</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/Circle.html#method_getAbscissaByOrdinate"><abbr title="Maths\Geometry\Circle">Circle</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     float
                 </td>
                 <td class="last">
-                    <a href="#method_getLength">getLength</a>()
-                    <p>Get the length of the segment</p>
+                    <a href="#method_getArea">getArea</a>()
+                    <p>
+</p>
                 </td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type">
-                    <a href="../../Maths/Geometry/Point.html"><abbr title="Maths\Geometry\Point">Point</abbr></a>
+                    bool
                 </td>
                 <td class="last">
-                    <a href="#method_getCenter">getCenter</a>()
-                    <p>Get the middle of the segment as a <code>\Maths\Geometry\Point</code> object</p>
+                    <a href="#method_isValidCirclePoint">isValidCirclePoint</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)
+                    <p>Test if a point is on the external circle of the disc</p>
                 </td>
                 <td></td>
             </tr>
@@ -389,9 +382,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method___construct"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 39</div>
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method___construct"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 60</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_a = null, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_b = null, int $space_type = Maths::CARTESIAN_2D)</code>
+    <strong>__construct</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_o = null, null|int $radius = null, int $space_type = Maths::CARTESIAN_2D)</code>
     </h3>
     <div class="details">
         <p>
@@ -404,13 +397,13 @@
                     <table>
                     <tr>
                 <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
-                <td>$point_a</td>
+                <td>$point_o</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
-                <td>$point_b</td>
+                <td>null|int</td>
+                <td>$radius</td>
                 <td>
 </td>
             </tr>
@@ -898,12 +891,13 @@
     </div>
 
                 <h3 id="method___toString">
-        <div class="location">at line 30</div>
+        <div class="location">at line 27</div>
         <code>                    string
     <strong>__toString</strong>()</code>
     </h3>
     <div class="details">
-        <p>Write a segment as <code>[(Ax,Ay),(Bx,By)]</code></p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -1090,14 +1084,13 @@
     </div>
 
                 <h3 id="method___equationToString">
-        <div class="location">at line 47</div>
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method___equationToString"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 91</div>
         <code>                    string
     <strong>__equationToString</strong>()</code>
     </h3>
     <div class="details">
-        <p>Write an algebraic function of the segment</p>
-        <p>
-</p>
+        <p>Write an algebraic function of the circle</p>
+        <p>(x - Ox)^2 + (y - Oy)^2 = r^2</p>
         <div class="tags">
             
                             <h4>Return Value</h4>
@@ -1115,13 +1108,76 @@
                     </div>
     </div>
 
-                <h3 id="method_setPointA">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_setPointA"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 91</div>
+                <h3 id="method_setRadius">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_setRadius"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 105</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setPointA</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    <strong>setRadius</strong>(int|mixed $val)</code>
     </h3>
     <div class="details">
-        <p>Define point A of the line</p>
+        <p>Define the radius value of the circle</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int|mixed</td>
+                <td>$val</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRadius">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getRadius"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 116</div>
+        <code>                    mixed
+    <strong>getRadius</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the radius value of the point</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPointO">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_setPointO"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 128</div>
+        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setPointO</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    </h3>
+    <div class="details">
+        <p>Define point O (origin) point of the circle</p>
         <p>
 </p>
         <div class="tags">
@@ -1161,13 +1217,13 @@
                     </div>
     </div>
 
-                <h3 id="method_getPointA">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_getPointA"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 106</div>
+                <h3 id="method_getPointO">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getPointO"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 143</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
-    <strong>getPointA</strong>()</code>
+    <strong>getPointO</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the A point of the line</p>
+        <p>Get the O (origin) point of the circle</p>
         <p>
 </p>
         <div class="tags">
@@ -1187,13 +1243,13 @@
                     </div>
     </div>
 
-                <h3 id="method_setPointB">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_setPointB"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 118</div>
+                <h3 id="method_setOrigin">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_setOrigin"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 155</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setPointB</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    <strong>setOrigin</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
     <div class="details">
-        <p>Define point B of the line</p>
+        <p>Define point O (origin) point of the circle</p>
         <p>
 </p>
         <div class="tags">
@@ -1233,13 +1289,13 @@
                     </div>
     </div>
 
-                <h3 id="method_getPointB">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_getPointB"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 133</div>
+                <h3 id="method_getOrigin">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getOrigin"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 170</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
-    <strong>getPointB</strong>()</code>
+    <strong>getOrigin</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the B point of the line</p>
+        <p>Get the O (origin) point of the circle</p>
         <p>
 </p>
         <div class="tags">
@@ -1259,13 +1315,14 @@
                     </div>
     </div>
 
-                <h3 id="method_getSlope">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_getSlope"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 145</div>
+                <h3 id="method_getDiameter">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getDiameter"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 180</div>
         <code>                    float
-    <strong>getSlope</strong>()</code>
+    <strong>getDiameter</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the slope of the line: m = (By - Ay) / (Bx - Ax)</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -1285,13 +1342,14 @@
                     </div>
     </div>
 
-                <h3 id="method_getYIntercept">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_getYIntercept"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 164</div>
+                <h3 id="method_getPerimeter">
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getPerimeter"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 188</div>
         <code>                    float
-    <strong>getYIntercept</strong>()</code>
+    <strong>getPerimeter</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the y-intercept of the line: m = (By - Ay) / (Bx - Ax)</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -1301,95 +1359,6 @@
                     <table>
         <tr>
             <td>float</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_rearrange">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_rearrange"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 177</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>rearrange</strong>(int $direction = Maths::DIRECTION_POSITIVE)</code>
-    </h3>
-    <div class="details">
-        <p>Rearrange a segment to have [A->B] in requested direction</p>
-        <p>
-</p>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table>
-                    <tr>
-                <td>int</td>
-                <td>$direction</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_isVertical">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_isVertical"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 196</div>
-        <code>                    bool
-    <strong>isVertical</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Test if a line is vertical (constant X value)</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>bool</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method_isHorizontal">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_isHorizontal"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 206</div>
-        <code>                    bool
-    <strong>isHorizontal</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Test if a line is horizontal (constant Y value)</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>bool</td>
             <td>
 </td>
         </tr>
@@ -1401,13 +1370,12 @@
     </div>
 
                 <h3 id="method_isValidPoint">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_isValidPoint"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 215</div>
+        <div class="location">at line 63</div>
         <code>                    bool
     <strong>isValidPoint</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)</code>
     </h3>
     <div class="details">
-        <p>
-</p>
+        <p>Test if a point is part of the disc ([O->a] &lt;= r)</p>
         <p>
 </p>
         <div class="tags">
@@ -1439,14 +1407,13 @@
     </div>
 
                 <h3 id="method_getOrdinateByAbscissa">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_getOrdinateByAbscissa"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 226</div>
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getOrdinateByAbscissa"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 217</div>
         <code>                    float
     <strong>getOrdinateByAbscissa</strong>(float $x)</code>
     </h3>
     <div class="details">
-        <p>Get the ordinate of a point of the line by its abscissa</p>
-        <p>
-</p>
+        <p>Get the ordinate of a point of the circle by its abscissa</p>
+        <p>y = sqrt( r^2 - (x - Ox)^2 ) + Oy</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1476,14 +1443,13 @@
     </div>
 
                 <h3 id="method_getAbscissaByOrdinate">
-        <div class="location">in <a href="../../Maths/Geometry/Line.html#method_getAbscissaByOrdinate"><abbr title="Maths\Geometry\Line">Line</abbr></a> at line 240</div>
+        <div class="location">in <a href="../../Maths/Geometry/Circle.html#method_getAbscissaByOrdinate"><abbr title="Maths\Geometry\Circle">Circle</abbr></a> at line 231</div>
         <code>                    float
     <strong>getAbscissaByOrdinate</strong>(float $y)</code>
     </h3>
     <div class="details">
-        <p>Get the abscissa of a point of the line by its ordinate</p>
-        <p>
-</p>
+        <p>Get the abscissa of a point of the circle by its ordinate</p>
+        <p>x = sqrt( r^2 - (y - Oy)^2 ) + Ox</p>
         <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1512,13 +1478,14 @@
                     </div>
     </div>
 
-                <h3 id="method_getLength">
-        <div class="location">at line 59</div>
+                <h3 id="method_getArea">
+        <div class="location">at line 39</div>
         <code>                    float
-    <strong>getLength</strong>()</code>
+    <strong>getArea</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the length of the segment</p>
+        <p>
+</p>
         <p>
 </p>
         <div class="tags">
@@ -1538,22 +1505,33 @@
                     </div>
     </div>
 
-                <h3 id="method_getCenter">
-        <div class="location">at line 73</div>
-        <code>                    <a href="../../Maths/Geometry/Point.html"><abbr title="Maths\Geometry\Point">Point</abbr></a>
-    <strong>getCenter</strong>()</code>
+                <h3 id="method_isValidCirclePoint">
+        <div class="location">at line 52</div>
+        <code>                    bool
+    <strong>isValidCirclePoint</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)</code>
     </h3>
     <div class="details">
-        <p>Get the middle of the segment as a <code>\Maths\Geometry\Point</code> object</p>
+        <p>Test if a point is on the external circle of the disc</p>
         <p>
 </p>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
                     <table>
         <tr>
-            <td><a href="../../Maths/Geometry/Point.html"><abbr title="Maths\Geometry\Point">Point</abbr></a></td>
+            <td>bool</td>
             <td>
 </td>
         </tr>

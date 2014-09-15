@@ -229,6 +229,26 @@
             </tr>
                     <tr>
                 <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getEquation">getEquation</a>()
+                    <p>Get the algebraic equation of the object</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___equationToString">__equationToString</a>()
+                    <p>Write an algebraic function of the quadrilateral This will return the "toString" result</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
                     <abbr title="Maths\Geometry\$this">$this</abbr>
                 </td>
                 <td class="last">
@@ -384,6 +404,16 @@
                 <td class="last">
                     <a href="#method_getSecondDiagonal">getSecondDiagonal</a>()
                     <p>Get the [B->D] diagonal as a Segment with a positive direction(s)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_isValidPoint">isValidPoint</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)
+                    <p>Test if point A is part of one of quadrilateral's segments</p>
                 </td>
                 <td></td>
             </tr>
@@ -596,7 +626,7 @@
     </div>
 
                 <h3 id="method___set">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 143</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 145</div>
         <code>                    void
     <strong>__set</strong>(mixed $name, mixed $value)</code>
     </h3>
@@ -649,7 +679,7 @@
     </div>
 
                 <h3 id="method___get">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 166</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 168</div>
         <code>                    mixed
     <strong>__get</strong>(mixed $name)</code>
     </h3>
@@ -687,7 +717,7 @@
     </div>
 
                 <h3 id="method___isset">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 185</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 187</div>
         <code>                    bool
     <strong>__isset</strong>(mixed $name)</code>
     </h3>
@@ -725,7 +755,7 @@
     </div>
 
                 <h3 id="method___unset">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 205</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 207</div>
         <code>                    void
     <strong>__unset</strong>(mixed $name)</code>
     </h3>
@@ -950,7 +980,7 @@
     </div>
 
                 <h3 id="method_setPoint">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 58</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 60</div>
         <code>                    
     <strong>setPoint</strong>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -996,7 +1026,7 @@
     </div>
 
                 <h3 id="method_getPoint">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 81</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 83</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
     <strong>getPoint</strong>(string $name)</code>
     </h3>
@@ -1033,7 +1063,7 @@
     </div>
 
                 <h3 id="method_getSegment">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 100</div>
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 102</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegment</strong>(string $name1, string|null $name2 = null)</code>
     </h3>
@@ -1089,8 +1119,60 @@
                     </div>
     </div>
 
+                <h3 id="method_getEquation">
+        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 233</div>
+        <code>                    string
+    <strong>getEquation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the algebraic equation of the object</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___equationToString">
+        <div class="location">at line 93</div>
+        <code>                    string
+    <strong>__equationToString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Write an algebraic function of the quadrilateral This will return the "toString" result</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_setPointA">
-        <div class="location">at line 96</div>
+        <div class="location">at line 107</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
     <strong>setPointA</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -1136,7 +1218,7 @@
     </div>
 
                 <h3 id="method_getPointA">
-        <div class="location">at line 111</div>
+        <div class="location">at line 122</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointA</strong>()</code>
     </h3>
@@ -1162,7 +1244,7 @@
     </div>
 
                 <h3 id="method_setPointB">
-        <div class="location">at line 123</div>
+        <div class="location">at line 134</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
     <strong>setPointB</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -1208,7 +1290,7 @@
     </div>
 
                 <h3 id="method_getPointB">
-        <div class="location">at line 138</div>
+        <div class="location">at line 149</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointB</strong>()</code>
     </h3>
@@ -1234,7 +1316,7 @@
     </div>
 
                 <h3 id="method_setPointC">
-        <div class="location">at line 150</div>
+        <div class="location">at line 161</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
     <strong>setPointC</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -1280,7 +1362,7 @@
     </div>
 
                 <h3 id="method_getPointC">
-        <div class="location">at line 165</div>
+        <div class="location">at line 176</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointC</strong>()</code>
     </h3>
@@ -1306,7 +1388,7 @@
     </div>
 
                 <h3 id="method_setPointD">
-        <div class="location">at line 177</div>
+        <div class="location">at line 188</div>
         <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
     <strong>setPointD</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
@@ -1352,7 +1434,7 @@
     </div>
 
                 <h3 id="method_getPointD">
-        <div class="location">at line 192</div>
+        <div class="location">at line 203</div>
         <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointD</strong>()</code>
     </h3>
@@ -1378,7 +1460,7 @@
     </div>
 
                 <h3 id="method_getSegmentAB">
-        <div class="location">at line 205</div>
+        <div class="location">at line 216</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegmentAB</strong>()</code>
     </h3>
@@ -1413,7 +1495,7 @@
     </div>
 
                 <h3 id="method_getSegmentBC">
-        <div class="location">at line 220</div>
+        <div class="location">at line 231</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegmentBC</strong>()</code>
     </h3>
@@ -1448,7 +1530,7 @@
     </div>
 
                 <h3 id="method_getSegmentCD">
-        <div class="location">at line 235</div>
+        <div class="location">at line 246</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegmentCD</strong>()</code>
     </h3>
@@ -1483,7 +1565,7 @@
     </div>
 
                 <h3 id="method_getSegmentDA">
-        <div class="location">at line 250</div>
+        <div class="location">at line 261</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegmentDA</strong>()</code>
     </h3>
@@ -1518,7 +1600,7 @@
     </div>
 
                 <h3 id="method_getSegmentAC">
-        <div class="location">at line 265</div>
+        <div class="location">at line 276</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegmentAC</strong>()</code>
     </h3>
@@ -1553,7 +1635,7 @@
     </div>
 
                 <h3 id="method_getSegmentBD">
-        <div class="location">at line 280</div>
+        <div class="location">at line 291</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSegmentBD</strong>()</code>
     </h3>
@@ -1588,7 +1670,7 @@
     </div>
 
                 <h3 id="method_getFirstDiagonal">
-        <div class="location">at line 295</div>
+        <div class="location">at line 306</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getFirstDiagonal</strong>()</code>
     </h3>
@@ -1623,7 +1705,7 @@
     </div>
 
                 <h3 id="method_getSecondDiagonal">
-        <div class="location">at line 317</div>
+        <div class="location">at line 328</div>
         <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
     <strong>getSecondDiagonal</strong>()</code>
     </h3>
@@ -1657,8 +1739,45 @@
                     </div>
     </div>
 
+                <h3 id="method_isValidPoint">
+        <div class="location">at line 352</div>
+        <code>                    bool
+    <strong>isValidPoint</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $a)</code>
+    </h3>
+    <div class="details">
+        <p>Test if point A is part of one of quadrilateral's segments</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>$a</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
                 <h3 id="method_isParallelogram">
-        <div class="location">at line 340</div>
+        <div class="location">at line 369</div>
         <code>                    bool
     <strong>isParallelogram</strong>()</code>
     </h3>
