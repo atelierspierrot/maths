@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Maths\Geometry\Rectangle | Maths</title>
+    <title>Maths\Geometry\RightTriangle | Maths</title>
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
@@ -16,7 +16,7 @@
     
     </head>
 
-    <body id="class" data-name="class:Maths_Geometry_Rectangle" data-root-path="../../">
+    <body id="class" data-name="class:Maths_Geometry_RightTriangle" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -63,26 +63,39 @@
                                                             <li><a href="../../Maths.html">Maths</a></li>
                                         <li><a href="../../Maths/Geometry.html">Geometry</a></li>
     
-                <li>Rectangle</li>
+                <li>RightTriangle</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
-        <h1>Rectangle</h1>
+        <h1>RightTriangle</h1>
     </div>
 
     <p>    class
-    <strong>Rectangle</strong>        extends <a href="../../Maths/Geometry/Quadrilateral.html"><abbr title="Maths\Geometry\Quadrilateral">Quadrilateral</abbr></a></p>
+    <strong>RightTriangle</strong>        extends <a href="../../Maths/Geometry/Rectangle.html"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a></p>
 
             <div class="description">
-            <p>Class Rectangle</p>            <p>D       C
-     ---------
-     |       |
-     ---------
-     A       B
- y
- ↑ → x</p>        </div>
+            <p>Class Right Triangle</p>            <p><ul>
+<li>triangle ABC</li>
+<li>right angle in B</li>
+<li>'alpha' angle is [cAb]</li>
+<li><p>'beta' angle is [aCb]</p>
+
+<pre><code>  C
+/ |
+</code></pre>
+
+<p>/  |
+  /   |</p>
+
+<hr />
+
+<p>A      B
+y
+↑ → x</p></li>
+</ul>
+</p>        </div>
     
     
     
@@ -95,7 +108,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_a = null, null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_b = null, null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_c = null, null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_d = null, int $space_type = Maths::CARTESIAN_2D)
+                    <a href="#method___construct">__construct</a>()
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
@@ -228,7 +241,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___toString">__toString</a>()
                                             <p>Write a line object as <code>[(Ax,Ay),(Bx,By),(Cx,Cy),(Dx,Dy)]</code></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/Quadrilateral.html#method___toString"><abbr title="Maths\Geometry\Quadrilateral">Quadrilateral</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -445,7 +458,7 @@ This will return the "toString" result</p>                </div>
                 <div class="col-md-8 type">
                     <a href="#method_getWidth">getWidth</a>()
                                             <p>Get rectangle's width (by convention width > height)</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/Rectangle.html#method_getWidth"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -454,7 +467,7 @@ This will return the "toString" result</p>                </div>
                 <div class="col-md-8 type">
                     <a href="#method_getHeight">getHeight</a>()
                                             <p>Get rectangle's height (by convention width > height)</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/Rectangle.html#method_getHeight"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -484,6 +497,46 @@ This will return the "toString" result</p>                </div>
                     <a href="#method_createFromCoordinates">createFromCoordinates</a>(array $coords)
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/Rectangle.html#method_createFromCoordinates"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createFromWidthAndAlpha">createFromWidthAndAlpha</a>(array $coords)
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAlpha">getAlpha</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBeta">getBeta</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Geometry\numeric">numeric</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHypotenuse">getHypotenuse</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -494,47 +547,12 @@ This will return the "toString" result</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 51</div>
+        <div class="location">at line 48</div>
         <code>                    
-    <strong>__construct</strong>(null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_a = null, null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_b = null, null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_c = null, null|<abbr title="Maths\Point(s)">Point(s)</abbr> $point_d = null, int $space_type = Maths::CARTESIAN_2D)</code>
+    <strong>__construct</strong>()</code>
     </h3>
     <div class="details">
                 <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>null|<abbr title="Maths\Point(s)">Point(s)</abbr></td>
-                <td>$point_a</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td>null|<abbr title="Maths\Point(s)">Point(s)</abbr></td>
-                <td>$point_b</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td>null|<abbr title="Maths\Point(s)">Point(s)</abbr></td>
-                <td>$point_c</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td>null|<abbr title="Maths\Point(s)">Point(s)</abbr></td>
-                <td>$point_d</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td>int</td>
-                <td>$space_type</td>
-                <td>
-</td>
-            </tr>
-            </table>
-
             
             
             
@@ -1014,7 +1032,7 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">in <a href="../../Maths/Geometry/Quadrilateral.html#method___toString"><abbr title="Maths\Geometry\Quadrilateral">Quadrilateral</abbr></a> at line 86</div>
+        <div class="location">at line 97</div>
         <code>                    string
     <strong>__toString</strong>()</code>
     </h3>
@@ -1889,7 +1907,7 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getWidth">
-        <div class="location">at line 67</div>
+        <div class="location">in <a href="../../Maths/Geometry/Rectangle.html#method_getWidth"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a> at line 67</div>
         <code>                    <abbr title="Maths\Geometry\numeric">numeric</abbr>
     <strong>getWidth</strong>()</code>
     </h3>
@@ -1916,7 +1934,7 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getHeight">
-        <div class="location">at line 80</div>
+        <div class="location">in <a href="../../Maths/Geometry/Rectangle.html#method_getHeight"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a> at line 80</div>
         <code>                    <abbr title="Maths\Geometry\numeric">numeric</abbr>
     <strong>getHeight</strong>()</code>
     </h3>
@@ -1943,7 +1961,7 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getArea">
-        <div class="location">at line 91</div>
+        <div class="location">at line 84</div>
         <code>                    <abbr title="Maths\Geometry\numeric">numeric</abbr>
     <strong>getArea</strong>()</code>
     </h3>
@@ -1968,7 +1986,7 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPerimeter">
-        <div class="location">at line 99</div>
+        <div class="location">at line 92</div>
         <code>                    <abbr title="Maths\Geometry\numeric">numeric</abbr>
     <strong>getPerimeter</strong>()</code>
     </h3>
@@ -1993,7 +2011,7 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createFromCoordinates">
-        <div class="location">at line 109</div>
+        <div class="location">in <a href="../../Maths/Geometry/Rectangle.html#method_createFromCoordinates"><abbr title="Maths\Geometry\Rectangle">Rectangle</abbr></a> at line 109</div>
         <code>                    
     <strong>createFromCoordinates</strong>(array $coords)</code>
     </h3>
@@ -2010,6 +2028,87 @@ This will return the "toString" result</p>                                </div>
             </table>
 
             
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFromWidthAndAlpha">
+        <div class="location">at line 53</div>
+        <code>                    
+    <strong>createFromWidthAndAlpha</strong>(array $coords)</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$coords</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAlpha">
+        <div class="location">at line 63</div>
+        <code>                    
+    <strong>getAlpha</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBeta">
+        <div class="location">at line 68</div>
+        <code>                    
+    <strong>getBeta</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHypotenuse">
+        <div class="location">at line 76</div>
+        <code>                    <abbr title="Maths\Geometry\numeric">numeric</abbr>
+    <strong>getHypotenuse</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Geometry\numeric">numeric</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
             
             
                     </div>

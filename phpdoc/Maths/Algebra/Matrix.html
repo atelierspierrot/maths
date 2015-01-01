@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Maths\Algebra\Matrix | Maths</title>
-                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="../../classes.html">Classes</a></li>
-                            <li><a href="../../namespaces.html">Namespaces</a></li>
-                        <li><a href="../../interfaces.html">Interfaces</a></li>
-            <li><a href="../../traits.html">Traits</a></li>
-            <li><a href="../../doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Maths\Algebra\Matrix | Maths</title>
 
-        <div id="title">Maths</div>
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+    
+    
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href="../../Maths/Algebra.html">Maths\Algebra</a>\Matrix</h1>
+    <body id="class" data-name="class:Maths_Algebra_Matrix" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Maths</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Maths.html">Maths</a></li>
+                                        <li><a href="../../Maths/Algebra.html">Algebra</a></li>
+    
+                <li>Matrix</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Matrix</h1>
+    </div>
+
+    <p>    class
     <strong>Matrix</strong>        implements
         <abbr title="Maths\Algebra\ArrayAccess">ArrayAccess</abbr>, <abbr title="Maths\Algebra\SeekableIterator">SeekableIterator</abbr>, <abbr title="Maths\Algebra\Countable">Countable</abbr>, <abbr title="Maths\Algebra\Serializable">Serializable</abbr></p>
 
             <div class="description">
-            <p>Class Matrix</p>
-            <p>Bidimensional array representation of a matrix.
+            <p>Class Matrix</p>            <p>Bidimensional array representation of a matrix.
 Each matrix's item is indexed like <code>x,y</code> with first item indexed <code>1,1</code> (1 based).</p>
 
 <h2>Iterate over items: the <code>WALK_</code> flags</h2>
@@ -69,12 +117,12 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
  position `2,4` is index `7` (with 4 cells per line)
 </code></pre>
 
-<p>The "positional" indexing can be forced in all cases using explicitly a string index with <code>matrix['x']</code>.</p>
-        </div>
+<p>The "positional" indexing can be forced in all cases using explicitly a string index with <code>matrix['x']</code>.</p>        </div>
+    
     
             <h2>Constants</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td>ARRAY_XY</td>
                 <td class="last">
@@ -127,7 +175,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property__size">
                                                                                 array
@@ -169,784 +217,710 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(array $data = null, int $walk_flag = self::WALK_XY, int $array_flag = self::ARRAY_XY, mixed $empty_cell)
-                    <p>MATRIX constructor</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>MATRIX constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___toString">__toString</a>()
-                    <p>Magic method to <code>echo $object</code> which returns a 2D representation of the matrix</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Magic method to <code>echo $object</code> which returns a 2D representation of the matrix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_reset">reset</a>()
-                    <p>Reset object <code>$data</code> to its original state</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Reset object <code>$data</code> to its original state</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int|array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getSize">getSize</a>(string $which = null)
-                    <p>Get the matrix size</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get the matrix size</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setWalkFlag">setWalkFlag</a>(int $flag, bool $auto_rewind = true)
-                    <p>Define the object's walk flag</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Define the object's walk flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getWalkFlag">getWalkFlag</a>()
-                    <p>Get the current object's walk flag</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get the current object's walk flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setArrayFlag">setArrayFlag</a>(int $flag, bool $auto_rewind = true)
-                    <p>Define the object's array access flag</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Define the object's array access flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getArrayFlag">getArrayFlag</a>()
-                    <p>Get the current object's array access flag</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get the current object's array access flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setEmptyCell">setEmptyCell</a>(mixed $cell)
-                    <p>Set the empty cell value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set the empty cell value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getEmptyCell">getEmptyCell</a>()
-                    <p>Get the empty cell value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get the empty cell value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setData">setData</a>(array $data = null)
-                    <p>Set the matrix contents</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set the matrix contents</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|<abbr title="Maths\Algebra\Traversable">Traversable</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getData">getData</a>()
-                    <p>Get the matrix as array</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get the matrix as array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_get">get</a>(string|int $index)
-                    <p>Get a cell value by index according to matrix's flags</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get a cell value by index according to matrix's flags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getX">getX</a>(string|int $index)
-                    <p>Get <code>x</code> value (line) by index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get <code>x</code> value (line) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getY">getY</a>(string|int $index)
-                    <p>Get <code>y</code> value (column) by index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get <code>y</code> value (column) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getXY">getXY</a>(string|int $index)
-                    <p>Get <code>x:y</code> value (cell) by positional index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get <code>x:y</code> value (cell) by positional index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getInt">getInt</a>(int $index)
-                    <p>Get <code>x:y</code> value (cell) by integer index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get <code>x:y</code> value (cell) by integer index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_set">set</a>(string|int $index, mixed $value)
-                    <p>Set a value by index according to matrix's flags</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set a value by index according to matrix's flags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setX">setX</a>(string|int $index, array $value)
-                    <p>Set <code>x</code> value (line) by index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set <code>x</code> value (line) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setY">setY</a>(string|int $index, array $value)
-                    <p>Set <code>y</code> value (column) by index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set <code>y</code> value (column) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setXY">setXY</a>(string $index, mixed $value)
-                    <p>Set <code>x:y</code> value (cell) by positional index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set <code>x:y</code> value (cell) by positional index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setInt">setInt</a>(int $index, mixed $value)
-                    <p>Set <code>x:y</code> value (cell) by integer index</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set <code>x:y</code> value (cell) by integer index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_rewind">rewind</a>()
-                    <p>Rewind a matrix according to its flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Rewind a matrix according to its flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_rewindX">rewindX</a>()
-                    <p>Rewind <code>x</code> index to position <code>1</code></p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Rewind <code>x</code> index to position <code>1</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_rewindY">rewindY</a>()
-                    <p>Rewind <code>y</code> index to position <code>1</code></p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Rewind <code>y</code> index to position <code>1</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_rewindXY">rewindXY</a>()
-                    <p>Rewind both <code>x</code> and <code>y</code> indexes to position <code>1,1</code></p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Rewind both <code>x</code> and <code>y</code> indexes to position <code>1,1</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_previous">previous</a>()
-                    <p>Go to previous index according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Go to previous index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_previousX">previousX</a>()
-                    <p>Seek to current <code>x</code> less 1</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to current <code>x</code> less 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_previousXExists">previousXExists</a>()
-                    <p>Test if current <code>x</code> less 1 exists</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>x</code> less 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_previousY">previousY</a>()
-                    <p>Seek to current <code>y</code> less 1</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to current <code>y</code> less 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_previousYExists">previousYExists</a>()
-                    <p>Test if current <code>y</code> less 1 exists</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>y</code> less 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_previousXY">previousXY</a>()
-                    <p>Seek to previous cell</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to previous cell</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_next">next</a>()
-                    <p>Go to next index according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Go to next index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_nextX">nextX</a>()
-                    <p>Seek to current <code>x</code> plus 1</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to current <code>x</code> plus 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_nextXExists">nextXExists</a>()
-                    <p>Test if current <code>x</code> plus 1 exists</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>x</code> plus 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_nextY">nextY</a>()
-                    <p>Seek to current <code>y</code> plus 1</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to current <code>y</code> plus 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_nextYExists">nextYExists</a>()
-                    <p>Test if current <code>y</code> plus 1 exists</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>y</code> plus 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_nextXY">nextXY</a>()
-                    <p>Go to next cell</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Go to next cell</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seek">seek</a>(string $index)
-                    <p>Seek to index according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekX">seekX</a>(int $index)
-                    <p>Seek to index for <code>x</code> (line)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to index for <code>x</code> (line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekY">seekY</a>(int $index)
-                    <p>Seek to index for <code>y</code> (column)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to index for <code>y</code> (column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekXY">seekXY</a>(string $index)
-                    <p>Seek to index for <code>x,y</code> (cell)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek to index for <code>x,y</code> (cell)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekInt">seekInt</a>(int $index)
-                    <p>Go to index <code>x,y</code> represented as an integer (0 based)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Go to index <code>x,y</code> represented as an integer (0 based)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_current">current</a>()
-                    <p>Get current value according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current value according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_currentX">currentX</a>()
-                    <p>Get current <code>x</code> value (line)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>x</code> value (line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_currentY">currentY</a>()
-                    <p>Get current <code>y</code> value (column)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>y</code> value (column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_currentXY">currentXY</a>()
-                    <p>Get current <code>x:y</code> value (cell)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>x:y</code> value (cell)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_key">key</a>()
-                    <p>Get current index according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_keyX">keyX</a>(bool $integer = false)
-                    <p>Get current <code>x</code> index (line)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>x</code> index (line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_keyY">keyY</a>(bool $integer = false)
-                    <p>Get current <code>y</code> index (column)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>y</code> index (column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_keyXY">keyXY</a>(bool $integer = false)
-                    <p>Get current <code>x,y</code> index (cell)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>x,y</code> index (cell)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_keyInt">keyInt</a>()
-                    <p>Get current <code>x,y</code> index as an integer (0 based)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get current <code>x,y</code> index as an integer (0 based)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_valid">valid</a>()
-                    <p>Test if current value is valid according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current value is valid according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_validX">validX</a>()
-                    <p>Test if current <code>x</code> line is valid</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>x</code> line is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_validY">validY</a>()
-                    <p>Test if current <code>y</code> column is valid</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>y</code> column is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_validXY">validXY</a>()
-                    <p>Test if current <code>x:y</code> cell is valid</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if current <code>x:y</code> cell is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_count">count</a>()
-                    <p>Count the number of values according to matrix's flag value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Count the number of values according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_countX">countX</a>()
-                    <p>Count the number of lines</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Count the number of lines</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_countY">countY</a>()
-                    <p>Count the number of columns</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Count the number of columns</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_countXY">countXY</a>()
-                    <p>Count the number of cells</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Count the number of cells</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekToOffset">seekToOffset</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
-                    <p>Seek <code>x</code> and <code>y</code> to an offset</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek <code>x</code> and <code>y</code> to an offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekToOffsetInteger">seekToOffsetInteger</a>(int $offset)
-                    <p>Seek <code>x</code> and <code>y</code> to an integer offset</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek <code>x</code> and <code>y</code> to an integer offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_seekToOffsetPositional">seekToOffsetPositional</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
-                    <p>Seek <code>x</code> and <code>y</code> to a positional offset</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Seek <code>x</code> and <code>y</code> to a positional offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_offsetExists">offsetExists</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
-                    <p>Test if an offset exists</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if an offset exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_offsetGet">offsetGet</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
-                    <p>Get an offset value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get an offset value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_offsetSet">offsetSet</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset, mixed $value)
-                    <p>Set an offset value</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Set an offset value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="Maths\Algebra\$this">$this</abbr>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_offsetUnset">offsetUnset</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
-                    <p>Unset an offset value (replacing it by '0')</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Unset an offset value (replacing it by '0')</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_serialize">serialize</a>()
-                    <p>Serialize a matrix: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are stored</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Serialize a matrix: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are stored</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_unserialize">unserialize</a>(string $serialized)
-                    <p>Populate a matrix from a serialized array: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are populated</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Populate a matrix from a serialized array: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are populated</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getLine">getLine</a>(int $index = null)
-                    <p>Get a line value (specifying an optional index)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get a line value (specifying an optional index)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getColumn">getColumn</a>(int $index = null)
-                    <p>Get a column value (specifying an optional index)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get a column value (specifying an optional index)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed|null
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getCell">getCell</a>(string $index = null)
-                    <p>Get a cell value (specifying an optional index)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Get a cell value (specifying an optional index)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isSquareMatrix">isSquareMatrix</a>()
-                    <p>Test if a matrix is a square (number of lines = number of columns)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if a matrix is a square (number of lines = number of columns)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isRowVector">isRowVector</a>()
-                    <p>Test if a matrix is a row vector (one single line)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if a matrix is a row vector (one single line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isColumnVector">isColumnVector</a>()
-                    <p>Test if a matrix is a column vector (one single column)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                                            <p>Test if a matrix is a column vector (one single column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___debug">__debug</a>(string $property = null, bool $verbose = false)
-                    <p>Special <code>__toString()</code> with infos</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+                                            <p>Special <code>__toString()</code> with infos</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 140</div>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 152</div>
         <code>                    
     <strong>__construct</strong>(array $data = null, int $walk_flag = self::WALK_XY, int $array_flag = self::ARRAY_XY, mixed $empty_cell)</code>
     </h3>
     <div class="details">
-        <p>MATRIX constructor</p>
-        <p>Any missing item in a sub-array will be replaced by <code>$empty_cell</code>.</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>MATRIX constructor</p>                    <p>Any missing item in a sub-array will be replaced by <code>$empty_cell</code>.</p>            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$data</td>
@@ -977,9 +951,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if <code>$data</code> is not a 2D array</td>
             </tr>
             </table>
@@ -988,20 +962,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method___toString">
-        <div class="location">at line 160</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line 172</div>
         <code>                    string
     <strong>__toString</strong>()</code>
     </h3>
     <div class="details">
-        <p>Magic method to <code>echo $object</code> which returns a 2D representation of the matrix</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Magic method to <code>echo $object</code> which returns a 2D representation of the matrix</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
             <td>
@@ -1014,35 +989,37 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_reset">
-        <div class="location">at line 174</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at line 186</div>
         <code>                    
     <strong>reset</strong>()</code>
     </h3>
     <div class="details">
-        <p>Reset object <code>$data</code> to its original state</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Reset object <code>$data</code> to its original state</p>                                </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method_getSize">
-        <div class="location">at line 186</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSize">
+        <div class="location">at line 198</div>
         <code>                    int|array
     <strong>getSize</strong>(string $which = null)</code>
     </h3>
     <div class="details">
-        <p>Get the matrix size</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get the matrix size</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$which</td>
@@ -1054,7 +1031,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int|array</td>
             <td>
@@ -1067,19 +1044,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setWalkFlag">
-        <div class="location">at line 202</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setWalkFlag">
+        <div class="location">at line 214</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setWalkFlag</strong>(int $flag, bool $auto_rewind = true)</code>
     </h3>
     <div class="details">
-        <p>Define the object's walk flag</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Define the object's walk flag</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$flag</td>
@@ -1097,7 +1075,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1110,20 +1088,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getWalkFlag">
-        <div class="location">at line 216</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWalkFlag">
+        <div class="location">at line 228</div>
         <code>                    int
     <strong>getWalkFlag</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the current object's walk flag</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get the current object's walk flag</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -1136,19 +1115,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setArrayFlag">
-        <div class="location">at line 228</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setArrayFlag">
+        <div class="location">at line 240</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setArrayFlag</strong>(int $flag, bool $auto_rewind = true)</code>
     </h3>
     <div class="details">
-        <p>Define the object's array access flag</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Define the object's array access flag</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$flag</td>
@@ -1166,7 +1146,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1179,20 +1159,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getArrayFlag">
-        <div class="location">at line 242</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayFlag">
+        <div class="location">at line 254</div>
         <code>                    int
     <strong>getArrayFlag</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the current object's array access flag</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get the current object's array access flag</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -1205,19 +1186,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setEmptyCell">
-        <div class="location">at line 253</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEmptyCell">
+        <div class="location">at line 265</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setEmptyCell</strong>(mixed $cell)</code>
     </h3>
     <div class="details">
-        <p>Set the empty cell value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set the empty cell value</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>mixed</td>
                 <td>$cell</td>
@@ -1229,7 +1211,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1242,20 +1224,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getEmptyCell">
-        <div class="location">at line 264</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyCell">
+        <div class="location">at line 276</div>
         <code>                    mixed
     <strong>getEmptyCell</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the empty cell value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get the empty cell value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
             <td>
@@ -1268,19 +1251,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setData">
-        <div class="location">at line 276</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setData">
+        <div class="location">at line 288</div>
         <code>                    void
     <strong>setData</strong>(array $data = null)</code>
     </h3>
     <div class="details">
-        <p>Set the matrix contents</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set the matrix contents</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$data</td>
@@ -1292,7 +1276,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>void</td>
             <td>
@@ -1303,9 +1287,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if <code>$data</code> is not a 2D array</td>
             </tr>
             </table>
@@ -1314,20 +1298,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getData">
-        <div class="location">at line 310</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getData">
+        <div class="location">at line 322</div>
         <code>                    array|<abbr title="Maths\Algebra\Traversable">Traversable</abbr>
     <strong>getData</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get the matrix as array</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get the matrix as array</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array|<abbr title="Maths\Algebra\Traversable">Traversable</abbr></td>
             <td>
@@ -1340,19 +1325,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_get">
-        <div class="location">at line 329</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at line 341</div>
         <code>                    mixed|null
     <strong>get</strong>(string|int $index)</code>
     </h3>
     <div class="details">
-        <p>Get a cell value by index according to matrix's flags</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get a cell value by index according to matrix's flags</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1364,7 +1350,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed|null</td>
             <td>
@@ -1375,13 +1361,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -1389,7 +1375,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::getX()</td>
                 <td></td>
@@ -1411,19 +1397,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getX">
-        <div class="location">at line 358</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getX">
+        <div class="location">at line 370</div>
         <code>                    array
     <strong>getX</strong>(string|int $index)</code>
     </h3>
     <div class="details">
-        <p>Get <code>x</code> value (line) by index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get <code>x</code> value (line) by index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1435,7 +1422,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
             <td>
@@ -1446,9 +1433,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
             </table>
@@ -1457,19 +1444,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getY">
-        <div class="location">at line 377</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getY">
+        <div class="location">at line 389</div>
         <code>                    array
     <strong>getY</strong>(string|int $index)</code>
     </h3>
     <div class="details">
-        <p>Get <code>y</code> value (column) by index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get <code>y</code> value (column) by index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1481,7 +1469,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
             <td>
@@ -1492,9 +1480,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
             </table>
@@ -1503,19 +1491,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getXY">
-        <div class="location">at line 397</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getXY">
+        <div class="location">at line 409</div>
         <code>                    mixed
     <strong>getXY</strong>(string|int $index)</code>
     </h3>
     <div class="details">
-        <p>Get <code>x:y</code> value (cell) by positional index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get <code>x:y</code> value (cell) by positional index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1527,7 +1516,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
             <td>
@@ -1538,13 +1527,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -1553,19 +1542,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getInt">
-        <div class="location">at line 419</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInt">
+        <div class="location">at line 431</div>
         <code>                    mixed
     <strong>getInt</strong>(int $index)</code>
     </h3>
     <div class="details">
-        <p>Get <code>x:y</code> value (cell) by integer index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get <code>x:y</code> value (cell) by integer index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -1577,7 +1567,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
             <td>
@@ -1588,13 +1578,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -1603,19 +1593,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_set">
-        <div class="location">at line 446</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at line 458</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>set</strong>(string|int $index, mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Set a value by index according to matrix's flags</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set a value by index according to matrix's flags</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1633,7 +1624,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1644,13 +1635,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -1658,7 +1649,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::setX()</td>
                 <td></td>
@@ -1680,19 +1671,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setX">
-        <div class="location">at line 476</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setX">
+        <div class="location">at line 488</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setX</strong>(string|int $index, array $value)</code>
     </h3>
     <div class="details">
-        <p>Set <code>x</code> value (line) by index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set <code>x</code> value (line) by index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1710,7 +1702,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1721,9 +1713,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
             </table>
@@ -1732,19 +1724,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setY">
-        <div class="location">at line 495</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setY">
+        <div class="location">at line 507</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setY</strong>(string|int $index, array $value)</code>
     </h3>
     <div class="details">
-        <p>Set <code>y</code> value (column) by index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set <code>y</code> value (column) by index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string|int</td>
                 <td>$index</td>
@@ -1762,7 +1755,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1773,9 +1766,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
             </table>
@@ -1784,19 +1777,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setXY">
-        <div class="location">at line 517</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setXY">
+        <div class="location">at line 529</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setXY</strong>(string $index, mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Set <code>x:y</code> value (cell) by positional index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set <code>x:y</code> value (cell) by positional index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$index</td>
@@ -1814,7 +1808,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1825,13 +1819,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -1840,19 +1834,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_setInt">
-        <div class="location">at line 539</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setInt">
+        <div class="location">at line 551</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>setInt</strong>(int $index, mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Set <code>x:y</code> value (cell) by integer index</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set <code>x:y</code> value (cell) by integer index</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -1870,7 +1865,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1881,13 +1876,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -1896,20 +1891,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_rewind">
-        <div class="location">at line 562</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">at line 574</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>rewind</strong>()</code>
     </h3>
     <div class="details">
-        <p>Rewind a matrix according to its flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Rewind a matrix according to its flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1921,7 +1917,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::rewindX()</td>
                 <td></td>
@@ -1939,20 +1935,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_rewindX">
-        <div class="location">at line 578</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewindX">
+        <div class="location">at line 590</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>rewindX</strong>()</code>
     </h3>
     <div class="details">
-        <p>Rewind <code>x</code> index to position <code>1</code></p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Rewind <code>x</code> index to position <code>1</code></p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1965,20 +1962,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_rewindY">
-        <div class="location">at line 589</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewindY">
+        <div class="location">at line 601</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>rewindY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Rewind <code>y</code> index to position <code>1</code></p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Rewind <code>y</code> index to position <code>1</code></p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -1991,20 +1989,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_rewindXY">
-        <div class="location">at line 600</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewindXY">
+        <div class="location">at line 612</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>rewindXY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Rewind both <code>x</code> and <code>y</code> indexes to position <code>1,1</code></p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Rewind both <code>x</code> and <code>y</code> indexes to position <code>1,1</code></p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2017,20 +2016,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_previous">
-        <div class="location">at line 615</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previous">
+        <div class="location">at line 627</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>previous</strong>()</code>
     </h3>
     <div class="details">
-        <p>Go to previous index according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Go to previous index according to matrix's flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2042,7 +2042,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::previousX()</td>
                 <td></td>
@@ -2060,20 +2060,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_previousX">
-        <div class="location">at line 631</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousX">
+        <div class="location">at line 643</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>previousX</strong>()</code>
     </h3>
     <div class="details">
-        <p>Seek to current <code>x</code> less 1</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to current <code>x</code> less 1</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2086,20 +2087,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_previousXExists">
-        <div class="location">at line 646</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousXExists">
+        <div class="location">at line 658</div>
         <code>                    bool
     <strong>previousXExists</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>x</code> less 1 exists</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>x</code> less 1 exists</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -2112,20 +2114,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_previousY">
-        <div class="location">at line 656</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousY">
+        <div class="location">at line 668</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>previousY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Seek to current <code>y</code> less 1</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to current <code>y</code> less 1</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2138,20 +2141,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_previousYExists">
-        <div class="location">at line 671</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousYExists">
+        <div class="location">at line 683</div>
         <code>                    bool
     <strong>previousYExists</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>y</code> less 1 exists</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>y</code> less 1 exists</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -2164,20 +2168,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_previousXY">
-        <div class="location">at line 681</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousXY">
+        <div class="location">at line 693</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>previousXY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Seek to previous cell</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to previous cell</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2190,20 +2195,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_next">
-        <div class="location">at line 705</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">at line 717</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>next</strong>()</code>
     </h3>
     <div class="details">
-        <p>Go to next index according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Go to next index according to matrix's flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2215,7 +2221,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::nextX()</td>
                 <td></td>
@@ -2233,20 +2239,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_nextX">
-        <div class="location">at line 721</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextX">
+        <div class="location">at line 733</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>nextX</strong>()</code>
     </h3>
     <div class="details">
-        <p>Seek to current <code>x</code> plus 1</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to current <code>x</code> plus 1</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2259,20 +2266,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_nextXExists">
-        <div class="location">at line 736</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextXExists">
+        <div class="location">at line 748</div>
         <code>                    bool
     <strong>nextXExists</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>x</code> plus 1 exists</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>x</code> plus 1 exists</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -2285,20 +2293,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_nextY">
-        <div class="location">at line 746</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextY">
+        <div class="location">at line 758</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>nextY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Seek to current <code>y</code> plus 1</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to current <code>y</code> plus 1</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2311,20 +2320,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_nextYExists">
-        <div class="location">at line 761</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextYExists">
+        <div class="location">at line 773</div>
         <code>                    bool
     <strong>nextYExists</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>y</code> plus 1 exists</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>y</code> plus 1 exists</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -2337,20 +2347,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_nextXY">
-        <div class="location">at line 771</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextXY">
+        <div class="location">at line 783</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>nextXY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Go to next cell</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Go to next cell</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2363,19 +2374,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seek">
-        <div class="location">at line 795</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seek">
+        <div class="location">at line 807</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seek</strong>(string $index)</code>
     </h3>
     <div class="details">
-        <p>Seek to index according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to index according to matrix's flag value</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$index</td>
@@ -2387,7 +2399,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2398,13 +2410,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -2413,19 +2425,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekX">
-        <div class="location">at line 819</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekX">
+        <div class="location">at line 831</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekX</strong>(int $index)</code>
     </h3>
     <div class="details">
-        <p>Seek to index for <code>x</code> (line)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to index for <code>x</code> (line)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -2437,7 +2450,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2448,9 +2461,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
             </table>
@@ -2459,19 +2472,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekY">
-        <div class="location">at line 838</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekY">
+        <div class="location">at line 850</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekY</strong>(int $index)</code>
     </h3>
     <div class="details">
-        <p>Seek to index for <code>y</code> (column)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to index for <code>y</code> (column)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -2483,7 +2497,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2494,9 +2508,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the index is out of range</td>
             </tr>
             </table>
@@ -2505,19 +2519,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekXY">
-        <div class="location">at line 859</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekXY">
+        <div class="location">at line 871</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekXY</strong>(string $index)</code>
     </h3>
     <div class="details">
-        <p>Seek to index for <code>x,y</code> (cell)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek to index for <code>x,y</code> (cell)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$index</td>
@@ -2528,7 +2543,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2539,17 +2554,17 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the <code>x</code> index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the <code>y</code> index is out of range</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is malformed</td>
             </tr>
             </table>
@@ -2558,19 +2573,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekInt">
-        <div class="location">at line 884</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekInt">
+        <div class="location">at line 896</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekInt</strong>(int $index)</code>
     </h3>
     <div class="details">
-        <p>Go to index <code>x,y</code> represented as an integer (0 based)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Go to index <code>x,y</code> represented as an integer (0 based)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -2582,7 +2598,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -2593,13 +2609,13 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>if the argument is not an integer</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the integer is out of matrix's range</td>
             </tr>
             </table>
@@ -2608,20 +2624,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_current">
-        <div class="location">at line 928</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">at line 940</div>
         <code>                    mixed|null
     <strong>current</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get current value according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current value according to matrix's flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed|null</td>
             <td>
@@ -2633,7 +2650,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::currentX()</td>
                 <td></td>
@@ -2651,20 +2668,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_currentX">
-        <div class="location">at line 944</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentX">
+        <div class="location">at line 956</div>
         <code>                    array|null
     <strong>currentX</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get current <code>x</code> value (line)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>x</code> value (line)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array|null</td>
             <td>
@@ -2677,20 +2695,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_currentY">
-        <div class="location">at line 954</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentY">
+        <div class="location">at line 966</div>
         <code>                    array|null
     <strong>currentY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get current <code>y</code> value (column)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>y</code> value (column)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array|null</td>
             <td>
@@ -2703,20 +2722,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_currentXY">
-        <div class="location">at line 968</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentXY">
+        <div class="location">at line 980</div>
         <code>                    mixed|null
     <strong>currentXY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get current <code>x:y</code> value (cell)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>x:y</code> value (cell)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed|null</td>
             <td>
@@ -2729,20 +2749,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_key">
-        <div class="location">at line 981</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">at line 993</div>
         <code>                    string|null
     <strong>key</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get current index according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current index according to matrix's flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string|null</td>
             <td>
@@ -2754,7 +2775,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::keyX()</td>
                 <td></td>
@@ -2772,19 +2793,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_keyX">
-        <div class="location">at line 998</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyX">
+        <div class="location">at line 1010</div>
         <code>                    int|null
     <strong>keyX</strong>(bool $integer = false)</code>
     </h3>
     <div class="details">
-        <p>Get current <code>x</code> index (line)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>x</code> index (line)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$integer</td>
@@ -2795,7 +2817,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int|null</td>
             <td>
@@ -2808,19 +2830,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_keyY">
-        <div class="location">at line 1009</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyY">
+        <div class="location">at line 1021</div>
         <code>                    int|null
     <strong>keyY</strong>(bool $integer = false)</code>
     </h3>
     <div class="details">
-        <p>Get current <code>y</code> index (column)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>y</code> index (column)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$integer</td>
@@ -2831,7 +2854,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int|null</td>
             <td>
@@ -2844,19 +2867,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_keyXY">
-        <div class="location">at line 1020</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyXY">
+        <div class="location">at line 1032</div>
         <code>                    string|null
     <strong>keyXY</strong>(bool $integer = false)</code>
     </h3>
     <div class="details">
-        <p>Get current <code>x,y</code> index (cell)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>x,y</code> index (cell)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$integer</td>
@@ -2867,7 +2891,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string|null</td>
             <td>
@@ -2880,20 +2904,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_keyInt">
-        <div class="location">at line 1033</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyInt">
+        <div class="location">at line 1045</div>
         <code>                    int
     <strong>keyInt</strong>()</code>
     </h3>
     <div class="details">
-        <p>Get current <code>x,y</code> index as an integer (0 based)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get current <code>x,y</code> index as an integer (0 based)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -2906,20 +2931,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_valid">
-        <div class="location">at line 1046</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">at line 1058</div>
         <code>                    bool
     <strong>valid</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current value is valid according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current value is valid according to matrix's flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -2931,7 +2957,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::validX()</td>
                 <td></td>
@@ -2949,20 +2975,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_validX">
-        <div class="location">at line 1062</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validX">
+        <div class="location">at line 1074</div>
         <code>                    bool
     <strong>validX</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>x</code> line is valid</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>x</code> line is valid</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -2975,20 +3002,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_validY">
-        <div class="location">at line 1072</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validY">
+        <div class="location">at line 1084</div>
         <code>                    bool
     <strong>validY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>y</code> column is valid</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>y</code> column is valid</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -3001,20 +3029,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_validXY">
-        <div class="location">at line 1082</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validXY">
+        <div class="location">at line 1094</div>
         <code>                    bool
     <strong>validXY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if current <code>x:y</code> cell is valid</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if current <code>x:y</code> cell is valid</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -3027,20 +3056,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_count">
-        <div class="location">at line 1097</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at line 1109</div>
         <code>                    int
     <strong>count</strong>()</code>
     </h3>
     <div class="details">
-        <p>Count the number of values according to matrix's flag value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Count the number of values according to matrix's flag value</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -3052,7 +3082,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>self::countX()</td>
                 <td></td>
@@ -3070,20 +3100,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_countX">
-        <div class="location">at line 1113</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countX">
+        <div class="location">at line 1125</div>
         <code>                    int
     <strong>countX</strong>()</code>
     </h3>
     <div class="details">
-        <p>Count the number of lines</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Count the number of lines</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -3096,20 +3127,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_countY">
-        <div class="location">at line 1123</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countY">
+        <div class="location">at line 1135</div>
         <code>                    int
     <strong>countY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Count the number of columns</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Count the number of columns</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -3122,20 +3154,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_countXY">
-        <div class="location">at line 1133</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countXY">
+        <div class="location">at line 1145</div>
         <code>                    int
     <strong>countXY</strong>()</code>
     </h3>
     <div class="details">
-        <p>Count the number of cells</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Count the number of cells</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
             <td>
@@ -3148,19 +3181,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekToOffset">
-        <div class="location">at line 1147</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekToOffset">
+        <div class="location">at line 1159</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekToOffset</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
     </h3>
     <div class="details">
-        <p>Seek <code>x</code> and <code>y</code> to an offset</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek <code>x</code> and <code>y</code> to an offset</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
                 <td>$offset</td>
@@ -3172,7 +3206,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -3183,9 +3217,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the offset is out of range of matrix's indexes</td>
             </tr>
             </table>
@@ -3194,19 +3228,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekToOffsetInteger">
-        <div class="location">at line 1167</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekToOffsetInteger">
+        <div class="location">at line 1179</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekToOffsetInteger</strong>(int $offset)</code>
     </h3>
     <div class="details">
-        <p>Seek <code>x</code> and <code>y</code> to an integer offset</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Seek <code>x</code> and <code>y</code> to an integer offset</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$offset</td>
@@ -3218,7 +3253,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -3229,9 +3264,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the offset is out of range of matrix's indexes</td>
             </tr>
             </table>
@@ -3240,25 +3275,27 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_seekToOffsetPositional">
-        <div class="location">at line 1199</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekToOffsetPositional">
+        <div class="location">at line 1211</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>seekToOffsetPositional</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
     </h3>
     <div class="details">
-        <p>Seek <code>x</code> and <code>y</code> to a positional offset</p>
-        <p>Offsets can be written as:</p>
+                    <div class="method-description">
+                                    <p>Seek <code>x</code> and <code>y</code> to a positional offset</p>                    <p>Offsets can be written as:</p>
 
 <ul>
 <li><code>int</code> to set a <code>x</code> index</li>
 <li><code>,int</code> to set an <code>y</code> index</li>
 <li><code>int,int</code> to set a <code>x,y</code> index</li>
 </ul>
-</p>
-        <div class="tags">
+</p>            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
                 <td>$offset</td>
@@ -3270,7 +3307,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -3281,9 +3318,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>if the offset is out of range of matrix's indexes</td>
             </tr>
             </table>
@@ -3292,19 +3329,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_offsetExists">
-        <div class="location">at line 1224</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">at line 1236</div>
         <code>                    bool
     <strong>offsetExists</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
     </h3>
     <div class="details">
-        <p>Test if an offset exists</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if an offset exists</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
                 <td>$offset</td>
@@ -3316,7 +3354,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -3329,19 +3367,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_offsetGet">
-        <div class="location">at line 1243</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">at line 1255</div>
         <code>                    mixed
     <strong>offsetGet</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
     </h3>
     <div class="details">
-        <p>Get an offset value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get an offset value</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
                 <td>$offset</td>
@@ -3353,7 +3392,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
             <td>
@@ -3364,9 +3403,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Triggers">Triggers</abbr></td>
+                <td><abbr title="Maths\Algebra\Triggers">Triggers</abbr></td>
                 <td>a NOTICE message if the offset is out of range</td>
             </tr>
             </table>
@@ -3375,19 +3414,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_offsetSet">
-        <div class="location">at line 1264</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">at line 1276</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>offsetSet</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset, mixed $value)</code>
     </h3>
     <div class="details">
-        <p>Set an offset value</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Set an offset value</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
                 <td>$offset</td>
@@ -3405,7 +3445,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -3416,9 +3456,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Triggers">Triggers</abbr></td>
+                <td><abbr title="Maths\Algebra\Triggers">Triggers</abbr></td>
                 <td>a NOTICE message if the offset is out of range</td>
             </tr>
             </table>
@@ -3427,19 +3467,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_offsetUnset">
-        <div class="location">at line 1283</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">at line 1295</div>
         <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
     <strong>offsetUnset</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
     </h3>
     <div class="details">
-        <p>Unset an offset value (replacing it by '0')</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Unset an offset value (replacing it by '0')</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
                 <td>$offset</td>
@@ -3451,7 +3492,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
             <td>
@@ -3462,9 +3503,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Triggers">Triggers</abbr></td>
+                <td><abbr title="Maths\Algebra\Triggers">Triggers</abbr></td>
                 <td>a NOTICE message if the offset is out of range</td>
             </tr>
             </table>
@@ -3473,20 +3514,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_serialize">
-        <div class="location">at line 1302</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at line 1314</div>
         <code>                    string
     <strong>serialize</strong>()</code>
     </h3>
     <div class="details">
-        <p>Serialize a matrix: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are stored</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Serialize a matrix: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are stored</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
             <td>
@@ -3499,19 +3541,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_unserialize">
-        <div class="location">at line 1318</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">at line 1330</div>
         <code>                    void
     <strong>unserialize</strong>(string $serialized)</code>
     </h3>
     <div class="details">
-        <p>Populate a matrix from a serialized array: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are populated</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Populate a matrix from a serialized array: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are populated</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$serialized</td>
@@ -3523,7 +3566,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>void</td>
             <td>
@@ -3536,19 +3579,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getLine">
-        <div class="location">at line 1336</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLine">
+        <div class="location">at line 1348</div>
         <code>                    array|null
     <strong>getLine</strong>(int $index = null)</code>
     </h3>
     <div class="details">
-        <p>Get a line value (specifying an optional index)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get a line value (specifying an optional index)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -3560,7 +3604,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array|null</td>
             <td>
@@ -3571,9 +3615,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>
 </td>
             </tr>
@@ -3583,19 +3627,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getColumn">
-        <div class="location">at line 1354</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumn">
+        <div class="location">at line 1366</div>
         <code>                    array|null
     <strong>getColumn</strong>(int $index = null)</code>
     </h3>
     <div class="details">
-        <p>Get a column value (specifying an optional index)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get a column value (specifying an optional index)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$index</td>
@@ -3607,7 +3652,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array|null</td>
             <td>
@@ -3618,9 +3663,9 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>
 </td>
             </tr>
@@ -3630,19 +3675,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_getCell">
-        <div class="location">at line 1373</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCell">
+        <div class="location">at line 1385</div>
         <code>                    mixed|null
     <strong>getCell</strong>(string $index = null)</code>
     </h3>
     <div class="details">
-        <p>Get a cell value (specifying an optional index)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Get a cell value (specifying an optional index)</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$index</td>
@@ -3654,7 +3700,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed|null</td>
             <td>
@@ -3665,14 +3711,14 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Exceptions</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/OutOfRangeException"><abbr title="OutOfRangeException">OutOfRangeException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
                 <td>
 </td>
             </tr>
@@ -3682,20 +3728,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_isSquareMatrix">
-        <div class="location">at line 1393</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSquareMatrix">
+        <div class="location">at line 1405</div>
         <code>                    bool
     <strong>isSquareMatrix</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if a matrix is a square (number of lines = number of columns)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if a matrix is a square (number of lines = number of columns)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -3708,20 +3755,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_isRowVector">
-        <div class="location">at line 1403</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRowVector">
+        <div class="location">at line 1415</div>
         <code>                    bool
     <strong>isRowVector</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if a matrix is a row vector (one single line)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if a matrix is a row vector (one single line)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -3734,20 +3782,21 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method_isColumnVector">
-        <div class="location">at line 1413</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isColumnVector">
+        <div class="location">at line 1425</div>
         <code>                    bool
     <strong>isColumnVector</strong>()</code>
     </h3>
     <div class="details">
-        <p>Test if a matrix is a column vector (one single column)</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Test if a matrix is a column vector (one single column)</p>                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
             <td>
@@ -3760,19 +3809,20 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
-                <h3 id="method___debug">
-        <div class="location">at line 1445</div>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___debug">
+        <div class="location">at line 1457</div>
         <code>                    string
     <strong>__debug</strong>(string $property = null, bool $verbose = false)</code>
     </h3>
     <div class="details">
-        <p>Special <code>__toString()</code> with infos</p>
-        <p>
-</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Special <code>__toString()</code> with infos</p>                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$property</td>
@@ -3788,7 +3838,7 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
             <td>
@@ -3801,10 +3851,17 @@ Each matrix's item is indexed like <code>x,y</code> with first item indexed <cod
                     </div>
     </div>
 
+            </div>
+            </div>
+
     
             </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
     </div>
     </body>
+
 </html>
