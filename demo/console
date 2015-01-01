@@ -29,5 +29,10 @@ if (file_exists($a = __DIR__.'/../../../autoload.php')) {
 }
 
 
-echo Maths\Arithmetic\Helper::GCD(1071,1029).PHP_EOL;
+//echo Maths\Arithmetic\Helper::GCD(1071,1029).PHP_EOL;
 
+//echo \Maths\Arithmetic\Helper::getTriangularNumber(5).PHP_EOL;    // 15
+//echo \Maths\Arithmetic\Helper::getTriangularNumber(60).PHP_EOL;   // 1830
+
+$pt = new \Maths\Arithmetic\PascalTriangle();
+echo $pt->toString(20);
