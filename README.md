@@ -77,15 +77,15 @@ The latest version of this documentation is available online at <http://docs.ate
 
 ## Author & License
 
->    Maths - PHP package
+>    Maths - Some PHP classes to do mathematics
 
 >    http://github.com/atelierspierrot/maths
 
->    Copyleft 2013-2014, Pierre Cassat and contributors
+>    Copyright (c) 2014-2015, Pierre Cassat and contributors
 
->    Licensed under the GPL Version 3 license.
+>    Licensed under the Apache Version 2.0 license.
 
->    http://opensource.org/licenses/GPL-3.0
+>    http://www.apache.org/licenses/LICENSE-2.0
 
 >    ----
 
