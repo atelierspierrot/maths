@@ -482,7 +482,6 @@ echo var_export($disc->isValidPoint($circ_test2),1)."\n";
     <p>This representation uses the javascript library <a href="http://jsxgraph.uni-bayreuth.de/wp/">JSXgraph</a> under both GNU Lesser GPL and MIT licenses.</p>
     <p>The package embeds a <code>\Maths\Helper\JXSgraph</code> class to help construct the js library usage.</p>
 
-
 <?php foreach ($demos as $i=>$_demo) : ?>
 
     <div class="jxs-wrapper" style="position: relative; clear: both; margin: 1em auto;">

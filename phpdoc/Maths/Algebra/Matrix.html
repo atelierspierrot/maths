@@ -1,0 +1,3867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Maths\Algebra\Matrix | Maths</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/sami.css">
+        <script src="../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../sami.js"></script>
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Maths_Algebra_Matrix" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Maths</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../../Maths.html">Maths</a></li>
+                                        <li><a href="../../Maths/Algebra.html">Algebra</a></li>
+    
+                <li>Matrix</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Matrix</h1>
+    </div>
+
+    <p>    class
+    <strong>Matrix</strong>        implements
+        <abbr title="Maths\Algebra\ArrayAccess">ArrayAccess</abbr>, <abbr title="Maths\Algebra\SeekableIterator">SeekableIterator</abbr>, <abbr title="Maths\Algebra\Countable">Countable</abbr>, <abbr title="Maths\Algebra\Serializable">Serializable</abbr></p>
+
+            <div class="description">
+            <p>Class Matrix</p>            <p>Bidimensional array representation of a matrix.
+Each matrix's item is indexed like <code>x,y</code> with first item indexed <code>1,1</code> (1 based).</p>
+
+<h2>Iterate over items: the <code>WALK_</code> flags</h2>
+
+<p>When iterating over a matrix, you can use one of the three <code>WALK_</code> flags to have following behaviors:</p>
+
+<ul>
+<li><code>WALK_X</code> to iterate over lines (each item is the current line array of cells)</li>
+<li><code>WALK_Y</code> to iterate over columns (each item is the current column array of cells)</li>
+<li><code>WALK_XY</code> to iterate over cells (each item is the current cell)</li>
+</ul>
+
+<p>The default behavior uses the <code>WALK_XY</code> flag.</p>
+
+<h2>Array access: the <code>ARRAY_</code> flags</h2>
+
+<p>When using a matrix by direct array access (e.g. <code>$martrix[index]</code>), you can use one of the
+<code>ARRAY_</code> flags to have the following behaviors:</p>
+
+<ul>
+<li><code>ARRAY_XY</code> to use <code>$index</code> like a bidimensional offset (e.g. <code>x,y</code>)</li>
+<li><code>ARRAY_INT</code> to use <code>$index</code> as an integer representation of each cell position (e.g. <code>1,3</code> would by <code>4</code>)</li>
+</ul>
+
+<p>Using the positional offsets, indexes can be written as:</p>
+
+<ul>
+<li><code>int</code> to set a <code>x</code> index</li>
+<li><code>,int</code> to set an <code>y</code> index</li>
+<li><code>int,int</code> to set a <code>x,y</code> index</li>
+</ul>
+
+<p>Using the integer access, you MUST keep in mind that the indexes are 0 based:</p>
+
+<pre><code> position `1,1` is index `0`
+ position `1,3` is index `4`
+ position `2,4` is index `7` (with 4 cells per line)
+</code></pre>
+
+<p>The "positional" indexing can be forced in all cases using explicitly a string index with <code>matrix['x']</code>.</p>        </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ARRAY_XY</td>
+                <td class="last">
+                    <p><em>Use this constant to use array access with indexes as positions</em></p>
+                    <p>A position can be used as: <code>x</code>, <code>,y</code> or <code>x,y</code></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ARRAY_INT</td>
+                <td class="last">
+                    <p><em>Use this constant to use array access with indexes as integers</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WALK_X</td>
+                <td class="last">
+                    <p><em>Use this constant to loop over lines</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WALK_Y</td>
+                <td class="last">
+                    <p><em>Use this constant to loop over columns</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WALK_XY</td>
+                <td class="last">
+                    <p><em>Use this constant to loop over cells</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>XY_SEPARATOR</td>
+                <td class="last">
+                    <p><em>Character used to identify a full positional index, here like <code>x,y</code></em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property__size">
+                                                                                array
+                </td>
+                <td>$_size</td>
+                <td class="last">
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_data">
+                                                                                array
+                </td>
+                <td>$data</td>
+                <td class="last">
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_x">
+                                                                                int
+                </td>
+                <td>$x</td>
+                <td class="last">
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_y">
+                                                                                int
+                </td>
+                <td>$y</td>
+                <td class="last">
+</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(array $data = null, int $walk_flag = self::WALK_XY, int $array_flag = self::ARRAY_XY, mixed $empty_cell)
+                                            <p>MATRIX constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+                                            <p>Magic method to <code>echo $object</code> which returns a 2D representation of the matrix</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reset">reset</a>()
+                                            <p>Reset object <code>$data</code> to its original state</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSize">getSize</a>(string $which = null)
+                                            <p>Get the matrix size</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setWalkFlag">setWalkFlag</a>(int $flag, bool $auto_rewind = true)
+                                            <p>Define the object's walk flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWalkFlag">getWalkFlag</a>()
+                                            <p>Get the current object's walk flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setArrayFlag">setArrayFlag</a>(int $flag, bool $auto_rewind = true)
+                                            <p>Define the object's array access flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getArrayFlag">getArrayFlag</a>()
+                                            <p>Get the current object's array access flag</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEmptyCell">setEmptyCell</a>(mixed $cell)
+                                            <p>Set the empty cell value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEmptyCell">getEmptyCell</a>()
+                                            <p>Get the empty cell value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setData">setData</a>(array $data = null)
+                                            <p>Set the matrix contents</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|<abbr title="Maths\Algebra\Traversable">Traversable</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getData">getData</a>()
+                                            <p>Get the matrix as array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get">get</a>(string|int $index)
+                                            <p>Get a cell value by index according to matrix's flags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getX">getX</a>(string|int $index)
+                                            <p>Get <code>x</code> value (line) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getY">getY</a>(string|int $index)
+                                            <p>Get <code>y</code> value (column) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getXY">getXY</a>(string|int $index)
+                                            <p>Get <code>x:y</code> value (cell) by positional index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getInt">getInt</a>(int $index)
+                                            <p>Get <code>x:y</code> value (cell) by integer index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_set">set</a>(string|int $index, mixed $value)
+                                            <p>Set a value by index according to matrix's flags</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setX">setX</a>(string|int $index, array $value)
+                                            <p>Set <code>x</code> value (line) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setY">setY</a>(string|int $index, array $value)
+                                            <p>Set <code>y</code> value (column) by index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setXY">setXY</a>(string $index, mixed $value)
+                                            <p>Set <code>x:y</code> value (cell) by positional index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setInt">setInt</a>(int $index, mixed $value)
+                                            <p>Set <code>x:y</code> value (cell) by integer index</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewind">rewind</a>()
+                                            <p>Rewind a matrix according to its flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewindX">rewindX</a>()
+                                            <p>Rewind <code>x</code> index to position <code>1</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewindY">rewindY</a>()
+                                            <p>Rewind <code>y</code> index to position <code>1</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rewindXY">rewindXY</a>()
+                                            <p>Rewind both <code>x</code> and <code>y</code> indexes to position <code>1,1</code></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previous">previous</a>()
+                                            <p>Go to previous index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousX">previousX</a>()
+                                            <p>Seek to current <code>x</code> less 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousXExists">previousXExists</a>()
+                                            <p>Test if current <code>x</code> less 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousY">previousY</a>()
+                                            <p>Seek to current <code>y</code> less 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousYExists">previousYExists</a>()
+                                            <p>Test if current <code>y</code> less 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_previousXY">previousXY</a>()
+                                            <p>Seek to previous cell</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_next">next</a>()
+                                            <p>Go to next index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextX">nextX</a>()
+                                            <p>Seek to current <code>x</code> plus 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextXExists">nextXExists</a>()
+                                            <p>Test if current <code>x</code> plus 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextY">nextY</a>()
+                                            <p>Seek to current <code>y</code> plus 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextYExists">nextYExists</a>()
+                                            <p>Test if current <code>y</code> plus 1 exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_nextXY">nextXY</a>()
+                                            <p>Go to next cell</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seek">seek</a>(string $index)
+                                            <p>Seek to index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekX">seekX</a>(int $index)
+                                            <p>Seek to index for <code>x</code> (line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekY">seekY</a>(int $index)
+                                            <p>Seek to index for <code>y</code> (column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekXY">seekXY</a>(string $index)
+                                            <p>Seek to index for <code>x,y</code> (cell)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekInt">seekInt</a>(int $index)
+                                            <p>Go to index <code>x,y</code> represented as an integer (0 based)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_current">current</a>()
+                                            <p>Get current value according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentX">currentX</a>()
+                                            <p>Get current <code>x</code> value (line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentY">currentY</a>()
+                                            <p>Get current <code>y</code> value (column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_currentXY">currentXY</a>()
+                                            <p>Get current <code>x:y</code> value (cell)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_key">key</a>()
+                                            <p>Get current index according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_keyX">keyX</a>(bool $integer = false)
+                                            <p>Get current <code>x</code> index (line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_keyY">keyY</a>(bool $integer = false)
+                                            <p>Get current <code>y</code> index (column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_keyXY">keyXY</a>(bool $integer = false)
+                                            <p>Get current <code>x,y</code> index (cell)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_keyInt">keyInt</a>()
+                                            <p>Get current <code>x,y</code> index as an integer (0 based)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_valid">valid</a>()
+                                            <p>Test if current value is valid according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validX">validX</a>()
+                                            <p>Test if current <code>x</code> line is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validY">validY</a>()
+                                            <p>Test if current <code>y</code> column is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validXY">validXY</a>()
+                                            <p>Test if current <code>x:y</code> cell is valid</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_count">count</a>()
+                                            <p>Count the number of values according to matrix's flag value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_countX">countX</a>()
+                                            <p>Count the number of lines</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_countY">countY</a>()
+                                            <p>Count the number of columns</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_countXY">countXY</a>()
+                                            <p>Count the number of cells</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekToOffset">seekToOffset</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
+                                            <p>Seek <code>x</code> and <code>y</code> to an offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekToOffsetInteger">seekToOffsetInteger</a>(int $offset)
+                                            <p>Seek <code>x</code> and <code>y</code> to an integer offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_seekToOffsetPositional">seekToOffsetPositional</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
+                                            <p>Seek <code>x</code> and <code>y</code> to a positional offset</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetExists">offsetExists</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
+                                            <p>Test if an offset exists</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetGet">offsetGet</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
+                                            <p>Get an offset value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetSet">offsetSet</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset, mixed $value)
+                                            <p>Set an offset value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Maths\Algebra\$this">$this</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_offsetUnset">offsetUnset</a>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)
+                                            <p>Unset an offset value (replacing it by '0')</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+                                            <p>Serialize a matrix: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are stored</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>(string $serialized)
+                                            <p>Populate a matrix from a serialized array: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are populated</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLine">getLine</a>(int $index = null)
+                                            <p>Get a line value (specifying an optional index)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getColumn">getColumn</a>(int $index = null)
+                                            <p>Get a column value (specifying an optional index)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCell">getCell</a>(string $index = null)
+                                            <p>Get a cell value (specifying an optional index)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isSquareMatrix">isSquareMatrix</a>()
+                                            <p>Test if a matrix is a square (number of lines = number of columns)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isRowVector">isRowVector</a>()
+                                            <p>Test if a matrix is a row vector (one single line)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isColumnVector">isColumnVector</a>()
+                                            <p>Test if a matrix is a column vector (one single column)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___debug">__debug</a>(string $property = null, bool $verbose = false)
+                                            <p>Special <code>__toString()</code> with infos</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 152</div>
+        <code>                    
+    <strong>__construct</strong>(array $data = null, int $walk_flag = self::WALK_XY, int $array_flag = self::ARRAY_XY, mixed $empty_cell)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>MATRIX constructor</p>                    <p>Any missing item in a sub-array will be replaced by <code>$empty_cell</code>.</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$walk_flag</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$array_flag</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$empty_cell</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if <code>$data</code> is not a 2D array</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">at line 172</div>
+        <code>                    string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Magic method to <code>echo $object</code> which returns a 2D representation of the matrix</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reset">
+        <div class="location">at line 186</div>
+        <code>                    
+    <strong>reset</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Reset object <code>$data</code> to its original state</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSize">
+        <div class="location">at line 198</div>
+        <code>                    int|array
+    <strong>getSize</strong>(string $which = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the matrix size</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$which</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setWalkFlag">
+        <div class="location">at line 214</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setWalkFlag</strong>(int $flag, bool $auto_rewind = true)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Define the object's walk flag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$flag</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$auto_rewind</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWalkFlag">
+        <div class="location">at line 228</div>
+        <code>                    int
+    <strong>getWalkFlag</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the current object's walk flag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setArrayFlag">
+        <div class="location">at line 240</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setArrayFlag</strong>(int $flag, bool $auto_rewind = true)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Define the object's array access flag</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$flag</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$auto_rewind</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getArrayFlag">
+        <div class="location">at line 254</div>
+        <code>                    int
+    <strong>getArrayFlag</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the current object's array access flag</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEmptyCell">
+        <div class="location">at line 265</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setEmptyCell</strong>(mixed $cell)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the empty cell value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$cell</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEmptyCell">
+        <div class="location">at line 276</div>
+        <code>                    mixed
+    <strong>getEmptyCell</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the empty cell value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setData">
+        <div class="location">at line 288</div>
+        <code>                    void
+    <strong>setData</strong>(array $data = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set the matrix contents</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if <code>$data</code> is not a 2D array</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getData">
+        <div class="location">at line 322</div>
+        <code>                    array|<abbr title="Maths\Algebra\Traversable">Traversable</abbr>
+    <strong>getData</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get the matrix as array</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|<abbr title="Maths\Algebra\Traversable">Traversable</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location">at line 341</div>
+        <code>                    mixed|null
+    <strong>get</strong>(string|int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a cell value by index according to matrix's flags</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::getX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::getY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::getXY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::getInt()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getX">
+        <div class="location">at line 370</div>
+        <code>                    array
+    <strong>getX</strong>(string|int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get <code>x</code> value (line) by index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getY">
+        <div class="location">at line 389</div>
+        <code>                    array
+    <strong>getY</strong>(string|int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get <code>y</code> value (column) by index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getXY">
+        <div class="location">at line 409</div>
+        <code>                    mixed
+    <strong>getXY</strong>(string|int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get <code>x:y</code> value (cell) by positional index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInt">
+        <div class="location">at line 431</div>
+        <code>                    mixed
+    <strong>getInt</strong>(int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get <code>x:y</code> value (cell) by integer index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_set">
+        <div class="location">at line 458</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>set</strong>(string|int $index, mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set a value by index according to matrix's flags</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::setX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::setY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::setXY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::setInt()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setX">
+        <div class="location">at line 488</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setX</strong>(string|int $index, array $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set <code>x</code> value (line) by index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setY">
+        <div class="location">at line 507</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setY</strong>(string|int $index, array $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set <code>y</code> value (column) by index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setXY">
+        <div class="location">at line 529</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setXY</strong>(string $index, mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set <code>x:y</code> value (cell) by positional index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setInt">
+        <div class="location">at line 551</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>setInt</strong>(int $index, mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set <code>x:y</code> value (cell) by integer index</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewind">
+        <div class="location">at line 574</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>rewind</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Rewind a matrix according to its flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::rewindX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::rewindY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::rewindXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewindX">
+        <div class="location">at line 590</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>rewindX</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Rewind <code>x</code> index to position <code>1</code></p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewindY">
+        <div class="location">at line 601</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>rewindY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Rewind <code>y</code> index to position <code>1</code></p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rewindXY">
+        <div class="location">at line 612</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>rewindXY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Rewind both <code>x</code> and <code>y</code> indexes to position <code>1,1</code></p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previous">
+        <div class="location">at line 627</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>previous</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Go to previous index according to matrix's flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::previousX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::previousY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::previousXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousX">
+        <div class="location">at line 643</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>previousX</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to current <code>x</code> less 1</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousXExists">
+        <div class="location">at line 658</div>
+        <code>                    bool
+    <strong>previousXExists</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>x</code> less 1 exists</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousY">
+        <div class="location">at line 668</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>previousY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to current <code>y</code> less 1</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousYExists">
+        <div class="location">at line 683</div>
+        <code>                    bool
+    <strong>previousYExists</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>y</code> less 1 exists</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_previousXY">
+        <div class="location">at line 693</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>previousXY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to previous cell</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_next">
+        <div class="location">at line 717</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>next</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Go to next index according to matrix's flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::nextX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::nextY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::nextXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextX">
+        <div class="location">at line 733</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>nextX</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to current <code>x</code> plus 1</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextXExists">
+        <div class="location">at line 748</div>
+        <code>                    bool
+    <strong>nextXExists</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>x</code> plus 1 exists</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextY">
+        <div class="location">at line 758</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>nextY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to current <code>y</code> plus 1</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextYExists">
+        <div class="location">at line 773</div>
+        <code>                    bool
+    <strong>nextYExists</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>y</code> plus 1 exists</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_nextXY">
+        <div class="location">at line 783</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>nextXY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Go to next cell</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seek">
+        <div class="location">at line 807</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seek</strong>(string $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to index according to matrix's flag value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekX">
+        <div class="location">at line 831</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekX</strong>(int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to index for <code>x</code> (line)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekY">
+        <div class="location">at line 850</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekY</strong>(int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to index for <code>y</code> (column)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the index is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekXY">
+        <div class="location">at line 871</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekXY</strong>(string $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek to index for <code>x,y</code> (cell)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$index</td>
+                <td>The index to go to, constructed like <code>x,y</code></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the <code>x</code> index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the <code>y</code> index is out of range</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is malformed</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekInt">
+        <div class="location">at line 896</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekInt</strong>(int $index)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Go to index <code>x,y</code> represented as an integer (0 based)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>if the argument is not an integer</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the integer is out of matrix's range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_current">
+        <div class="location">at line 940</div>
+        <code>                    mixed|null
+    <strong>current</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current value according to matrix's flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::currentX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::currentY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::currentXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentX">
+        <div class="location">at line 956</div>
+        <code>                    array|null
+    <strong>currentX</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>x</code> value (line)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentY">
+        <div class="location">at line 966</div>
+        <code>                    array|null
+    <strong>currentY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>y</code> value (column)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_currentXY">
+        <div class="location">at line 980</div>
+        <code>                    mixed|null
+    <strong>currentXY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>x:y</code> value (cell)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_key">
+        <div class="location">at line 993</div>
+        <code>                    string|null
+    <strong>key</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current index according to matrix's flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::keyX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::keyY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::keyXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyX">
+        <div class="location">at line 1010</div>
+        <code>                    int|null
+    <strong>keyX</strong>(bool $integer = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>x</code> index (line)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$integer</td>
+                <td>Return an integer index (0 based) or a positional one (1 based)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyY">
+        <div class="location">at line 1021</div>
+        <code>                    int|null
+    <strong>keyY</strong>(bool $integer = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>y</code> index (column)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$integer</td>
+                <td>Return an integer index (0 based) or a positional one (1 based)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyXY">
+        <div class="location">at line 1032</div>
+        <code>                    string|null
+    <strong>keyXY</strong>(bool $integer = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>x,y</code> index (cell)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$integer</td>
+                <td>Return an integer index (0 based) or a positional one (1 based)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_keyInt">
+        <div class="location">at line 1045</div>
+        <code>                    int
+    <strong>keyInt</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get current <code>x,y</code> index as an integer (0 based)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_valid">
+        <div class="location">at line 1058</div>
+        <code>                    bool
+    <strong>valid</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current value is valid according to matrix's flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::validX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::validY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::validXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validX">
+        <div class="location">at line 1074</div>
+        <code>                    bool
+    <strong>validX</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>x</code> line is valid</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validY">
+        <div class="location">at line 1084</div>
+        <code>                    bool
+    <strong>validY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>y</code> column is valid</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validXY">
+        <div class="location">at line 1094</div>
+        <code>                    bool
+    <strong>validXY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if current <code>x:y</code> cell is valid</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_count">
+        <div class="location">at line 1109</div>
+        <code>                    int
+    <strong>count</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Count the number of values according to matrix's flag value</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>self::countX()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::countY()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::countXY()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countX">
+        <div class="location">at line 1125</div>
+        <code>                    int
+    <strong>countX</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Count the number of lines</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countY">
+        <div class="location">at line 1135</div>
+        <code>                    int
+    <strong>countY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Count the number of columns</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_countXY">
+        <div class="location">at line 1145</div>
+        <code>                    int
+    <strong>countXY</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Count the number of cells</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekToOffset">
+        <div class="location">at line 1159</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekToOffset</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek <code>x</code> and <code>y</code> to an offset</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the offset is out of range of matrix's indexes</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekToOffsetInteger">
+        <div class="location">at line 1179</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekToOffsetInteger</strong>(int $offset)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek <code>x</code> and <code>y</code> to an integer offset</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the offset is out of range of matrix's indexes</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_seekToOffsetPositional">
+        <div class="location">at line 1211</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>seekToOffsetPositional</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Seek <code>x</code> and <code>y</code> to a positional offset</p>                    <p>Offsets can be written as:</p>
+
+<ul>
+<li><code>int</code> to set a <code>x</code> index</li>
+<li><code>,int</code> to set an <code>y</code> index</li>
+<li><code>int,int</code> to set a <code>x,y</code> index</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>if the offset is out of range of matrix's indexes</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetExists">
+        <div class="location">at line 1236</div>
+        <code>                    bool
+    <strong>offsetExists</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if an offset exists</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetGet">
+        <div class="location">at line 1255</div>
+        <code>                    mixed
+    <strong>offsetGet</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get an offset value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\Triggers">Triggers</abbr></td>
+                <td>a NOTICE message if the offset is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetSet">
+        <div class="location">at line 1276</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>offsetSet</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset, mixed $value)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Set an offset value</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\Triggers">Triggers</abbr></td>
+                <td>a NOTICE message if the offset is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_offsetUnset">
+        <div class="location">at line 1295</div>
+        <code>                    <abbr title="Maths\Algebra\$this">$this</abbr>
+    <strong>offsetUnset</strong>(<abbr title="Maths\Algebra\int/string">int/string</abbr> $offset)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Unset an offset value (replacing it by '0')</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\int/string">int/string</abbr></td>
+                <td>$offset</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Maths\Algebra\$this">$this</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\Triggers">Triggers</abbr></td>
+                <td>a NOTICE message if the offset is out of range</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at line 1314</div>
+        <code>                    string
+    <strong>serialize</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Serialize a matrix: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are stored</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">at line 1330</div>
+        <code>                    void
+    <strong>unserialize</strong>(string $serialized)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Populate a matrix from a serialized array: only <code>$data</code>, <code>$_cache</code> and <code>$flag</code> are populated</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serialized</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLine">
+        <div class="location">at line 1348</div>
+        <code>                    array|null
+    <strong>getLine</strong>(int $index = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a line value (specifying an optional index)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getColumn">
+        <div class="location">at line 1366</div>
+        <code>                    array|null
+    <strong>getColumn</strong>(int $index = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a column value (specifying an optional index)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCell">
+        <div class="location">at line 1385</div>
+        <code>                    mixed|null
+    <strong>getCell</strong>(string $index = null)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Get a cell value (specifying an optional index)</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Maths\Algebra\OutOfRangeException">OutOfRangeException</abbr></td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="Maths\Algebra\InvalidArgumentException">InvalidArgumentException</abbr></td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isSquareMatrix">
+        <div class="location">at line 1405</div>
+        <code>                    bool
+    <strong>isSquareMatrix</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if a matrix is a square (number of lines = number of columns)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRowVector">
+        <div class="location">at line 1415</div>
+        <code>                    bool
+    <strong>isRowVector</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if a matrix is a row vector (one single line)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isColumnVector">
+        <div class="location">at line 1425</div>
+        <code>                    bool
+    <strong>isColumnVector</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Test if a matrix is a column vector (one single column)</p>                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___debug">
+        <div class="location">at line 1457</div>
+        <code>                    string
+    <strong>__debug</strong>(string $property = null, bool $verbose = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Special <code>__toString()</code> with infos</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$property</td>
+                <td>An object variable to debug: x, y, xy, line, column, cell, flag or matrix (default)</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$verbose</td>
+                <td>Include some info about current matrix</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
