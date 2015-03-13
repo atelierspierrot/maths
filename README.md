@@ -16,7 +16,7 @@ If you are a [Composer](http://getcomposer.org/) user, just add the package to t
 requirements of your project's `composer.json` manifest file:
 
 ```json
-"atelierspierrot/event-manager": "dev-master"
+"atelierspierrot/maths": "dev-master"
 ```
 
 You can use a specific release or the latest release of a major version using the appropriate
