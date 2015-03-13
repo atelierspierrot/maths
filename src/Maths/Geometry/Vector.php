@@ -31,7 +31,7 @@ use \Maths\Geometry\Point;
 /**
  * Basic Vector
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Vector
     extends Segment

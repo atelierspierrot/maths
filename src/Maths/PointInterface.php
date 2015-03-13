@@ -25,7 +25,7 @@ namespace Maths;
 /**
  * The point interface
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 interface PointInterface
 {

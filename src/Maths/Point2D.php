@@ -29,7 +29,7 @@ use \Maths\PointInterface;
 /**
  * Basic 2D point
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Point2D
     extends Point1D

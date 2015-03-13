@@ -29,7 +29,7 @@ use \Maths\PointInterface;
 /**
  * Segment class : two points A -> B
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Segment
     extends Line

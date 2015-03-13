@@ -19,9 +19,8 @@
         "atelierspierrot/library": "1.*"
     },
     "require-dev": {
-        "psr/log": "dev-master",
-        "sami/sami": "dev-master",
-        "phpmd/phpmd" : "1.4.*"
+        "sami/sami": "@stable",
+        "phpmd/phpmd" : "@stable"
     },
     "autoload": { "psr-0": {  "Maths": "src" } },
     "minimum-stability": "dev",

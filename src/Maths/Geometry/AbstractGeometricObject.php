@@ -31,7 +31,7 @@ use \Maths\Geometry\Segment;
 use \Maths\PointInterface;
 
 /**
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 abstract class AbstractGeometricObject
     extends AbstractCartesianObject

@@ -26,7 +26,7 @@ use \Maths\Maths;
 use \Library\Helper\Text as TextHelper;
 
 /**
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 abstract class AbstractCartesianObject
     implements \ArrayAccess

@@ -29,7 +29,7 @@ use \Maths\PointInterface;
 /**
  * Point class
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Point
     extends Point3D

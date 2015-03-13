@@ -60,7 +60,7 @@ namespace Maths\Algebra;
  *
  * The "positional" indexing can be forced in all cases using explicitly a string index with `matrix['x']`.
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Matrix
     implements ArrayAccess, SeekableIterator, Countable, Serializable

@@ -29,7 +29,7 @@ use \Maths\PointInterface;
 /**
  * Line class : two points A -> B not limited
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Line
     extends AbstractGeometricObject

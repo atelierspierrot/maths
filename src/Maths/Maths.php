@@ -30,7 +30,7 @@ use \Maths\Geometry\Segment;
 /**
  * Basic class Maths
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Maths
 {

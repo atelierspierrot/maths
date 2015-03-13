@@ -27,7 +27,7 @@ use \Maths\PointInterface;
 /**
  * Basic geometric objects interface
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 interface CartesianInterface
 {

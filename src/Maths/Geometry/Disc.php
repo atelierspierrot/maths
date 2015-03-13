@@ -29,6 +29,7 @@ use \Maths\PointInterface;
 /**
  * Class Disc
  *
+ * @author  piwi <me@e-piwi.fr>
  */
 class Disc
     extends Circle
