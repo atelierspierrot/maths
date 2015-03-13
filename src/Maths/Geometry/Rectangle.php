@@ -37,6 +37,7 @@ use \Maths\Geometry\Segment;
  *  y
  *  ↑ → x
  *
+ * @author  piwi <me@e-piwi.fr>
  */
 class Rectangle
     extends Quadrilateral

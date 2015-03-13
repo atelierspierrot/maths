@@ -25,7 +25,7 @@ namespace Maths;
 /**
  * Basic 1D objects interface
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 interface Cartesian1DInterface
     extends CartesianInterface

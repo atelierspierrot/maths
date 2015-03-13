@@ -32,8 +32,8 @@ use \Maths\Geometry\Circle;
 /**
  * Helper class to use the JSXgraph javascript library to render mathematics forms
  *
- * @see     http://jsxgraph.uni-bayreuth.de/
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @link    http://jsxgraph.uni-bayreuth.de/
+ * @author  piwi <me@e-piwi.fr>
  */
 class JSXgraph
 {

@@ -33,6 +33,7 @@ use \Maths\PointInterface;
  *
  *      (x - Ox)^2 + (y - Oy)^2 = r^2
  *
+ * @author  piwi <me@e-piwi.fr>
  */
 class Circle
     extends AbstractGeometricObject

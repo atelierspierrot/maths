@@ -41,6 +41,7 @@ use \Maths\Geometry\Rectangle;
  *  y
  *  ↑ → x
  *
+ * @author  piwi <me@e-piwi.fr>
  */
 class RightTriangle
     extends Rectangle

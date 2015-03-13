@@ -25,7 +25,7 @@ namespace Maths\Arithmetic;
 /**
  * Basic class for arithemtic
  *
- * @author  PieroWbmstr (me [at] e-piwi [dot] fr)
+ * @author  piwi <me@e-piwi.fr>
  */
 class Helper
 {

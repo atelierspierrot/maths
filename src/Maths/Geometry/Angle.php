@@ -38,6 +38,7 @@ use \Maths\PointInterface;
  *  y
  *  ↑ → x
  *
+ * @author  piwi <me@e-piwi.fr>
  */
 class Angle
     extends AbstractGeometricObject

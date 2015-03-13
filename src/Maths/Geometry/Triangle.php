@@ -43,6 +43,7 @@ use \Maths\PointInterface;
  *  y
  *  ↑ → x
  *
+ * @author  piwi <me@e-piwi.fr>
  */
 class Triangle
     extends AbstractGeometricObject
