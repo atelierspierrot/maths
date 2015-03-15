@@ -36,4 +36,3 @@ if (file_exists($a = __DIR__.'/../../../autoload.php')) {
 
 $pt = new \Maths\Arithmetic\PascalTriangle();
 echo $pt->toString(20);
-
