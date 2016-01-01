@@ -9,7 +9,7 @@
  */
 //@ini_set('display_errors','1'); @error_reporting(E_ALL);
 //@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_STRICT);
-@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
+@ini_set('display_errors', '1'); @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 
 /**
  * Set a default timezone to avoid PHP5 warnings
@@ -29,11 +29,13 @@ function _getSecuredRealPath($path, $depth_from_root = 1)
 {
     $ds = DIRECTORY_SEPARATOR;
     $parts = explode($ds, realpath('.'));
-    for ($i=0; $i<=$depth_from_root; $i++) array_pop($parts);
+    for ($i=0; $i<=$depth_from_root; $i++) {
+        array_pop($parts);
+    }
     return str_replace(join($ds, $parts), $ds.'[***]', $path);
 }
 
-function getPhpClassManualLink( $class_name, $ln='en' )
+function getPhpClassManualLink($class_name, $ln='en')
 {
     return sprintf('http://php.net/manual/%s/class.%s.php', $ln, strtolower($class_name));
 }
@@ -129,53 +131,52 @@ echo '$logger = new Library\Logger($log_options);'."\n";
 $ok = $logger->log(Library\Logger::DEBUG, 'my message');
 echo "\n";
 echo '$ok = $logger->log(Library\Logger::DEBUG, "my message")'."\n";
-echo '// => '.var_export($ok,1)."\n";
+echo '// => '.var_export($ok, 1)."\n";
 
 // write a log message with placeholders
 class TestClass
 {
-    var $msg;
-    function __construct( $str )
+    public $msg;
+    public function __construct($str)
     {
         $this->msg = $str;
     }
-    function __toString()
+    public function __toString()
     {
         return $this->msg;
     }
 }
 $ok = $logger->log(Library\Logger::DEBUG, "my message with placeholders : {one} and {two}", array(
     'one' => 'my value for first placeholder',
-    'two' => new TestClass( 'my test class with a toString method' )
+    'two' => new TestClass('my test class with a toString method')
 ));
 echo "\n";
 echo '$ok = $logger->log(Library\Logger::DEBUG, "my message with placeholders : {one} and {two}", array('."\n"
     ."\t".'"one" => "my value for first placeholder",'."\n"
     ."\t".'"two" => new TestClass( "my test class with a toString method" )'."\n"
     .'));'."\n";
-echo '// => '.var_export($ok,1)."\n";
+echo '// => '.var_export($ok, 1)."\n";
 
 // write logs in a specific "test" file
 $ok = $logger->log(Library\Logger::DEBUG, 'my message', array(), 'test');
 echo "\n";
 echo '$ok = $logger->log(Library\Logger::DEBUG, "my message", array(), "test");'."\n";
-echo '// => '.var_export($ok,1)."\n";
+echo '// => '.var_export($ok, 1)."\n";
 
-$ok = $logger->log( Library\Logger::DEBUG, '[from ?] a simple message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ' );
-$ok = $logger->log( Library\Logger::ERROR, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ' );
-$ok = $logger->log( Library\Logger::INFO, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ', $_GET, 'test' );
+$ok = $logger->log(Library\Logger::DEBUG, '[from ?] a simple message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ');
+$ok = $logger->log(Library\Logger::ERROR, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ');
+$ok = $logger->log(Library\Logger::INFO, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ', $_GET, 'test');
 echo "\n";
 echo '$ok = $logger->log( Library\Logger::DEBUG, "[from ?] a simple message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf " );'."\n";
 echo '$ok = $logger->log( Library\Logger::ERROR, "a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf " );'."\n";
 echo '$ok = $logger->log( Library\Logger::INFO, "a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ", $_GET, "test" );'."\n";
-echo '// => '.var_export($ok,1)."\n";
+echo '// => '.var_export($ok, 1)."\n";
 
 // write many logs to test rotation
-for ($i=0; $i<1000; $i++)
-{
-    $ok = $logger->log( Library\Logger::DEBUG, '[from ?] a simple message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ' );
-    $ok = $logger->log( Library\Logger::ERROR, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ' );
-    $ok = $logger->log( Library\Logger::INFO, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ', $_GET, 'test' );
+for ($i=0; $i<1000; $i++) {
+    $ok = $logger->log(Library\Logger::DEBUG, '[from ?] a simple message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ');
+    $ok = $logger->log(Library\Logger::ERROR, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ');
+    $ok = $logger->log(Library\Logger::INFO, 'a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf ', $_GET, 'test');
 }
 ?>
     </pre>
@@ -190,19 +191,18 @@ of at least 755.</p>
 $filename = 'tmp/mytestfile.txt';
 $rotator = new Library\FileRotator(
     $filename, Library\FileRotator::ROTATE_PERIODIC, array(
-		'period_duration' => 60, // in seconds (here 1 day)
-		'filename_mask' => '%s.@date@', // mask used for filenames
-		                                // @date@ will be replaced by current date formated with 'date_format'
-		                                // @i@ will be replaced by rotation iterator
-		'date_format' => 'ymdHi',
-		'backup_time' => 10, // number of backuped files
-	)
+        'period_duration' => 60, // in seconds (here 1 day)
+        'filename_mask' => '%s.@date@', // mask used for filenames
+                                        // @date@ will be replaced by current date formated with 'date_format'
+                                        // @i@ will be replaced by rotation iterator
+        'date_format' => 'ymdHi',
+        'backup_time' => 10, // number of backuped files
+    )
 );
 
 
 // write many logs to test rotation
-for ($i=0; $i<1000; $i++)
-{
+for ($i=0; $i<1000; $i++) {
     $ok = $rotator->write('[from ?] a simple message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf');
     $ok = $rotator->write('a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf');
     $ok = $rotator->write('a long message qsmldkf jfqksmldkfjqmlskdf jmlqksjmdlfkj jKMlkjqmlsdkjf');

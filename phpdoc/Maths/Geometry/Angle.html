@@ -12,6 +12,9 @@
         <script src="../../js/bootstrap.min.js"></script>
         <script src="../../js/typeahead.min.js"></script>
         <script src="../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -73,7 +76,8 @@
     </div>
 
     <p>    class
-    <strong>Angle</strong>        extends <a href="../../Maths/Geometry/AbstractGeometricObject.html"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></p>
+    <strong>Angle</strong>        extends <a href="../../Maths/Geometry/AbstractGeometricObject.html"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a>
+</p>
 
             <div class="description">
             <p>Class Angle</p>            <p>B
@@ -93,137 +97,181 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_a = null, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_b = null, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_c = null, int $angle = null, int $space_type = Maths::CARTESIAN_2D)
+                    <a href="#method___construct">__construct</a>(
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr> $point_a = null, 
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr> $point_b = null, 
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr> $point_c = null, 
+    int $angle = null, 
+    int $space_type = Maths::CARTESIAN_2D)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\$this">$this</abbr>
+                    
+    <abbr title="Maths\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setSpaceType">setSpaceType</a>(int $type)
+                    <a href="#method_setSpaceType">setSpaceType</a>(
+    int $type)
                                             <p>Define the object cartesian space type (number of dimensions)</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getSpaceType">getSpaceType</a>()
                                             <p>Get the object cartesian space type (number of dimensions)</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_is1D">is1D</a>()
                                             <p>Test if the object is in 1D only</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_is2D">is2D</a>()
                                             <p>Test if the object is in 2D</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_is3D">is3D</a>()
                                             <p>Test if the object is in 3D</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___set">__set</a>(mixed $name, mixed $value)
+                    <a href="#method___set">__set</a>(
+    mixed $name, 
+    mixed $value)
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    
+    mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___get">__get</a>(mixed $name)
+                    <a href="#method___get">__get</a>(
+    mixed $name)
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___isset">__isset</a>(mixed $name)
+                    <a href="#method___isset">__isset</a>(
+    mixed $name)
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___unset">__unset</a>(mixed $name)
+                    <a href="#method___unset">__unset</a>(
+    mixed $name)
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetExists">offsetExists</a>(mixed $offset)
+                    <a href="#method_offsetExists">offsetExists</a>(
+    mixed $offset)
                                             <p>Test if an offset exists in the object using array notation <code>isset($obj[offset])</code></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetGet">offsetGet</a>(mixed $offset)
+                    <a href="#method_offsetGet">offsetGet</a>(
+    mixed $offset)
                                             <p>Get an object coordinate using array notation <code>$obj[offset]</code></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetSet">offsetSet</a>(mixed $offset, mixed $value)
+                    <a href="#method_offsetSet">offsetSet</a>(
+    mixed $offset, 
+    mixed $value)
                                             <p>Set an object coordinate using array notation <code>$obj[offset] = value</code></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetUnset">offsetUnset</a>(mixed $offset)
+                    <a href="#method_offsetUnset">offsetUnset</a>(
+    mixed $offset)
                                             <p>Set an object coordinate using array notation <code>unset($obj[offset])</code></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method___toString">__toString</a>()
@@ -233,42 +281,56 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPoint">setPoint</a>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <a href="#method_setPoint">setPoint</a>(
+    string $name, 
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
                                             <p>Define (or redefine) a point of the object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
+                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getPoint">getPoint</a>(string $name)
+                    <a href="#method_getPoint">getPoint</a>(
+    string $name)
                                             <p>Get a point of the object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
+                    
+    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getSegment">getSegment</a>(string $name1, string|null $name2 = null)
+                    <a href="#method_getSegment">getSegment</a>(
+    string $name1, 
+    string|null $name2 = null)
                                             <p>Get a [point1->point2] segment as a <code>\Maths\Geometry\Segment</code> object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getEquation">getEquation</a>()
                                             <p>Get the algebraic equation of the object</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method___equationToString">__equationToString</a>()
@@ -278,16 +340,19 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPointA">setPointA</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <a href="#method_setPointA">setPointA</a>(
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
                                             <p>Define point A of the quadrilateral</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getPointA">getPointA</a>()
@@ -296,16 +361,19 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPointB">setPointB</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <a href="#method_setPointB">setPointB</a>(
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
                                             <p>Define point B of the quadrilateral</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getPointB">getPointB</a>()
@@ -314,16 +382,19 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPointC">setPointC</a>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
+                    <a href="#method_setPointC">setPointC</a>(
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)
                                             <p>Define point C of the quadrilateral</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getPointC">getPointC</a>()
@@ -332,16 +403,19 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setAngle">setAngle</a>(int $val)
+                    <a href="#method_setAngle">setAngle</a>(
+    int $val)
                                             <p>Define the angle value (in degrees)</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int|null
+                    
+    int|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getAngle">getAngle</a>()
@@ -350,25 +424,30 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setAngleByDeg">setAngleByDeg</a>(int $val)
+                    <a href="#method_setAngleByDeg">setAngleByDeg</a>(
+    int $val)
                                             <p>Define the angle value in degrees</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\Geometry\$this">$this</abbr>
+                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setAngleByRad">setAngleByRad</a>(int $val)
+                    <a href="#method_setAngleByRad">setAngleByRad</a>(
+    int $val)
                                             <p>Define the angle value in radians</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int|null
+                    
+    int|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getAngleToDeg">getAngleToDeg</a>()
@@ -377,7 +456,8 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int|null
+                    
+    int|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getAngleToRad">getAngleToRad</a>()
@@ -386,7 +466,8 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isRight">isRight</a>()
@@ -395,7 +476,8 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isStraight">isStraight</a>()
@@ -404,7 +486,8 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isAcute">isAcute</a>()
@@ -413,7 +496,8 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isObtuse">isObtuse</a>()
@@ -422,7 +506,8 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isReflex">isReflex</a>()
@@ -437,9 +522,15 @@ This will return the "toString" result</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 84</div>
+        <div class="location">at line 86</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_a = null, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_b = null, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point_c = null, int $angle = null, int $space_type = Maths::CARTESIAN_2D)</code>
+    
+    <strong>__construct</strong>(
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr> $point_a = null, 
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr> $point_b = null, 
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr> $point_c = null, 
+    int $angle = null, 
+    int $space_type = Maths::CARTESIAN_2D)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -447,31 +538,36 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr></td>
                 <td>$point_a</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr></td>
                 <td>$point_b</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <abbr title="Maths\Geometry\Maths\PointInterface">PointInterface</abbr></td>
                 <td>$point_c</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$angle</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$space_type</td>
                 <td>
 </td>
@@ -487,9 +583,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setSpaceType">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 76</div>
-        <code>                    <abbr title="Maths\$this">$this</abbr>
-    <strong>setSpaceType</strong>(int $type)</code>
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_setSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 77</div>
+        <code>                    
+    <abbr title="Maths\$this">$this</abbr>
+    <strong>setSpaceType</strong>(
+    int $type)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -499,7 +598,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$type</td>
                 <td>
 </td>
@@ -511,7 +611,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -525,8 +626,10 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSpaceType">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 87</div>
-        <code>                    int
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_getSpaceType"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 88</div>
+        <code>                    
+    int
     <strong>getSpaceType</strong>()</code>
     </h3>
     <div class="details">
@@ -538,7 +641,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>
 </td>
         </tr>
@@ -552,8 +656,10 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_is1D">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 97</div>
-        <code>                    bool
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_is1D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 98</div>
+        <code>                    
+    bool
     <strong>is1D</strong>()</code>
     </h3>
     <div class="details">
@@ -565,7 +671,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -579,8 +686,10 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_is2D">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 107</div>
-        <code>                    bool
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_is2D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 108</div>
+        <code>                    
+    bool
     <strong>is2D</strong>()</code>
     </h3>
     <div class="details">
@@ -592,7 +701,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -606,8 +716,10 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_is3D">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 117</div>
-        <code>                    bool
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_is3D"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 118</div>
+        <code>                    
+    bool
     <strong>is3D</strong>()</code>
     </h3>
     <div class="details">
@@ -619,7 +731,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -633,9 +746,13 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 157</div>
-        <code>                    void
-    <strong>__set</strong>(mixed $name, mixed $value)</code>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___set"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 158</div>
+        <code>                    
+    void
+    <strong>__set</strong>(
+    mixed $name, 
+    mixed $value)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -643,13 +760,15 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$value</td>
                 <td>
 </td>
@@ -661,7 +780,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -672,7 +792,7 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -684,9 +804,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 180</div>
-        <code>                    mixed
-    <strong>__get</strong>(mixed $name)</code>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___get"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 181</div>
+        <code>                    
+    mixed
+    <strong>__get</strong>(
+    mixed $name)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -694,7 +817,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -706,7 +830,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
+            <td>
+    mixed</td>
             <td>
 </td>
         </tr>
@@ -720,9 +845,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 199</div>
-        <code>                    bool
-    <strong>__isset</strong>(mixed $name)</code>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___isset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 200</div>
+        <code>                    
+    bool
+    <strong>__isset</strong>(
+    mixed $name)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -730,7 +858,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -742,7 +871,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -756,9 +886,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 219</div>
-        <code>                    void
-    <strong>__unset</strong>(mixed $name)</code>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method___unset"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 220</div>
+        <code>                    
+    void
+    <strong>__unset</strong>(
+    mixed $name)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -766,7 +899,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -778,7 +912,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -789,7 +924,7 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -801,9 +936,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 207</div>
-        <code>                    bool
-    <strong>offsetExists</strong>(mixed $offset)</code>
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetExists"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 208</div>
+        <code>                    
+    bool
+    <strong>offsetExists</strong>(
+    mixed $offset)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -813,7 +951,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
@@ -825,7 +964,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -839,9 +979,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 218</div>
-        <code>                    bool
-    <strong>offsetGet</strong>(mixed $offset)</code>
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetGet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 219</div>
+        <code>                    
+    bool
+    <strong>offsetGet</strong>(
+    mixed $offset)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -851,7 +994,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
@@ -863,7 +1007,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -877,9 +1022,13 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 230</div>
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetSet"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 231</div>
         <code>                    
-    <strong>offsetSet</strong>(mixed $offset, mixed $value)</code>
+    
+    <strong>offsetSet</strong>(
+    mixed $offset, 
+    mixed $value)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -889,13 +1038,15 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$value</td>
                 <td>
 </td>
@@ -908,7 +1059,7 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -920,9 +1071,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">in <a href="../../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 245</div>
+        <div class="location">in 
+    <a href="../../Maths/AbstractCartesianObject.html#method_offsetUnset"><abbr title="Maths\AbstractCartesianObject">AbstractCartesianObject</abbr></a> at line 246</div>
         <code>                    
-    <strong>offsetUnset</strong>(mixed $offset)</code>
+    
+    <strong>offsetUnset</strong>(
+    mixed $offset)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -932,7 +1086,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
@@ -945,7 +1100,7 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -957,8 +1112,9 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at line 109</div>
-        <code>                    string
+        <div class="location">at line 111</div>
+        <code>                    
+    string
     <strong>__toString</strong>()</code>
     </h3>
     <div class="details">
@@ -970,7 +1126,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>
 </td>
         </tr>
@@ -984,9 +1141,13 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPoint">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 72</div>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_setPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 73</div>
         <code>                    
-    <strong>setPoint</strong>(string $name, <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+    
+    <strong>setPoint</strong>(
+    string $name, 
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -996,13 +1157,15 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
                 <td>$point</td>
                 <td>
 </td>
@@ -1015,11 +1178,11 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the <code>$point</code> argument is not <code>\Maths\PointInterface</code> object</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the <code>$point</code> argument is not an object</td>
             </tr>
             </table>
@@ -1031,9 +1194,12 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPoint">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 95</div>
-        <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
-    <strong>getPoint</strong>(string $name)</code>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getPoint"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 96</div>
+        <code>                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>
+    <strong>getPoint</strong>(
+    string $name)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1043,7 +1209,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -1055,7 +1222,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+            <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -1069,9 +1237,13 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSegment">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 114</div>
-        <code>                    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
-    <strong>getSegment</strong>(string $name1, string|null $name2 = null)</code>
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getSegment"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 115</div>
+        <code>                    
+    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a>
+    <strong>getSegment</strong>(
+    string $name1, 
+    string|null $name2 = null)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1081,12 +1253,14 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>
+    string</td>
                 <td>$name1</td>
                 <td>name of first point of the segment</td>
             </tr>
                     <tr>
-                <td>string|null</td>
+                <td>
+    string|null</td>
                 <td>$name2</td>
                 <td>name of first point of the segment</td>
             </tr>
@@ -1097,7 +1271,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a></td>
+            <td>
+    <a href="../../Maths/Geometry/Segment.html"><abbr title="Maths\Geometry\Segment">Segment</abbr></a></td>
             <td>
 </td>
         </tr>
@@ -1108,15 +1283,15 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if the segmentation can't be constructed (wrong parameters)</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if <code>$name1</code> is more than 2 chars length</td>
             </tr>
                     <tr>
-                <td><a href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException"><abbr title="InvalidArgumentException">InvalidArgumentException</abbr></a></td>
                 <td>if one of the points is not found</td>
             </tr>
             </table>
@@ -1128,8 +1303,10 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getEquation">
-        <div class="location">in <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 245</div>
-        <code>                    string
+        <div class="location">in 
+    <a href="../../Maths/Geometry/AbstractGeometricObject.html#method_getEquation"><abbr title="Maths\Geometry\AbstractGeometricObject">AbstractGeometricObject</abbr></a> at line 246</div>
+        <code>                    
+    string
     <strong>getEquation</strong>()</code>
     </h3>
     <div class="details">
@@ -1141,7 +1318,8 @@ This will return the "toString" result</p>                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>
 </td>
         </tr>
@@ -1155,8 +1333,9 @@ This will return the "toString" result</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___equationToString">
-        <div class="location">at line 120</div>
-        <code>                    string
+        <div class="location">at line 122</div>
+        <code>                    
+    string
     <strong>__equationToString</strong>()</code>
     </h3>
     <div class="details">
@@ -1169,7 +1348,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>
 </td>
         </tr>
@@ -1183,9 +1363,11 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPointA">
-        <div class="location">at line 134</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setPointA</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+        <div class="location">at line 136</div>
+        <code>                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setPointA</strong>(
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1195,7 +1377,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
                 <td>$point</td>
                 <td>
 </td>
@@ -1207,7 +1390,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\Geometry\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -1218,7 +1402,7 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>if the argument is not on of the <code>\Maths\PointInterface</code> classes</td>
             </tr>
             </table>
@@ -1230,8 +1414,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPointA">
-        <div class="location">at line 149</div>
-        <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+        <div class="location">at line 151</div>
+        <code>                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointA</strong>()</code>
     </h3>
     <div class="details">
@@ -1243,7 +1428,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
+            <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
             <td>
 </td>
         </tr>
@@ -1257,9 +1443,11 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPointB">
-        <div class="location">at line 161</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setPointB</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+        <div class="location">at line 163</div>
+        <code>                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setPointB</strong>(
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1269,7 +1457,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
                 <td>$point</td>
                 <td>
 </td>
@@ -1281,7 +1470,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\Geometry\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -1292,7 +1482,7 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>if the argument is not on of the <code>\Maths\PointInterface</code> classes</td>
             </tr>
             </table>
@@ -1304,8 +1494,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPointB">
-        <div class="location">at line 176</div>
-        <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+        <div class="location">at line 178</div>
+        <code>                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointB</strong>()</code>
     </h3>
     <div class="details">
@@ -1317,7 +1508,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
+            <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
             <td>
 </td>
         </tr>
@@ -1331,9 +1523,11 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPointC">
-        <div class="location">at line 188</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setPointC</strong>(<a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
+        <div class="location">at line 190</div>
+        <code>                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setPointC</strong>(
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a> $point)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1343,7 +1537,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
+                <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a></td>
                 <td>$point</td>
                 <td>
 </td>
@@ -1355,7 +1550,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\Geometry\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -1366,7 +1562,7 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>if the argument is not on of the <code>\Maths\PointInterface</code> classes</td>
             </tr>
             </table>
@@ -1378,8 +1574,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPointC">
-        <div class="location">at line 203</div>
-        <code>                    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
+        <div class="location">at line 205</div>
+        <code>                    
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null
     <strong>getPointC</strong>()</code>
     </h3>
     <div class="details">
@@ -1391,7 +1588,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
+            <td>
+    <a href="../../Maths/PointInterface.html"><abbr title="Maths\PointInterface">PointInterface</abbr></a>|null</td>
             <td>
 </td>
         </tr>
@@ -1405,9 +1603,11 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setAngle">
-        <div class="location">at line 214</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setAngle</strong>(int $val)</code>
+        <div class="location">at line 216</div>
+        <code>                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setAngle</strong>(
+    int $val)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1417,7 +1617,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$val</td>
                 <td>
 </td>
@@ -1429,7 +1630,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\Geometry\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -1443,8 +1645,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getAngle">
-        <div class="location">at line 225</div>
-        <code>                    int|null
+        <div class="location">at line 227</div>
+        <code>                    
+    int|null
     <strong>getAngle</strong>()</code>
     </h3>
     <div class="details">
@@ -1456,7 +1659,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>int|null</td>
+            <td>
+    int|null</td>
             <td>
 </td>
         </tr>
@@ -1470,9 +1674,11 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setAngleByDeg">
-        <div class="location">at line 238</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setAngleByDeg</strong>(int $val)</code>
+        <div class="location">at line 240</div>
+        <code>                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setAngleByDeg</strong>(
+    int $val)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1482,7 +1688,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$val</td>
                 <td>
 </td>
@@ -1494,7 +1701,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\Geometry\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -1508,9 +1716,11 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setAngleByRad">
-        <div class="location">at line 249</div>
-        <code>                    <abbr title="Maths\Geometry\$this">$this</abbr>
-    <strong>setAngleByRad</strong>(int $val)</code>
+        <div class="location">at line 251</div>
+        <code>                    
+    <abbr title="Maths\Geometry\$this">$this</abbr>
+    <strong>setAngleByRad</strong>(
+    int $val)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -1520,7 +1730,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$val</td>
                 <td>
 </td>
@@ -1532,7 +1743,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\Geometry\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\Geometry\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -1546,8 +1758,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getAngleToDeg">
-        <div class="location">at line 259</div>
-        <code>                    int|null
+        <div class="location">at line 261</div>
+        <code>                    
+    int|null
     <strong>getAngleToDeg</strong>()</code>
     </h3>
     <div class="details">
@@ -1559,7 +1772,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>int|null</td>
+            <td>
+    int|null</td>
             <td>
 </td>
         </tr>
@@ -1573,8 +1787,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getAngleToRad">
-        <div class="location">at line 269</div>
-        <code>                    int|null
+        <div class="location">at line 271</div>
+        <code>                    
+    int|null
     <strong>getAngleToRad</strong>()</code>
     </h3>
     <div class="details">
@@ -1586,7 +1801,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>int|null</td>
+            <td>
+    int|null</td>
             <td>
 </td>
         </tr>
@@ -1600,8 +1816,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isRight">
-        <div class="location">at line 281</div>
-        <code>                    bool
+        <div class="location">at line 283</div>
+        <code>                    
+    bool
     <strong>isRight</strong>()</code>
     </h3>
     <div class="details">
@@ -1613,7 +1830,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -1627,8 +1845,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isStraight">
-        <div class="location">at line 291</div>
-        <code>                    bool
+        <div class="location">at line 293</div>
+        <code>                    
+    bool
     <strong>isStraight</strong>()</code>
     </h3>
     <div class="details">
@@ -1640,7 +1859,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -1654,8 +1874,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isAcute">
-        <div class="location">at line 301</div>
-        <code>                    bool
+        <div class="location">at line 303</div>
+        <code>                    
+    bool
     <strong>isAcute</strong>()</code>
     </h3>
     <div class="details">
@@ -1667,7 +1888,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -1681,8 +1903,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isObtuse">
-        <div class="location">at line 311</div>
-        <code>                    bool
+        <div class="location">at line 313</div>
+        <code>                    
+    bool
     <strong>isObtuse</strong>()</code>
     </h3>
     <div class="details">
@@ -1694,7 +1917,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -1708,8 +1932,9 @@ This will return the "toString" result</p>                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isReflex">
-        <div class="location">at line 321</div>
-        <code>                    bool
+        <div class="location">at line 323</div>
+        <code>                    
+    bool
     <strong>isReflex</strong>()</code>
     </h3>
     <div class="details">
@@ -1721,7 +1946,8 @@ This will return the "toString" result</p>                                </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>

@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -216,7 +216,7 @@ class Circle
     {
         $o = $this->getPointO();
         return (bool) (
-            ( pow(($a->getAbscissa() - $o->getAbscissa()), 2) + pow(($a->getOrdinate() - $o->getOrdinate()), 2) ) == pow($this->getRadius(), 2)
+            (pow(($a->getAbscissa() - $o->getAbscissa()), 2) + pow(($a->getOrdinate() - $o->getOrdinate()), 2)) == pow($this->getRadius(), 2)
         );
     }
 
@@ -231,7 +231,7 @@ class Circle
     public function getOrdinateByAbscissa($x)
     {
         $o = $this->getPointO();
-        return ( sqrt( pow($this->getRadius(), 2) - pow(($x - $o->getAbscissa()), 2) ) + $o->getOrdinate() );
+        return (sqrt(pow($this->getRadius(), 2) - pow(($x - $o->getAbscissa()), 2)) + $o->getOrdinate());
     }
 
     /**
@@ -245,7 +245,6 @@ class Circle
     public function getAbscissaByOrdinate($y)
     {
         $o = $this->getPointO();
-        return ( sqrt( pow($this->getRadius(), 2) - pow(($y - $o->getOrdinate()), 2) ) + $o->getAbscissa() );
+        return (sqrt(pow($this->getRadius(), 2) - pow(($y - $o->getOrdinate()), 2)) + $o->getAbscissa());
     }
-
 }

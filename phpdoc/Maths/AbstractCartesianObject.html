@@ -12,6 +12,9 @@
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/typeahead.min.js"></script>
         <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     
     
     </head>
@@ -71,9 +74,10 @@
         <h1>AbstractCartesianObject</h1>
     </div>
 
-    <p>abstract     class
+    <p>    class
     <strong>AbstractCartesianObject</strong>        implements
-        <a href="http://php.net/ArrayAccess"><abbr title="ArrayAccess">ArrayAccess</abbr></a></p>
+        <a target="_blank" href="http://php.net/ArrayAccess"><abbr title="ArrayAccess">ArrayAccess</abbr></a>
+</p>
 
     
     
@@ -85,24 +89,29 @@
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(int $type = Maths::CARTESIAN_2D)
+                    <a href="#method___construct">__construct</a>(
+    int $type = Maths::CARTESIAN_2D)
                                             <p>Construction of a cartesian object specify a number of space dimensions (default is 2D)</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Maths\$this">$this</abbr>
+                    
+    <abbr title="Maths\$this">$this</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setSpaceType">setSpaceType</a>(int $type)
+                    <a href="#method_setSpaceType">setSpaceType</a>(
+    int $type)
                                             <p>Define the object cartesian space type (number of dimensions)</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    
+    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getSpaceType">getSpaceType</a>()
@@ -111,7 +120,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_is1D">is1D</a>()
@@ -120,7 +130,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_is2D">is2D</a>()
@@ -129,7 +140,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_is3D">is3D</a>()
@@ -138,83 +150,102 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___set">__set</a>(mixed $name, mixed $value)
+                    <a href="#method___set">__set</a>(
+    mixed $name, 
+    mixed $value)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    
+    mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___get">__get</a>(mixed $name)
+                    <a href="#method___get">__get</a>(
+    mixed $name)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___isset">__isset</a>(mixed $name)
+                    <a href="#method___isset">__isset</a>(
+    mixed $name)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
+    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___unset">__unset</a>(mixed $name)
+                    <a href="#method___unset">__unset</a>(
+    mixed $name)
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetExists">offsetExists</a>(mixed $offset)
+                    <a href="#method_offsetExists">offsetExists</a>(
+    mixed $offset)
                                             <p>Test if an offset exists in the object using array notation <code>isset($obj[offset])</code></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
+    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetGet">offsetGet</a>(mixed $offset)
+                    <a href="#method_offsetGet">offsetGet</a>(
+    mixed $offset)
                                             <p>Get an object coordinate using array notation <code>$obj[offset]</code></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetSet">offsetSet</a>(mixed $offset, mixed $value)
+                    <a href="#method_offsetSet">offsetSet</a>(
+    mixed $offset, 
+    mixed $value)
                                             <p>Set an object coordinate using array notation <code>$obj[offset] = value</code></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
+    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_offsetUnset">offsetUnset</a>(mixed $offset)
+                    <a href="#method_offsetUnset">offsetUnset</a>(
+    mixed $offset)
                                             <p>Set an object coordinate using array notation <code>unset($obj[offset])</code></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
+    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method___toString">__toString</a>()
@@ -229,9 +260,11 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 63</div>
+        <div class="location">at line 64</div>
         <code>                    
-    <strong>__construct</strong>(int $type = Maths::CARTESIAN_2D)</code>
+    
+    <strong>__construct</strong>(
+    int $type = Maths::CARTESIAN_2D)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -241,7 +274,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$type</td>
                 <td>
 </td>
@@ -257,9 +291,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSpaceType">
-        <div class="location">at line 76</div>
-        <code>                    <abbr title="Maths\$this">$this</abbr>
-    <strong>setSpaceType</strong>(int $type)</code>
+        <div class="location">at line 77</div>
+        <code>                    
+    <abbr title="Maths\$this">$this</abbr>
+    <strong>setSpaceType</strong>(
+    int $type)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -269,7 +305,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>
+    int</td>
                 <td>$type</td>
                 <td>
 </td>
@@ -281,7 +318,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Maths\$this">$this</abbr></td>
+            <td>
+    <abbr title="Maths\$this">$this</abbr></td>
             <td>
 </td>
         </tr>
@@ -295,8 +333,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSpaceType">
-        <div class="location">at line 87</div>
-        <code>                    int
+        <div class="location">at line 88</div>
+        <code>                    
+    int
     <strong>getSpaceType</strong>()</code>
     </h3>
     <div class="details">
@@ -308,7 +347,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>
+    int</td>
             <td>
 </td>
         </tr>
@@ -322,8 +362,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_is1D">
-        <div class="location">at line 97</div>
-        <code>                    bool
+        <div class="location">at line 98</div>
+        <code>                    
+    bool
     <strong>is1D</strong>()</code>
     </h3>
     <div class="details">
@@ -335,7 +376,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -349,8 +391,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_is2D">
-        <div class="location">at line 107</div>
-        <code>                    bool
+        <div class="location">at line 108</div>
+        <code>                    
+    bool
     <strong>is2D</strong>()</code>
     </h3>
     <div class="details">
@@ -362,7 +405,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -376,8 +420,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_is3D">
-        <div class="location">at line 117</div>
-        <code>                    bool
+        <div class="location">at line 118</div>
+        <code>                    
+    bool
     <strong>is3D</strong>()</code>
     </h3>
     <div class="details">
@@ -389,7 +434,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -403,9 +449,12 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___set">
-        <div class="location">at line 130</div>
-        <code>                    void
-    <strong>__set</strong>(mixed $name, mixed $value)</code>
+        <div class="location">at line 131</div>
+        <code>                    
+    void
+    <strong>__set</strong>(
+    mixed $name, 
+    mixed $value)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -413,13 +462,15 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$value</td>
                 <td>
 </td>
@@ -431,7 +482,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -442,7 +494,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -454,9 +506,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">at line 150</div>
-        <code>                    mixed
-    <strong>__get</strong>(mixed $name)</code>
+        <div class="location">at line 151</div>
+        <code>                    
+    mixed
+    <strong>__get</strong>(
+    mixed $name)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -464,7 +518,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -476,7 +531,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
+            <td>
+    mixed</td>
             <td>
 </td>
         </tr>
@@ -490,9 +546,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___isset">
-        <div class="location">at line 166</div>
-        <code>                    bool
-    <strong>__isset</strong>(mixed $name)</code>
+        <div class="location">at line 167</div>
+        <code>                    
+    bool
+    <strong>__isset</strong>(
+    mixed $name)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -500,7 +558,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -512,7 +571,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -526,9 +586,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___unset">
-        <div class="location">at line 183</div>
-        <code>                    void
-    <strong>__unset</strong>(mixed $name)</code>
+        <div class="location">at line 184</div>
+        <code>                    
+    void
+    <strong>__unset</strong>(
+    mixed $name)</code>
     </h3>
     <div class="details">
                 <div class="tags">
@@ -536,7 +598,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$name</td>
                 <td>
 </td>
@@ -548,7 +611,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>
+    void</td>
             <td>
 </td>
         </tr>
@@ -559,7 +623,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -571,9 +635,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetExists">
-        <div class="location">at line 207</div>
-        <code>                    bool
-    <strong>offsetExists</strong>(mixed $offset)</code>
+        <div class="location">at line 208</div>
+        <code>                    
+    bool
+    <strong>offsetExists</strong>(
+    mixed $offset)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -583,7 +649,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
@@ -595,7 +662,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -609,9 +677,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetGet">
-        <div class="location">at line 218</div>
-        <code>                    bool
-    <strong>offsetGet</strong>(mixed $offset)</code>
+        <div class="location">at line 219</div>
+        <code>                    
+    bool
+    <strong>offsetGet</strong>(
+    mixed $offset)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -621,7 +691,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
@@ -633,7 +704,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>
+    bool</td>
             <td>
 </td>
         </tr>
@@ -647,9 +719,12 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetSet">
-        <div class="location">at line 230</div>
+        <div class="location">at line 231</div>
         <code>                    
-    <strong>offsetSet</strong>(mixed $offset, mixed $value)</code>
+    
+    <strong>offsetSet</strong>(
+    mixed $offset, 
+    mixed $value)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -659,13 +734,15 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$value</td>
                 <td>
 </td>
@@ -678,7 +755,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -690,9 +767,11 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_offsetUnset">
-        <div class="location">at line 245</div>
+        <div class="location">at line 246</div>
         <code>                    
-    <strong>offsetUnset</strong>(mixed $offset)</code>
+    
+    <strong>offsetUnset</strong>(
+    mixed $offset)</code>
     </h3>
     <div class="details">
                     <div class="method-description">
@@ -702,7 +781,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>
+    mixed</td>
                 <td>$offset</td>
                 <td>
 </td>
@@ -715,7 +795,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
+                <td><a target="_blank" href="http://php.net/Exception"><abbr title="Exception">Exception</abbr></a></td>
                 <td>eventually caught</td>
             </tr>
             </table>
@@ -727,8 +807,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at line 261</div>
-        <code>    abstract                string
+        <div class="location">at line 262</div>
+        <code>    abstract                
+    string
     <strong>__toString</strong>()</code>
     </h3>
     <div class="details">
@@ -740,7 +821,8 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>
+    string</td>
             <td>
 </td>
         </tr>

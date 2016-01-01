@@ -33,7 +33,7 @@ Author & License
 
 >    http://github.com/atelierspierrot/maths
 
->    Copyright (c) 2014-2015, Pierre Cassat and contributors
+>    Copyright (c) 2014-2016, Pierre Cassat and contributors
 
 >    Licensed under the Apache Version 2.0 license.
 

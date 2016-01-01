@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -115,9 +115,9 @@ class JSXgraph
     {
         $opts = array();
         foreach ($this->_options as $n=>$v) {
-           if (substr($n, 0, strlen($prefix))==$prefix) {
-               $opts[substr($n, strlen($prefix))] = $v;
-           }
+            if (substr($n, 0, strlen($prefix))==$prefix) {
+                $opts[substr($n, strlen($prefix))] = $v;
+            }
         }
         return $opts;
     }
@@ -221,7 +221,7 @@ class JSXgraph
 
     public function drawOrigin(array $options = array())
     {
-        $origin = new Point(0,0);
+        $origin = new Point(0, 0);
         $options = array_merge(
             $this->getOptionsByPrefix(self::ORIGIN_PREFIX), $options
         );
@@ -309,9 +309,5 @@ class JSXgraph
 
     public function demonstrateThales(Line $line1, Line $line2)
     {
-
     }
-
 }
-
-// Endfile
