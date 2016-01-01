@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,5 +79,4 @@ class Disc
         $s = new Segment($this->getPointO(), $a);
         return (bool) ($s->getLength() <= $this->getRadius());
     }
-
 }

@@ -9,7 +9,7 @@
  */
 //@ini_set('display_errors','1'); @error_reporting(E_ALL);
 //@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_STRICT);
-@ini_set('display_errors','1'); @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
+@ini_set('display_errors', '1'); @error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT);
 
 /**
  * Set a default timezone to avoid PHP5 warnings
@@ -36,11 +36,13 @@ function _getSecuredRealPath($path, $depth_from_root = 1)
 {
     $ds = DIRECTORY_SEPARATOR;
     $parts = explode($ds, realpath('.'));
-    for ($i=0; $i<=$depth_from_root; $i++) array_pop($parts);
+    for ($i=0; $i<=$depth_from_root; $i++) {
+        array_pop($parts);
+    }
     return str_replace(join($ds, $parts), $ds.'[***]', $path);
 }
 
-function getPhpClassManualLink( $class_name, $ln='en' )
+function getPhpClassManualLink($class_name, $ln='en')
 {
     return sprintf('http://php.net/manual/%s/class.%s.php', $ln, strtolower($class_name));
 }
@@ -115,11 +117,6 @@ if (file_exists($_f = __DIR__."/../vendor/autoload.php")) {
     trigger_error('You need to run Composer on your package to install dependencies!', E_USER_ERROR);
 }
 ?>
-    
-
-<p>&#x61; &#x40; &#xCA; &#xFB;</p>
-    <p>&#61; &#40; &#171; &#x171;</p>
-
 
 <h3 id="presentation">Presentation</h3>
 
@@ -141,11 +138,11 @@ if (file_exists($_f = __DIR__."/../vendor/autoload.php")) {
 $point1d = new Maths\Point1D(5);
 echo '$point1d = new Maths\Point1D(5);'."\n";
 echo 'echo $point1d->is1D()'."\n";
-echo var_export($point1d->is1D(),1)."\n";
+echo var_export($point1d->is1D(), 1)."\n";
 echo 'echo $point1d->is2D()'."\n";
-echo var_export($point1d->is2D(),1)."\n";
+echo var_export($point1d->is2D(), 1)."\n";
 echo 'echo $point1d->is3D()'."\n";
-echo var_export($point1d->is3D(),1)."\n";
+echo var_export($point1d->is3D(), 1)."\n";
 echo 'echo $point1d'."\n";
 echo $point1d."\n";
 echo '$point1d->x = 1;'."\n";
@@ -169,14 +166,14 @@ echo $point1d->getAbscissa()."\n";
 
     <pre class="code" data-language="php">
 <?php
-$point2d = new Maths\Point2D(3,6);
+$point2d = new Maths\Point2D(3, 6);
 echo '$point2d = new Maths\Point2D(3,6);'."\n";
 echo 'echo $point2d->is1D()'."\n";
-echo var_export($point2d->is1D(),1)."\n";
+echo var_export($point2d->is1D(), 1)."\n";
 echo 'echo $point2d->is2D()'."\n";
-echo var_export($point2d->is2D(),1)."\n";
+echo var_export($point2d->is2D(), 1)."\n";
 echo 'echo $point2d->is3D()'."\n";
-echo var_export($point2d->is3D(),1)."\n";
+echo var_export($point2d->is3D(), 1)."\n";
 echo 'echo $point2d'."\n";
 echo $point2d."\n";
 echo '$point2d->x = 1;'."\n";
@@ -211,16 +208,16 @@ $point2d->name = 'D';
 var_export($point2d);
 
 echo "\n\n";
-$point_d1 = new Maths\Point2D(2,2);
-$point_d2 = new Maths\Point2D(3,4);
-$point_d3 = new Maths\Point2D(0,1);
+$point_d1 = new Maths\Point2D(2, 2);
+$point_d2 = new Maths\Point2D(3, 4);
+$point_d3 = new Maths\Point2D(0, 1);
 echo '$point_d1 = new Maths\Point2D(2,2);'."\n";
 echo '$point_d2 = new Maths\Point2D(3,4);'."\n";
 echo '$point_d3 = new Maths\Point2D(0,1);'."\n";
 echo 'echo \Maths\Maths::getDirectionByPoints($point_d1, $point_d2))'."\n";
-echo var_export(\Maths\Maths::getDirectionByPoints($point_d1, $point_d2),1)."\n";
+echo var_export(\Maths\Maths::getDirectionByPoints($point_d1, $point_d2), 1)."\n";
 echo 'echo \Maths\Maths::getDirectionByPoints($point_d1, $point_d3))'."\n";
-echo var_export(\Maths\Maths::getDirectionByPoints($point_d1, $point_d3),1)."\n";
+echo var_export(\Maths\Maths::getDirectionByPoints($point_d1, $point_d3), 1)."\n";
 
 ?>
     </pre>
@@ -229,15 +226,15 @@ echo var_export(\Maths\Maths::getDirectionByPoints($point_d1, $point_d3),1)."\n"
 
     <pre class="code" data-language="php">
 <?php
-$point3d = new Maths\Point3D(2,4,8);
+$point3d = new Maths\Point3D(2, 4, 8);
 echo '$point3d = new Maths\Point3D(2,4,8);'."\n";
 echo $point3d."\n";
 echo 'echo $point3d->is1D()'."\n";
-echo var_export($point3d->is1D(),1)."\n";
+echo var_export($point3d->is1D(), 1)."\n";
 echo 'echo $point3d->is2D()'."\n";
-echo var_export($point3d->is2D(),1)."\n";
+echo var_export($point3d->is2D(), 1)."\n";
 echo 'echo $point3d->is3D()'."\n";
-echo var_export($point3d->is3D(),1)."\n";
+echo var_export($point3d->is3D(), 1)."\n";
 echo 'echo $point3d'."\n";
 echo $point3d."\n";
 echo '$point3d->x = 1;'."\n";
@@ -278,8 +275,8 @@ echo $point3d->getOrdinate()."\n";
 echo '$line_pointa = new \Maths\Geometry\Point(2,4);'."\n";
 echo '$line_pointb = new \Maths\Geometry\Point(-2,3);'."\n";
 echo '$line1 = new \Maths\Geometry\Segment($line_pointa, $line_pointb);'."\n";
-$line_pointa = new \Maths\Geometry\Point(2,4);
-$line_pointb = new \Maths\Geometry\Point(-2,3);
+$line_pointa = new \Maths\Geometry\Point(2, 4);
+$line_pointb = new \Maths\Geometry\Point(-2, 3);
 $line1 = new \Maths\Geometry\Line($line_pointa, $line_pointb);
 echo 'echo $line1;'."\n";
 echo $line1."\n";
@@ -287,14 +284,14 @@ echo 'echo $line1->equation;'."\n";
 echo $line1->equation."\n";
 
 echo "\n\n";
-$test_pointa = new \Maths\Geometry\Point(1,3.75);
-$test_pointb = new \Maths\Geometry\Point(3,2);
+$test_pointa = new \Maths\Geometry\Point(1, 3.75);
+$test_pointb = new \Maths\Geometry\Point(3, 2);
 echo '$test_pointa = new \Maths\Geometry\Point(1,3.75);'."\n";
 echo '$test_pointb = new \Maths\Geometry\Point(3,2);'."\n";
 echo '$line1->isValidPoint($test_pointa);'."\n";
-echo var_export($line1->isValidPoint($test_pointa),1)."\n";
+echo var_export($line1->isValidPoint($test_pointa), 1)."\n";
 echo '$line1->isValidPoint($test_pointb);'."\n";
-echo var_export($line1->isValidPoint($test_pointb),1)."\n";
+echo var_export($line1->isValidPoint($test_pointb), 1)."\n";
 ?>
     </pre>
 
@@ -305,8 +302,8 @@ echo var_export($line1->isValidPoint($test_pointb),1)."\n";
 echo '$segment_pointa = new \Maths\Geometry\Point(2,4);'."\n";
 echo '$segment_pointb = new \Maths\Geometry\Point(-2,3);'."\n";
 echo '$segment1 = new \Maths\Geometry\Segment($segment_pointa, $segment_pointb);'."\n";
-$segment_pointa = new \Maths\Geometry\Point(2,4);
-$segment_pointb = new \Maths\Geometry\Point(-2,3);
+$segment_pointa = new \Maths\Geometry\Point(2, 4);
+$segment_pointb = new \Maths\Geometry\Point(-2, 3);
 $segment1 = new \Maths\Geometry\Segment($segment_pointa, $segment_pointb);
 echo 'echo $segment1;'."\n";
 echo $segment1."\n";
@@ -324,17 +321,17 @@ echo $segment1->length."\n";
 
 
 
-$seg_para_a = new \Maths\Geometry\Point(1,2);
-$seg_para_b = new \Maths\Geometry\Point(1,4);
+$seg_para_a = new \Maths\Geometry\Point(1, 2);
+$seg_para_b = new \Maths\Geometry\Point(1, 4);
 $seg_para_1 = new \Maths\Geometry\Segment($seg_para_a, $seg_para_b);
-$seg_para_c = new \Maths\Geometry\Point(3,-1);
-$seg_para_d = new \Maths\Geometry\Point(3,2);
+$seg_para_c = new \Maths\Geometry\Point(3, -1);
+$seg_para_d = new \Maths\Geometry\Point(3, 2);
 $seg_para_2 = new \Maths\Geometry\Segment($seg_para_c, $seg_para_d);
 
 var_export(\Maths\Maths::areParallels($seg_para_1, $seg_para_2));
 
-$seg_para_e = new \Maths\Geometry\Point(1,-1);
-$seg_para_f = new \Maths\Geometry\Point(3,2);
+$seg_para_e = new \Maths\Geometry\Point(1, -1);
+$seg_para_f = new \Maths\Geometry\Point(3, 2);
 $seg_para_3 = new \Maths\Geometry\Segment($seg_para_e, $seg_para_f);
 var_export(\Maths\Maths::areParallels($seg_para_1, $seg_para_3));
 
@@ -344,7 +341,7 @@ var_export(\Maths\Maths::areParallels($seg_para_1, $seg_para_3));
     <h3 id="quadri">Quadrilaterals</h3>
 
     <h4>Maths\Geometry\Quadrilateral</h4>
-    
+
     <pre class="code" data-language="php">
 <?php
 
@@ -352,10 +349,10 @@ echo '$rec_pointA = new \Maths\Geometry\Point(1,2);'."\n";
 echo '$rec_pointB = new \Maths\Geometry\Point(4,2);'."\n";
 echo '$rec_pointC = new \Maths\Geometry\Point(4,4);'."\n";
 echo '$rec_pointD = new \Maths\Geometry\Point(1,4);'."\n";
-$rec_pointA = new \Maths\Geometry\Point(1,2);
-$rec_pointB = new \Maths\Geometry\Point(4,2);
-$rec_pointC = new \Maths\Geometry\Point(4,4);
-$rec_pointD = new \Maths\Geometry\Point(1,4);
+$rec_pointA = new \Maths\Geometry\Point(1, 2);
+$rec_pointB = new \Maths\Geometry\Point(4, 2);
+$rec_pointC = new \Maths\Geometry\Point(4, 4);
+$rec_pointD = new \Maths\Geometry\Point(1, 4);
 echo '$quadri = new \Maths\Geometry\Quadrilateral($rec_pointA, $rec_pointB, $rec_pointC, $rec_pointD);'."\n";
 $quadri = new \Maths\Geometry\Quadrilateral($rec_pointA, $rec_pointB, $rec_pointC, $rec_pointD);
 echo 'echo $quadri;'."\n";
@@ -364,13 +361,13 @@ echo $quadri."\n";
 echo 'echo $quadri->equation;'."\n";
 echo $quadri->equation."\n";
 echo 'echo $quadri->isParallelogram();'."\n";
-echo var_export($quadri->isParallelogram(),1)."\n";
+echo var_export($quadri->isParallelogram(), 1)."\n";
 
 ?>
     </pre>
-    
+
     <h4>Maths\Geometry\Rectangle</h4>
-    
+
     <pre class="code" data-language="php">
 <?php
 echo '$rect = new \Maths\Geometry\Rectangle($rec_pointA, $rec_pointB, $rec_pointC, $rec_pointD);'."\n";
@@ -400,11 +397,11 @@ echo $rect->getSegmentAB();
 <?php
 
 echo '$tri_point1 = new \Maths\Geometry\Point(-1,-2);'."\n";
-$tri_point1 = new \Maths\Geometry\Point(-1,-2);;
+$tri_point1 = new \Maths\Geometry\Point(-1, -2);;
 echo '$tri_point2 = new \Maths\Geometry\Point(2,4);'."\n";
-$tri_point2 = new \Maths\Geometry\Point(2,4);;
+$tri_point2 = new \Maths\Geometry\Point(2, 4);;
 echo '$tri_point3 = new \Maths\Geometry\Point(1,1);'."\n";
-$tri_point3 = new \Maths\Geometry\Point(1,1);;
+$tri_point3 = new \Maths\Geometry\Point(1, 1);;
 echo '$tri = new \Maths\Geometry\Triangle($tri_point1, $tri_point2, $tri_point3);'."\n";
 $tri = new \Maths\Geometry\Triangle($tri_point1, $tri_point2, $tri_point3);
 echo 'echo $tri;'."\n";
@@ -427,7 +424,7 @@ echo $tri->perimeter."\n";
 <?php
 
 echo '$circ_pointO = new \Maths\Geometry\Point(-1,-2);'."\n";
-$circ_pointO = new \Maths\Geometry\Point(-1,-2);
+$circ_pointO = new \Maths\Geometry\Point(-1, -2);
 echo '$circ = new \Maths\Geometry\Circle($rec_point0, 3);'."\n";
 $circ = new \Maths\Geometry\Circle($circ_pointO, 3);
 echo 'echo $circ;'."\n";
@@ -450,18 +447,18 @@ echo 'echo $circ->isValidPoint($circ_test1);'."\n";
 $circ_test1_x = 1;
 $circ_test1_y = $circ->getOrdinateByAbscissa($circ_test1_x);
 echo $circ_test1_y."\n";
-$circ_test1 = new \Maths\Geometry\Point($circ_test1_x,$circ_test1_y);
-echo var_export($circ->isValidPoint($circ_test1),1)."\n";
+$circ_test1 = new \Maths\Geometry\Point($circ_test1_x, $circ_test1_y);
+echo var_export($circ->isValidPoint($circ_test1), 1)."\n";
 
 echo "\n";
 echo '$circ_test2 = new \Maths\Geometry\Point(-1,0.5);'."\n";
 echo 'echo $circ->isValidPoint($circ_test2);'."\n";
-$circ_test2 = new \Maths\Geometry\Point(-1,0.5);
-echo var_export($circ->isValidPoint($circ_test2),1)."\n";
+$circ_test2 = new \Maths\Geometry\Point(-1, 0.5);
+echo var_export($circ->isValidPoint($circ_test2), 1)."\n";
 
 echo "\n";
 echo '$disc_pointO = new \Maths\Geometry\Point(-2,4);'."\n";
-$disc_pointO = new \Maths\Geometry\Point(-2,4);
+$disc_pointO = new \Maths\Geometry\Point(-2, 4);
 echo '$disc = new \Maths\Geometry\Circle($disc_point0, 4);'."\n";
 $disc = new \Maths\Geometry\Disc($disc_pointO, 4);
 echo 'echo $disc;'."\n";
@@ -472,7 +469,7 @@ echo $disc->area."\n";
 
 echo "\n";
 echo 'echo $circ->isValidPoint($circ_test2);'."\n";
-echo var_export($disc->isValidPoint($circ_test2),1)."\n";
+echo var_export($disc->isValidPoint($circ_test2), 1)."\n";
 
 ?>
     </pre>

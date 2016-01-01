@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -107,7 +107,7 @@ class Maths
      */
     public static function segmentToString($coordinates_a, $coordinates_b)
     {
-        return self::polygonToString($coordinates_a,$coordinates_b);
+        return self::polygonToString($coordinates_a, $coordinates_b);
     }
 
     /**
@@ -188,7 +188,7 @@ class Maths
         $x = ($div!=0 ?
             (($line2->getYIntercept() - $line1->getYIntercept()) / $div) : ($line2->getYIntercept() - $line1->getYIntercept()));
         $y = $line1->getOrdinateByAbscissa($x);
-        return new Point($x,$y);
+        return new Point($x, $y);
     }
 
 
@@ -207,7 +207,6 @@ class Maths
         if (self::areParallels($line1, $line2)) {
             return false;
         }
-
     }
 
     /**
@@ -246,8 +245,8 @@ class Maths
             $line2->getPointB()->getOrdinate()
         );
         $e = new Point(
-            rand(0,10) + (max($abs) + abs(min($abs))),
-            rand(0,10) + (max($ords) + abs(min($ords)))
+            rand(0, 10) + (max($abs) + abs(min($abs))),
+            rand(0, 10) + (max($ords) + abs(min($ords)))
         );
         $segAE = new Segment($line1->getPointA(), $e);
         $segBE = new Segment($line1->getPointB(), $e);
@@ -341,7 +340,4 @@ TYPEOTHER;
             return self::DIRECTION_NULL;
         }
     }
-
 }
-
-// Endfile

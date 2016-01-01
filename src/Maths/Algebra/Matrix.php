@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -122,22 +122,22 @@ class Matrix
     /**
      * @var     array   Current matrix sizes: `_size[x]` for lines, `_size[y]` for columns & `_size[c]` for cells
      */
-    var $_size          = array('x'=>0, 'y'=>0, 'c'=>0);
+    public $_size          = array('x'=>0, 'y'=>0, 'c'=>0);
 
     /**
      * @var     array   Current matrix values 2D array
      */
-    var $data           = array();
+    public $data           = array();
 
     /**
      * @var     int     Current `x` index value 1 based
      */
-    var $x              = null;
+    public $x              = null;
 
     /**
      * @var     int     Current `y` index value 1 based
      */
-    var $y              = null;
+    public $y              = null;
 
     /**
      * MATRIX constructor
@@ -1348,7 +1348,9 @@ class Matrix
      */
     public function getLine($index = null)
     {
-        if (is_null($index)) $index = $this->keyX();
+        if (is_null($index)) {
+            $index = $this->keyX();
+        }
         try {
             $this->seekX($index);
         } catch (OutOfRangeException $e) {
@@ -1366,7 +1368,9 @@ class Matrix
      */
     public function getColumn($index = null)
     {
-        if (is_null($index)) $index = $this->keyY();
+        if (is_null($index)) {
+            $index = $this->keyY();
+        }
         try {
             $this->seekY($index);
         } catch (OutOfRangeException $e) {
@@ -1385,7 +1389,9 @@ class Matrix
      */
     public function getCell($index = null)
     {
-        if (is_null($index)) $index = $this->keyXY();
+        if (is_null($index)) {
+            $index = $this->keyXY();
+        }
         try {
             $this->seekXY($index);
         } catch (InvalidArgumentException $e) {
@@ -1499,7 +1505,7 @@ class Matrix
                 if ($verbose) {
                     $str .= "current walking flag is: "
                         .$this->getWalkFlag()
-                        .' ('.( ($this->getWalkFlag() & self::WALK_X) ? 'X' : (($this->getWalkFlag() & self::WALK_Y) ? 'Y' : 'XY') ).')';
+                        .' ('.(($this->getWalkFlag() & self::WALK_X) ? 'X' : (($this->getWalkFlag() & self::WALK_Y) ? 'Y' : 'XY')).')';
                 } else {
                     $str .= $this->getWalkFlag();
                 }
@@ -1508,7 +1514,7 @@ class Matrix
                 if ($verbose) {
                     $str .= "current array access flag is: "
                         .$this->getArrayFlag()
-                        .' ('.( ( ($this->getArrayFlag() & self::ARRAY_INT) ? 'INT' : 'XY' ) ).')';
+                        .' ('.((($this->getArrayFlag() & self::ARRAY_INT) ? 'INT' : 'XY')).')';
                 } else {
                     $str .= $this->getArrayFlag();
                 }
@@ -1517,8 +1523,8 @@ class Matrix
             if ($verbose) {
                 $str .= "matrix of {$this->countX()} lines & {$this->countY()} columns"
                     ." ({$this->countXY()} cells)"
-                    .PHP_EOL."walking flag is ".( ($this->getWalkFlag() & self::WALK_X) ? 'X' : (($this->getWalkFlag() & self::WALK_Y) ? 'Y' : 'XY') )
-                    .PHP_EOL."array access flag is ".( ($this->getArrayFlag() & self::ARRAY_INT) ? 'INT' : 'XY' )
+                    .PHP_EOL."walking flag is ".(($this->getWalkFlag() & self::WALK_X) ? 'X' : (($this->getWalkFlag() & self::WALK_Y) ? 'Y' : 'XY'))
+                    .PHP_EOL."array access flag is ".(($this->getArrayFlag() & self::ARRAY_INT) ? 'INT' : 'XY')
                     .PHP_EOL."----------------".PHP_EOL;
             }
             foreach ($this->data as $x=>$cell) {
@@ -1531,7 +1537,4 @@ class Matrix
         }
         return $str;
     }
-
 }
-
-// Endfile

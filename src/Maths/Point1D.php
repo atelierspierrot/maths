@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,6 @@ namespace Maths;
 use \Maths\Maths;
 use \Maths\AbstractCartesianObject;
 use \Maths\PointInterface;
-
 
 /**
  * Basic 1D point
@@ -98,7 +97,4 @@ class Point1D
     {
         return $this->_coordinates['abscissa'];
     }
-
 }
-
-// Endfile

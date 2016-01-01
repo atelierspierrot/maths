@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -250,7 +250,7 @@ class Line
      */
     public function isValidPoint(PointInterface $a)
     {
-        return (bool) ($a->getOrdinate() == ( ($this->getSlope() * $a->getAbscissa()) + $this->getYIntercept() ));
+        return (bool) ($a->getOrdinate() == (($this->getSlope() * $a->getAbscissa()) + $this->getYIntercept()));
     }
 
     /**
@@ -264,7 +264,7 @@ class Line
         if ($this->isHorizontal()) {
             return $this->getPointA()->getOrdinate();
         }
-        return ( ($this->getSlope() * $x) + $this->getYIntercept() );
+        return (($this->getSlope() * $x) + $this->getYIntercept());
     }
 
     /**
@@ -278,9 +278,6 @@ class Line
         if ($this->isVertical()) {
             return $this->getPointA()->getAbscissa();
         }
-        return ( ($y - $this->getYIntercept()) / $this->getSlope() );
+        return (($y - $this->getYIntercept()) / $this->getSlope());
     }
-
 }
-
-// Endfile

@@ -2,7 +2,7 @@
 /**
  * This file is part of the Maths package.
  *
- * Copyright (c) 2014-2015 Pierre Cassat <me@e-piwi.fr> and contributors
+ * Copyright (c) 2014-2016 Pierre Cassat <me@e-piwi.fr> and contributors
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -86,7 +86,7 @@ class Helper
      * @param $b
      * @return float|int
      */
-    public static function modulo($a,$b)
+    public static function modulo($a, $b)
     {
         if (abs($b)>abs($a)) {
             return $a;
@@ -94,7 +94,7 @@ class Helper
         if ($a>0 && $b>0) {
             return ($a%$b);
         }
-        return self::getModuloFromEntirePart($a,$b);
+        return self::getModuloFromEntirePart($a, $b);
     }
 
     /**
@@ -105,7 +105,7 @@ class Helper
      * @param $b
      * @return float
      */
-    public static function getModuloFromEntirePart($a,$b)
+    public static function getModuloFromEntirePart($a, $b)
     {
         $div = round($a/$b, 0, (($a/$b)>=0 ? PHP_ROUND_HALF_DOWN : PHP_ROUND_HALF_UP));
         $a = round($a, 0, ($a>=0 ? PHP_ROUND_HALF_DOWN : PHP_ROUND_HALF_UP));
@@ -123,14 +123,14 @@ class Helper
      * @param $b
      * @return int
      */
-    public static function getModuloUsingTruncation($a,$b)
+    public static function getModuloUsingTruncation($a, $b)
     {
         $a = round($a, 0, ($a>=0 ? PHP_ROUND_HALF_DOWN : PHP_ROUND_HALF_UP));
         $b = round($b, 0, ($b>=0 ? PHP_ROUND_HALF_DOWN : PHP_ROUND_HALF_UP));
         $tmp_a = $a;
         $ab = $a/$b;
         $counter = 0;
-        while ($ab!==0 && ($ab!==round($ab,0))) {
+        while ($ab!==0 && ($ab!==round($ab, 0))) {
             $counter++;
             if ($tmp_a>0) {
                 $tmp_a = $a - $counter;
@@ -156,7 +156,7 @@ class Helper
     {
         $sum = 0;
         for ($i=0;$i<strlen($a);$i++) {
-            $sum += pow($a{$i},strlen($a));
+            $sum += pow($a{$i}, strlen($a));
         }
         return ($sum==$a);
     }
@@ -237,13 +237,10 @@ class Helper
             return $a;
         }
         try {
-            list(,$r) = self::EuclideanDivision($a, $b);
+            list(, $r) = self::EuclideanDivision($a, $b);
             return self::GCD($b, $r);
         } catch (\InvalidArgumentException $e) {
             throw $e;
         }
     }
-
 }
-
-// Endfile
